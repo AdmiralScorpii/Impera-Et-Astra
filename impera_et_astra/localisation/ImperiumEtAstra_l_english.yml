@@ -125,3 +125,31 @@
    RT_PEACEFUL_PRINCE:0 "Peaceful Prince"
    RT_PEACEFUL_PRINCESS:0 "Peaceful Princess"
    
+   #########################################################################
+   #################### Personalities ######################################
+   #########################################################################
+   
+   personality_zealous_slavers:0 "Zealous Slavers"
+   personality_zealous_slavers_desc:0 "Spiritual or religious zealots who believe that by the divine power of their beliefs that nonbelievers and aliens alike can be enslaved in the name of their creed."
+   personality_migratory_pilgrims:0 "Migratory Pilgrims"
+   personality_migratory_pilgrims_desc:0 "This species believes that by exploring and travelling the galaxy and interacting with the various states and species that inhabit it that they become closer to their beliefs."
+   personality_imperialist_conquerors:0 "Imperialist Conquerors"
+   personality_imperialist_conquerors_desc:0 "Through their power and strength as an empire, this species believes that through military conquest and battle that they shall gain glory in the galaxy."
+   personality_enlightened_peacekeepers:0 "Enlightened Peacekeepers"
+   personality_enlightened_peacekeepers_desc:0 "A pacifist species that believes that all species and sovereign nations have a right to live and exist freely and are not afraid to use force if necessary to uphold their values."
+   personality_capitalist_profiteers:0 "Capitalist Profiteers"
+   personality_capitalist_profiteers_desc:0 "Capitalists that believe that profits and productivity are the most important thing of their species and will use any means to achieve this goal."
+   personality_roving_traders:0 "Roving Traders"
+   personality_roving_traders_desc:0 "A merchantile based species that believes that by travelling and migrating through the galaxy they stand to gain better business opportunities as individuals."
+   personality_democratic_isolationists:0 "Democratic Isolationists"
+   personality_democratic_isolationists_desc:0 "A species that believes in the process of democracy but feels that aliens and outsiders wish contempt and harbor degenerative ideas about their society."
+   personality_sovereign_monarchists:0 "Sovereign Monarchists"
+   personality_sovereign_monarchists_desc:0 "Feudalists that believe that the fact their kingdom exists in the galaxy is proof enough for them to be content and happy with their place in the galaxy."
+   personality_laissez_faire_economists:0 "Laissez-Faire Economists"
+   personality_laissez_faire_economists_desc:0 "Merchants and capitalists who believe that free trade is the most superior form of trade and that all in the galaxy should be welcome in their economic system."
+   personality_ambitious_autocrats:0 "Ambitious Autocrats"
+   personality_ambitious_autocrats_desc:0 "Autocrats that wish to expand their power and influence through any means at their disposal."
+   personality_nuetral_militarists:0 "Nuetral Militarists"
+   personality_nuetral_militarists_desc:0 "A species that wishes only to exist and to rule their empire's territory but realize that they must also maintain a defensive, standing army to ward off those who wish them harm."
+   personality_indifferent_merchants:0 "Indifferent Merchants"
+   personality_indifferent_merchants_desc:0 "Merchants that only wish to conduct business with those who will take their business."
