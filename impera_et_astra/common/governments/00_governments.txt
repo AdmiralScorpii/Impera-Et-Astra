@@ -1724,6 +1724,58 @@ peaceful_empire = {
 ######## FANATIC PACIFIST #########
 ##################################
 
+pacifist_empire = {
+
+	has_heir = yes
+	dynastic_last_names = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_pacifist"
+			has_ethic = "ethic_fanatic_collectivist"
+		}
+		NOT = { has_ethic = "ethic_pacifist" }
+		NOT = { has_ethic = "ethic_collectivist" }
+	}
+	
+	modifier = {
+		country_core_sector_planet_cap = 10
+		pop_happiness = -0.15
+		slave_production_output = 0.1
+		tile_resource_physics_research_mult = 0.30
+		tile_resource_society_research_mult = 0.30
+		tile_resource_engineering_research_mult = 0.30
+		category_military_theory_research_speed_mult = -0.30
+		category_voidcraft_research_speed_mult = -0.30
+		science_ship_survey_speed = 0.45
+		tile_resource_food_mult = 0.35
+		planet_army_build_cost_mult = 0.35
+		shipsize_corvette_build_cost_mult = 0.25
+		shipsize_destroyer_build_cost_mult = 0.30
+		shipsize_cruiser_build_cost_mult = 0.40
+		shipsize_battleship_build_cost_mult = 0.55
+		planet_building_cost_mult = -0.45
+		pop_other_species_happiness = 0.2
+		pop_war_happiness = -0.25
+	}
+	
+	ruler_title = RT_TRANQUIL_EMPEROR
+	ruler_title_female = RT_TRANQUIL_EMPRESS
+	heir_title = PEACEFUL_PRINCE
+	heir_title_female = PEACEFUL_PRINCESS
+}
+
 ######################
 # Other
 ######################
