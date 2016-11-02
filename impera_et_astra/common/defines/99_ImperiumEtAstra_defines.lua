@@ -1,3 +1,3 @@
-NDefines.NSpecies.MAX_ETHIC_POINTS = 5
+NDefines.NSpecies.MAX_ETHIC_POINTS = 4
 NDefines.NGameplay.ETHOS_MAX_POINTS = 5
-NDefines.NGameplay.ETHOS_DISTRIBUTION_FACTOR = 0.4
+NDefines.NGameplay.ETHOS_DISTRIBUTION_FACTOR = 1.0

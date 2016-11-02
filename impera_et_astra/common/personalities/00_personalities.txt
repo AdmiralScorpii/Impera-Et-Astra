@@ -40,91 +40,6 @@
 
 # NOTE: Weight is additive!
 
-zealous_slavers = {
-	type = hegemon
-	aggressiveness = 1.5
-	trade_willingness = 0.65
-	bravery = 0.5
-	
-	military_spending = 1.2
-	colony_spending = 0.9	
-	
-	federation_acceptance = -20
-	nap_acceptance = -25
-	defensive_pact_acceptance = -15
-	migration_pact_acceptance = -100		
-	
-	advanced_start_chance = 40
-	
-	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.5
-	shields_ratio = 0.5
-	afterburners_ratio = 0.1	
-	
-	threat_modifier = 1.0
-	threat_others_modifier = 0.5
-	friction_modifier = 1.0
-
-	behaviour = {
-		conqueror = yes
-		subjugator = yes
-		liberator = no
-		opportunist = yes
-		slaver = yes
-		uplifter = no
-		purger = yes
-		dominator = yes
-		infiltrator = no
-		robot_exploiter = yes
-		robot_liberator = no
-		propagator = no
-		ideologue = yes
-		multispecies = no
-	}
-
-	
-	allow = {
-		NOT = { is_country_type = fallen_empire }
-		NOT = { is_country_type = awakened_fallen_empire }	
-		NOT = {has_ethic = "ethic_pacifist"}
-		NOT = {has_ethic = "ethic_fanatic_pacifist"}
-		NOT = {has_ethic = "ethic_individualist"}
-		NOT = {has_ethic = "ethic_fanatic_individualist"}			
-		OR = {
-			has_government = "theocratic_kingdom"
-			has_government = "holy_kingdom"
-			has_government = "theocratic_empire"
-			has_government = "holy_empire"
-		}
-	}
-	
-	weight_modifier = {
-		weight = 10
-		modifier = {
-			factor = 2
-			has_trait = "trait_decadent"
-		}
-		modifier = {
-			factor = 1 
-			OR = {
-				has_government = "theocratic_kingdom"
-				has_government = "theocratic_empire"			
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_government = "holy_kingdom"
-				has_government = "holy_empire"
-			}
-		}
-		modifier = {
-			factor = -2 
-			has_trait = "trait_charismatic"		
-		}		
-	}	
-}
-
 migratory_pilgrims = {
 	type = propogator 
 	aggressiveness = 0.8
@@ -178,10 +93,12 @@ migratory_pilgrims = {
 			has_government = "theocratic_democracy"
 			has_government = "holy_democracy"
 		}
-		NOT = {has_ethic = "ethic_militarist"}
-		NOT = {has_ethic = "ethic_fanatic_militarist"}
-		NOT = {has_ethic = "ethic_xenophobe"}
-		NOT = {has_ethic = "ethic_fanatic_xenophobe"}		
+		NOT = {
+			has_ethic = "ethic_militarist"
+			has_ethic = "ethic_fanatic_militarist"
+			has_ethic = "ethic_xenophobe"
+			has_ethic = "ethic_fanatic_xenophobe"
+		}		
 	}
 	
 	weight_modifier = {
@@ -197,6 +114,15 @@ migratory_pilgrims = {
 		modifier = {
 			factor = 2 
 			has_trait = "trait_nomadic"
+		}
+		modifier = {
+			factor = 2 
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}			
 		}
 		modifier = {
 			factor = 2 
@@ -266,10 +192,12 @@ imperialist_conquerors = {
 			has_government = "ethic_fanatic_militarist"
 			has_government = "theocratic_empire"
 		}
-		NOT = {has_ethic = "ethic_pacifist"}
-		NOT = {has_ethic = "ethic_fanatic_pacifist"}
-		NOT = {has_ethic = "ethic_xenophile"}
-		NOT = {has_ethic = "ethic_fanatic_xenophile"}	
+		NOT = {
+			has_ethic = "ethic_pacifist"
+			has_ethic = "ethic_fanatic_pacifist"
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
+		}	
 	}
 	
 	weight_modifier = {
@@ -281,6 +209,10 @@ imperialist_conquerors = {
 		modifier = {
 			factor = 2
 			has_trait = "trait_very_strong"
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_fanatic_militarist"
 		}
 		modifier = {
 			factor = -1 
@@ -350,8 +282,10 @@ enlightened_peacekeepers = {
 			has_government = "peaceful_empire"
 			has_government = "pacifist_empire"
 		}
-		NOT = {has_ethic = "ethic_xenophobe"}
-		NOT = {has_ethic = "ethic_fanatic_xenophobe"}
+		NOT = {
+			has_ethic = "ethic_xenophobe"
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
 	}
 	
 	weight_modifier = {
@@ -373,7 +307,7 @@ enlightened_peacekeepers = {
 			has_trait = "trait_deviants"
 		}
 		modifier = {
-			factor = -2 
+			factor = 1
 			has_trait = "trait_repugnant"
 		}
 	}	
@@ -431,8 +365,10 @@ capitalist_profiteers = {
 			has_government = "corporate_autocracy"
 			has_government = "corporate_oligarchy"
 		}
-		NOT = {has_ethic = "ethic_xenophile"}
-		NOT = {has_ethic = "ethic_fanatic_xenophile"}			
+		NOT = {
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
+		}		
 	}
 	
 	weight_modifier = {
@@ -511,19 +447,24 @@ roving_traders = {
 			has_government = "merchant_republic"
 			has_government = "merchant_democracy"
 		}
-		NOT = {has_ethic = "ethic_xenophobe"}
-		NOT = {has_ethic = "ethic_fanatic_xenophobe"}
+		NOT = {
+			has_ethic = "ethic_xenophobe"
+			has_ethic = "ethic_fanatic_xenophobe"
+		}	
 	}
 	
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = 1
-			has_election_type = democratic 
+			factor = 1 
+			has_trait = "trait_charismatic"
 		}
 		modifier = {
 			factor = 1 
-			has_trait = "trait_charismatic"
+			OR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_xenophile"
+			}
 		}
 		modifier = {
 			factor = 2 
@@ -720,14 +661,12 @@ laissez_faire_economists = {
 			has_government = "merchant_oligarchy"
 			has_government = "corporate_oligarchy"
 		}
-		NOT = {	has_ethic = "ethic_xenophobe" }
-		NOT = { has_ethic = "ethic_fanatic_xenophobe" }
-		NOT = { has_ethic = "ethic_militarist" }
-		NOT = { has_ethic = "ethic_fanatic_militarist" }
-		NOT = { has_ethic = "ethic_individualist" }
-		NOT = { has_ethic = "ethic_collectivist" }
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
-		
+		NOT = {
+			has_ethic = "ethic_fanatic_xenophobe"
+			has_ethic = "ethic_xenophobe" 
+			has_ethic = "ethic_militarist"
+			has_ethic = "ethic_fanatic_militarist"
+		}		
 	}
 	
 	weight_modifier = {
@@ -747,6 +686,14 @@ laissez_faire_economists = {
 		modifier = {
 			factor = 2 
 			has_trait = "trait_industrious"
+		}
+		modifier = {
+			factor = 1 
+			has_trait = "trait_adaptive"
+		}
+		modifier {
+			factor = 2 
+			has_trait = "trait_very_adaptive"
 		}
 		modifier = {
 			factor = -1 
@@ -939,8 +886,10 @@ nuetral_militarists = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
-		NOT = {has_ethic = "ethic_pacifist"}
-		NOT = {has_ethic = "ethic_fanatic_pacifist"}
+		NOT = {
+			has_ethic = "ethic_pacifist"
+			has_ethic = "ethic_fanatic_pacifist"
+		}
 		OR = {
 			has_government = "regimental_republic"
 			has_government = "martial_republic"
@@ -1009,11 +958,10 @@ indifferent_merchants = {
 			has_government = "merchant_democracy"
 			has_government = "merchant_oligarchy"		
 		}
-		has_trait = "trait_conformists"
 	}
 	
 	weight_modifier = {
-		weight = 10		
+		weight = 100		
 	}
 }
 
@@ -1063,43 +1011,13 @@ federation_builders = {
 		NOT = { is_country_type = awakened_fallen_empire }
 		NOT = {
 			has_ethic = "ethic_xenophobe"
-			has_ethic = "ethic_fanatic_xenophobe"	
-			has_ethic = "ethic_collectivist"
-			has_ethic = "ethic_fanatic_collectivist"				
+			has_ethic = "ethic_fanatic_xenophobe"				
 		}
 		OR = {
-			has_ethic = "ethic_fanatic_xenophile"
-			has_ethic = "ethic_fanatic_individualist"
-			AND = {
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"				
-				}
-				OR = {
-					has_ethic = "ethic_individualist"
-					has_ethic = "ethic_fanatic_individualist"					
-				}				
-			}
-			AND = {
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"				
-				}
-				OR = {
-					has_ethic = "ethic_xenophile"
-					has_ethic = "ethic_fanatic_xenophile"				
-				}				
-			}
-			AND = {
-				OR = {
-					has_ethic = "ethic_xenophile"
-					has_ethic = "ethic_fanatic_xenophile"				
-				}
-				OR = {
-					has_ethic = "ethic_individualist"
-					has_ethic = "ethic_fanatic_individualist"					
-				}				
-			}
+			has_government = "pacifist_democracy"
+			has_government = "peaceful_democracy"
+			has_government = "pacifist_republic"
+			has_government = "peaceful_republic"
 		}
 	}
 	
@@ -1137,12 +1055,168 @@ federation_builders = {
 			factor = -1
 			has_trait = "trait_repugnant"
 		}	
+	}	
+}
+
+malevolent_capitalists = {
+	aggressiveness = 1.5
+	trade_willingness = 0.5
+	bravery = 1.25
+	
+	military_spending = 1.2
+	colony_spending = 0.9	
+	
+	federation_acceptance = -20
+	nap_acceptance = -25
+	defensive_pact_acceptance = -25
+	migration_pact_acceptance = -20	
+	
+	advanced_start_chance = 25
+	
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.4
+	shields_ratio = 0.5
+	afterburners_ratio = 0.1	
+	
+	threat_modifier = 1.2
+	threat_others_modifier = 1.0
+	friction_modifier = 1.2
+	
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		dominator = yes
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		OR = {
+			has_government = "corporate_autocracy"
+			has_government = "corporate_oligarchy"	
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
 		modifier = {
-			factor = 1
-			has_election_type = democratic
+			factor = 1 
+			has_trait = "trait_solitary"
+		}
+		modifier = {
+			factor = 1 
+			has_trait = "trait_weak"
+		}
+		modifier = {
+			factor = 2
+			has_trait = "trait_decadent"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_charismatic"
+		}
+		modifier = {
+			factor = -10
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}			
 		}
 	}	
 }
 
-
-
+military_subjugators = {
+	aggressiveness = 1.5
+	trade_willingness = 0.5
+	bravery = 1.3
+	
+	military_spending = 1.2
+	colony_spending = 1.0	
+	
+	federation_acceptance = -30
+	nap_acceptance = -30
+	defensive_pact_acceptance = -30
+	migration_pact_acceptance = -25
+	
+	advanced_start_chance = 35
+	
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.5
+	shields_ratio = 0.5
+	afterburners_ratio = 0.2
+	
+	threat_modifier = 1.4
+	threat_others_modifier = 1.1
+	friction_modifier = 1.3
+	
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		dominator = yes
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		OR = {
+			has_government = "regimental_monarchy"
+			has_government = "martial_dictatorship"	
+			has_government = "regimental_empire"
+			has_government = "martial_empire"
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1 
+			has_trait = "trait_decadent"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_weak"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_strong"
+		}
+		modifier = {
+			factor = 2
+			has_trait = "trait_very_strong"
+		}
+		modifier = {
+			factor = 2 
+			has_ethic = "ethic_fanatic_militarist"
+		}
+		modifier = {
+			factor = -2
+			has_trait = "trait_weak"		
+		}
+		modifier = { 
+			factor = -1 
+			has_trait = "trait_talented"
+		}
+	}	
+}
