@@ -1,0 +1,279 @@
+#Some traits use empire range. We use these events to cheat the modifiers into traits.
+
+namespace = additional_traits
+
+### Hidden Game Start Event
+
+##################################################################################################################################
+#####Adding traits bonus to eligible nations.
+
+#Sociable
+event = {
+    id = additional_traits.1
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_sociable}
+					has_trait = trait_sociable
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_sociable
+                days = -1
+            }
+			set_country_flag = flag_trait_sociable
+        }
+	}
+}
+
+#Hateful
+event = {
+    id = additional_traits.2
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_hateful}
+					has_trait = trait_hateful
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_hateful
+                days = -1
+            }
+			set_country_flag = flag_trait_hateful
+        }
+    }
+}
+
+#Born Warriors
+event = {
+	id = additional_traits.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_born_warriors}
+					has_trait = trait_born_warriors
+				}
+            }
+            add_modifier = {
+				modifier = wear_trait_born_warriors
+                days = -1
+            }
+			set_country_flag = flag_trait_born_warriors
+        }
+    }
+}
+
+#Competitive
+event = {
+    id = additional_traits.4
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_competitive}
+					has_trait = trait_competitive
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_competitive
+                days = -1
+            }
+			set_country_flag = flag_trait_competitive
+		}
+	}
+}
+
+#Focused
+#event = {
+#	id = additional_traits.5
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		every_country = {
+#			limit = {
+#				AND = {
+#					NOT = {has_country_flag = flag_trait_focused}
+#					has_trait = trait_focused
+#				}
+#			}
+#			add_modifier = {
+#				modifier = wear_trait_focused
+#				days = -1
+#			}
+#			set_country_flag = flag_trait_focused
+#		}
+#	}
+#}
+
+#Agressive
+event = {
+    id = additional_traits.6
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_aggressive}
+					has_trait = trait_aggressive
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_aggressive
+                days = -1
+            }
+			set_country_flag = flag_trait_aggressive
+        }
+    }
+}
+
+
+#Extremely Agressive
+event = {
+    id = additional_traits.7
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_extremely_aggressive}
+					has_trait = trait_extremely_aggressive
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_extremely_aggressive
+                days = -1
+            }
+			set_country_flag = flag_trait_extremely_aggressive
+        }
+    }
+}
+
+#Lateral Thinkers
+event = {
+    id = additional_traits.8
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					has_trait = trait_lateral_thinkers
+					NOT = {has_country_flag = flag_trait_lateral_thinkers}
+				}
+            }
+            add_modifier = {
+				modifier = wear_trait_lateral_thinkers
+				days = -1
+            }
+			set_country_flag = flag_trait_lateral_thinkers
+        }
+    }
+}
+
+#Roboticians
+event = {
+	id = additional_traits.9
+	hide_window = no
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				AND = {
+					has_trait = trait_roboticians
+					NOT = {has_country_flag = flag_trait_roboticians}
+				}
+			}
+			give_technology = tech_robotic_workers
+			set_country_flag = flag_trait_roboticians
+		}	
+	}
+}
+
+#Belligerent
+event = {
+    id = additional_traits.10
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_belligerent}
+					has_trait = trait_belligerent
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_belligerent
+                days = -1
+            }
+			set_country_flag = flag_trait_belligerent
+        }
+    }
+}
+
+#Fast Analysers
+event = {
+    id = additional_traits.11
+    hide_window = yes
+    is_triggered_only = yes
+   
+    immediate = {
+        every_country = {
+            limit = {
+				AND = {
+					NOT = {has_country_flag = flag_trait_fast_analysers}
+					has_trait = trait_fast_analysers
+				}
+            }
+            add_modifier = {
+                modifier = wear_trait_fast_analysers
+                days = -1
+            }
+			set_country_flag = flag_trait_fast_analysers
+        }
+    }
+}
+
+#Roboticians
+event = {
+	id = additional_traits.12
+	hide_window = no
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				AND = {
+					has_trait = trait_psionics
+					NOT = {has_country_flag = flag_trait_psionics}
+				}
+			}
+			give_technology = tech_psionic_theory
+			set_country_flag = flag_trait_psionics
+		}	
+	}
+}

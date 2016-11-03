@@ -1,0 +1,147 @@
+﻿l_braz_por:
+####################################
+ # Traits
+ ####################################
+ #Handicaps
+ 
+ trait_ephemeral:0 "Efêmero"
+ trait_ephemeral_desc:0 "§LEssa espécie possui uma baixa expectativa de vida mesmo em condições ideais.§!\n"
+ 
+ trait_easily_distracted:0 "Facilmente Distraído"
+ trait_easily_distracted_desc:0 "§LIndivíduos dessa espécie é incapaz de se concentrar em um único assunto por tempo o bastante para ser produtiva.§!\n"
+ 
+ trait_simple_minded:0 "Simplório"
+ trait_simple_minded_desc:0 "§LComo essa espécie adquiriu viagem intersideral é um mistério para todos.§!\n"
+ 
+ trait_lazy:0 "Preguiçosos"
+ trait_lazy_desc:0 "§LEssa espécie não é muito de trabalha.§!\n"
+ 
+ trait_wasteful:0 "Desperdiçadores"
+ trait_wasteful_desc:0 "§LEsta espécie gasta demais com coisas inúteis.§!\n"
+ 
+ trait_lethargic:0 "Letárgico"
+ trait_lethargic_desc:0 "§LEssa espécie enrola e procrastina sem dó. Pra que fazer hoje o que pode ser deixado para amanhã ?§!\n"
+ 
+ trait_unfit_engineers:0 "Engenheiros Inaptos"
+ trait_unfit_engineers_desc:0 "§LSeres dessa espécie tem dificuldade para entender muitos dos conceitos fundamentais de engenharia.§!\n"
+ 
+ trait_unfit_physicists:0 "Físicos Inaptos" 
+ trait_unfit_physicists_desc:0 "§LSeres dessa espécie tem dificuldade para entender muitos dos conceitos fundamentais de física teórica.§!\n"
+ 
+ trait_unfit_sociologists:0 "Sociologistas Inaptos"
+ trait_unfit_sociologists_desc:0 "§Leres dessa espécie tem dificuldade para entender muitos dos conceitos fundamentais de sociologia.§!\n"
+ 
+ trait_hateful:0 "Odiosos"
+ trait_hateful_desc:0 "§LDevido aos costumes e maneiras revoltantes dessa espécie, eles tendem a ser evitados.\n\nEsta Trait também diminui o Crescimento de Confiança por 25%.§!\n" 
+ 
+ trait_hunter_gatherers:0 "Caçadores-Coletores"
+ trait_hunter_gatherers_desc:0 "§LEsta espécie tem uma longa tradição na exploração de terra virgem, tornando-os pouco habilitados para agricultura de longo prazo.§!\n"
+ 
+ trait_violent:0 "Violento"
+ trait_violent_desc:0 "§LHá uma predisposição biológica inata à violência entre membros dessa espécie.§!\n"
+ 
+ trait_free_spirits:0 "Espíritos Livres"
+ trait_free_spirits_desc:0 "§LLiberdade de pensamento e o desafio a autoridades é parte da cultura dessa raça a séculos.§!\n"
+ 
+ trait_iconoclastic:0 "Iconoclastas"
+ trait_iconoclastic_desc:0 "§LEmbora essa espécie não esteja tentando derrubar instituições tradicionais, é provavelmente só uma questão de tempo.§!\n"
+ 
+ trait_delicate:0 "Delicado"
+ trait_delicate_desc:0 "§LMembros dessa espécie são facilmente feridos, não sendo capazes de aguentar muito estress físico.§!\n"
+ 
+ trait_weak_willed:0 "Sem Força de Vontade"
+ trait_weak_willed_desc:0 "§LEssa espécie se dobra rapidamente quando sob pressão.§!\n"
+ 
+ trait_very_slow_breeders:0 "Muito Inférteis"
+ trait_very_slow_breeders_desc:0 "§LEssa espécie se reproduz a uma taxa muito lenta, diminuindo significativamente o crescimento populacional.§!\n"
+
+ ###########################################################################################################################################################
+ #Neutral
+ 
+ #trait_focused:0 "Focused"
+ #trait_focused_desc:0 "§LThis species concentrates its specialists on one research at one time.\n\nThis trait also removed one research alternative.§!\n"
+ 
+ ###########################################################################################################################################################
+ #Avantages
+ 
+ trait_multitasking:0 "Multitarefas"
+ trait_multitasking_desc:0 "§LA habilidade dessa raça em realizar múltiplas tarefas ao mesmo tempo lhes dá uma vantagem no desenvolvimento tecnológico.§!\n"
+ 
+ trait_easily_satisfied:0 "Fácil de Agradar"
+ trait_easily_satisfied_desc:0 "§LAs mais básicas necessidades vitais já são o suficiente para deixar indivíduos dessa espécie contentes.§!\n"
+ 
+ trait_born_warriors:0 "Guerreiros Natos"
+ trait_born_warriors_desc:0 "§LTodos os melhores filósofos dessa raça chegaram à mesma conclusão: Guerra é a resposta.\n\nEsta Trait adiciona 5% de dano a suas frotas.§!\n"
+ 
+ trait_sociable:0 "Conversadores"
+ trait_sociable_desc:0 "§LEssa espécie, por instinto ou tradição, tem o hábito de bater papo o máximo possível.\n\nEsta Trait também aumenta o Crescimento de Confiança por 25%.§!\n" 
+ 
+ trait_competitive:0 "Competitivos"
+ trait_competitive_desc:0 "§LEm rituais ou brigas incessantes, indivíduos dessa espécie vivem para provar seu valor.\n\nEsta trait adiciona 50% ao Ganho de Influência por Rivais.§!\n"
+ 
+ trait_aggressive:0 "Agressivos"
+ trait_aggressive_desc:0 "§LCooperação não é exatamente um ponto forte nessa espécie.\n\nEsta Trait permite um Rival adicional.§!\n"
+ 
+ trait_extremely_aggressive:0 "Extremamente Agressivos"
+ trait_extremely_aggressive_desc:0 "§LEssa espécie se sente ameaçado por outras espécies, não importa o quão amigáveis.\n\nEsta Trait permite dois Rivais adicionais.§!\n"
+ 
+ trait_zealous_defenders:0 "Defensores Fanáticos"
+ trait_zealous_defenders_desc:0 "§LEssa espécie luta com um zelo brutal quando encurralada.§!\n"
+ 
+ trait_lateral_thinkers:0 "Pensadores Laterais"
+ trait_lateral_thinkers_desc:0 "§LEssa espécie está acostumada a combate tridimensional, então combate espacial não é grande novidade para eles.\n\nEsta Trait adiciona 10% de dano a suas frotas.§!\n"
+  
+ trait_roboticians:0 "Especialistas em Robótica"
+ trait_roboticians_desc:0 "§LEssa sociedade inventou robôs e xenóides de uso em larga escala antes da invenção de viagem mais rápida que a luz.\n\nEssa trait destranca a tecnologia robotic_workers no começo do jogo apenas.§!\n"
+
+ trait_belligerent:0 "Beligerante"
+ trait_belligerent_desc:0 "§LEssa espécie possui um amor por confrontos e lutas.\n\nEsta Trait permite um Rival adicional e adiciona 50% ao Ganho de Influência por Rivais.§!\n"
+
+ trait_fast_analysers:0 "Analistas Hábeis"
+ trait_fast_analysers_desc:0 "§LMembros dessa espécie raramente perdem tempo com dados de pouca importância. \n\nEsta característica lhe da 10 % a mais de velocidade em inspeções§!\n"
+ 
+ trait_thermosynthetic:0 "Termo Sintético"
+ trait_thermosynthetic_desc:0 "§LEssa espécie pega grande parte de seus nutrimentos pelo sol e de outras fontes de calor.§!\n"
+
+ trait_war_lovers:0 "Amigos da Guerra"
+ trait_war_lovers_desc:0 "§LGuerra é Amor, Paz é Ódio. De acordo com essa espécie.§!\n"
+ 
+ trait_doulophage:0 "Canibais"
+ trait_doulophage_desc:0 "§LMembros dessa espécie não apenas mantém escravos, mas também os comem.§!\n"
+ 
+ trait_psionics:0 "Psiônicos"
+ trait_psionics_desc:0 "§LEsta espécie inicialmente possuem poderes psiônicos e está ciente de seus usos.§!\n"
+  
+ ###########################################################################################################################################################
+ #Traits Modifiers
+ 
+ wear_trait_sociable:0 "Conversadores"
+ wear_trait_sociable_desc:0 "A espécie dominante deste império é composta por Conversadores."
+ 
+ wear_trait_hateful:0 "Odiosos"
+ wear_trait_hateful_desc:0 "A espécie dominante deste império é Odiosa."
+ 
+ wear_trait_born_warriors:0 "Guerreiros Natos"
+ wear_trait_born_warriors_desc:0 "A espécie dominante deste império é composta por Guerreiros Natos."
+
+ wear_trait_competitive:0 "Competitivos"
+ wear_trait_competitive_desc:0 "A espécie dominante deste império é Competitiva."
+
+ #wear_trait_focused:0 "Focados"
+ #wear_trait_focused_desc:0 "A espécie dominante deste império é Focada."
+ 
+ wear_trait_aggressive:0 "Agressivos"
+ wear_trait_aggressive_desc:0 "A espécie dominante deste império é Agressiva."
+ 
+ wear_trait_extremely_aggressive:0 "Extremamente Agressivos"
+ wear_trait_extremely_aggressive_desc:0 "A espécie dominante deste império é Extremamente Agressiva."
+ 
+ wear_trait_lateral_thinkers:0 "Pensadores Laterais"
+ wear_trait_lateral_thinkers_desc:0 "A espécie dominante deste império é composta por Pensadores Laterais."
+ 
+ wear_trait_belligerent:0 "Beligerante"
+ wear_trait_belligerent_desc:0 "A espécie dominante deste império é Beligerante."
+
+ wear_trait_fast_analysers:0 "Analistas Hábeis"
+ wear_trait_fast_analysers_desc:0 "A espécie dominante deste império é composta por Analistas Hábeis."
+ 

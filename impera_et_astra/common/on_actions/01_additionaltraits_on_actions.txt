@@ -1,0 +1,79 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {	
+		additional_traits.1			#Sociable
+		additional_traits.2 		#Hateful
+		additional_traits.3 		#Born_Warriors
+		additional_traits.4			#Competitive
+	#	additional_traits.5 		#Focused
+		additional_traits.6 		#Aggressive
+		additional_traits.7 		#Extremely Aggressive
+		additional_traits.8 		#Lateral Thinkers
+		additional_traits.9 		#Roboticians
+		additional_traits.10 		#Belligerent
+		additional_traits.11 		#Fast Analysers
+		additional_traits.12 		#Psionics
+		
+		
+	}
+}
+
+on_modification_complete = {
+	events = {	
+		additional_traits.1 		#Sociable
+		additional_traits.2 		#Hateful
+		additional_traits.3 		#Born_Warriors
+		additional_traits.4 		#Competitive
+	#	additional_traits.5 		#Focused
+		additional_traits.6 		#Aggressive
+		additional_traits.7 		#Extremely Aggressive
+		additional_traits.8 		#Lateral Thinkers
+	#	NO ROBOTICIANS
+		additional_traits.10 		#Belligerent
+		additional_traits.11 		#Fast Analysers
+	#	NO PSIONICS
+		
+		additional_traits_rem.1 	#Sociable
+		additional_traits_rem.2 	#Hateful
+		additional_traits_rem.3 	#Born_Warriors
+		additional_traits_rem.4 	#Competitive
+	#	additional_traits_rem.5 	#Focused
+		additional_traits_rem.6 	#Aggressive
+		additional_traits_rem.7 	#Extremely Aggressive
+		additional_traits_rem.8 	#Lateral Thinkers
+	#	NO ROBOTICIANS
+		additional_traits_rem.10 	#Belligerent
+		additional_traits_rem.11 	#Fast Analysers
+	#	NO PSIONICS
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		additional_traits.1 		#Sociable
+		additional_traits.2 		#Hateful
+		additional_traits.3 		#Born_Warriors
+		additional_traits.4 		#Competitive
+	#	additional_traits.5 		#Focused
+		additional_traits.6 		#Aggressive
+		additional_traits.7 		#Extremely Aggressive
+		additional_traits.8 		#Lateral Thinkers
+	#	NO ROBOTICIANS
+		additional_traits.10 		#Belligerent
+		additional_traits.11 		#Fast Analysers
+	#	NO PSIONICS
+
+		additional_traits_rem.1 	#Sociable
+		additional_traits_rem.2 	#Hateful
+		additional_traits_rem.3 	#Born_Warriors
+		additional_traits_rem.4 	#Competitive
+	#	additional_traits_rem.5 	#Focused
+		additional_traits_rem.6 	#Aggressive
+		additional_traits_rem.7 	#Extremely Aggressive
+		additional_traits_rem.8 	#Lateral Thinkers
+	#	NO ROBOTICIANS
+		additional_traits_rem.10 	#Belligerent
+		additional_traits_rem.11 	#Fast Analysers
+	#	NO PSIONICS
+	}
+}

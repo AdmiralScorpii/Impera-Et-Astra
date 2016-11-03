@@ -1,0 +1,147 @@
+﻿l_russian:
+####################################
+ # Traits
+ ####################################
+ #Handicaps
+ 
+ trait_ephemeral:0 "Эфемерные"
+ trait_ephemeral_desc:0 "§LЭтот вид менее устойчив, чем остальные и его представители умирают раньше.§!\n"
+ 
+ trait_easily_distracted:0 "Легко Отвлекающиеся"
+ trait_easily_distracted_desc:0 "§LПредставители этого вида очень легко увлекаются, но не надолго.§!\n"
+ 
+ trait_simple_minded:0 "Туповатые"
+ trait_simple_minded_desc:0 "§LЗвезды до сих пор не понимают, как этот вид достиг сверхсветовых скоростей .§!\n"
+ 
+ trait_lazy:0 "Ленивые"
+ trait_lazy_desc:0 "§LЭтот вид никогда не работает слишком много.§!\n"
+ 
+ trait_wasteful:0 "Wasteful"
+ trait_wasteful_desc:0 "§LThis species is economicaly inefficient and tends to often spend their funds on useless things.§!\n"
+ 
+ trait_lethargic:0 "Летаргические"
+ trait_lethargic_desc:0 "§LЭтот вид никогда не торопится с работой. Зачем делать сегодня, если можно сделать завтра?§!\n"
+ 
+ trait_unfit_engineers:0 "Бездарные инженеры"
+ trait_unfit_engineers_desc:0 "§LПредставители этой расы с трудом понимают даже основы инженерного искусства.§!\n" 
+ 
+ trait_unfit_physicists:0 "Бездарные физики"
+ trait_unfit_physicists_desc:0 "§LПредставители этой расы с трудом понимают даже основы теоретической физики.§!\n"
+ 
+ trait_unfit_sociologists:0 "Бездарные социологи"
+ trait_unfit_sociologists_desc:0 "§LПредставители этой расы с трудом понимают даже основы социологии.§!\n"
+ 
+ trait_hateful:0 "Hateful"
+ trait_hateful_desc:0 "§LThe revolting manners and customs of this species make that everybody avoids them.\n\nThis trait also decreases Trust Growth by 25%.§!\n"
+ 
+ trait_hunter_gatherers:0 "Hunter-Gatherers"
+ trait_hunter_gatherers_desc:0 "This species has a deep tradition of living off the land and is inexperimented when it comes to modern agriculture.§!\n"
+ 
+ trait_violent:0 "Violent"
+ trait_violent_desc:0 "There is a prevalent biological predisposition toward infighting among this species.§!\n"
+ 
+ trait_free_spirits:0 "Free Spirits"
+ trait_free_spirits_desc:0 "These people are free-thinking by nature and more likely differ from the governing ethics.§!\n"
+ 
+ trait_iconoclastic:0 "Iconoclastic"
+ trait_iconoclastic_desc:0 "While this species doesn't seek to overthrow traditional institutions and ideas, it's probably just a question of time.§!\n"
+
+ trait_delicate:0 "Delicate"
+ trait_delicate_desc:0 "§LMembers of this species are quick to become hurt. They are not able to withstand a lot phyiscally.§!\n"
+ 
+ trait_weak_willed:0 "Weak Willed"
+ trait_weak_willed_desc:0 "§LThis species buckles rapidly under pressure.§!\n"
+ 
+ trait_very_slow_breeders:0 "Very Slow Breeders"
+ trait_very_slow_breeders_desc:0 "§LThis species reproduces at a very slow rate, lowering population growth.§!\n"
+ 
+ ###########################################################################################################################################################
+ #Neutral
+ 
+ #trait_focused:0 "Focused"
+ #trait_focused_desc:0 "§LThis species concentrates its specialists on one research at one time.\n\nThis trait also removed one research alternative.§!\n"
+ 
+ ###########################################################################################################################################################
+ #Avantages
+ 
+ trait_multitasking:0 "Мильтизадачные"
+ trait_multitasking_desc:0 "§LУмение этого вида делать две вещи одновременно ускоряет их техничиский прогресс.§!\n"
+ 
+ trait_easily_satisfied:0 "Непривередливые"
+ trait_easily_satisfied_desc:0 "§LПредставителям этого вида достаточно удолетворения их базовых потребностей.§!\n"
+ 
+ trait_born_warriors:0 "Прирождённые Воины"
+ trait_born_warriors_desc:0 "§LЛучшие философы этого вида пришли к единому выводу: ответ всему - война.\n\nThis trait also add +5% damage to your fleet.§!\n"
+ 
+ trait_sociable:0 "Sociable"
+ trait_sociable_desc:0 "§LThis species, by instinct or tradition, is used to discuss with all parties.\n\nThis trait also increases Trust Growth by 25%.§!\n"
+ 
+ trait_competitive:0 "Competitive"
+ trait_competitive_desc:0 "§LRituals or incessant fights, this species live for confrontation.\n\nThis trait add +50% to Rivalty Influence Gain.§!\n"
+ 
+ trait_aggressive:0 "Aggressive"
+ trait_aggressive_desc:0 "§LCooperation isn't exactly a strong point of this species.\n\nThis trait allows a (1) max Rivalry.§!\n"
+ 
+ trait_extremely_aggressive:0 "Extremely Aggressive"
+ trait_extremely_aggressive_desc:0 "§LThis species feels threatened by other species.\n\nThis trait allows two (2) max Rivalry.§!\n"
+ 
+ trait_zealous_defenders:0 "Zealous Defenders"
+ trait_zealous_defenders_desc:0 "§LThis species fights with an ungodly zeal when threatened.§!\n"
+ 
+ trait_lateral_thinkers:0 "Lateral Thinkers"
+ trait_lateral_thinkers_desc:0 "This species is used to battles using all the three dimensions, space isn't a novelty for them.\n\nThis trait boost your fleet damage by 10%.§!\n"
+  
+ trait_roboticians:0 "Roboticians"
+ trait_roboticians_desc:0 "§LThis species have discovered robotics before faster-than-light travel.\n\nThis trait gives the technology robotic_workers at game start only.§!\n"
+ 
+ trait_belligerent:0 "Belligerent"
+ trait_belligerent_desc:0 "§LThis species thrives in confrontation.\n\nThis trait allows a (1) max Rivalry a,d adds +50% to Rivalry Influence Gain.§!\n"
+ 
+ trait_fast_analysers:0 "Fast Analysers"
+ trait_fast_analysers_desc:0 "§LThis species rarely loses time on insignificant datas.\n\nThis trait speed up surveys by 10%.§!\n"
+ 
+ trait_thermosynthetic:0 "Thermosynthetic"
+ trait_thermosynthetic_desc:0 "§LThis species gets an important part of its nutriments from their sun or others heat sources.§!\n" 
+
+ trait_war_lovers:0 "Friends of War"
+ trait_war_lovers_desc:0 "§LWar is Love, Peace is Hate. At least according to this species.§!\n"
+ 
+ trait_doulophage:0 "Doulophage"
+ trait_doulophage_desc:0 "§LMembers of this species not only keep slaves, but also eat them.§!\n"
+ 
+ trait_psionics:0 "Psionics"
+ trait_psionics_desc:0 "§LThis species initially possess psionic power and is aware of its uses.§!\n"
+  
+ ###########################################################################################################################################################
+ #Traits Modifiers
+ 
+ wear_trait_sociable:0 "Sociable"
+ wear_trait_sociable_desc:0 "The dominant species of this empire is Sociable."
+ 
+ wear_trait_hateful:0 "Hateful"
+ wear_trait_hateful_desc:0 "The dominant species of this empire is Hateful."
+
+ wear_trait_born_warriors:0 "Born-Warriors"
+ wear_trait_born_warriors_desc:0 "The dominant species of this empire is composed by Born-Warriors."
+
+ wear_trait_competitive:0 "Competitive"
+ wear_trait_competitive_desc:0 "The dominant species of this empire is Competitive."
+
+ #wear_trait_focused:0 "Focused"
+ #wear_trait_focused_desc:0 "The dominant species of this empire is Focused"
+
+ wear_trait_aggressive:0 "Aggressive"
+ wear_trait_aggressive_desc:0 "The dominant species of this empire is Aggressive."
+
+ wear_trait_extremely_aggressive:0 "Extremely Aggressive"
+ wear_trait_extremely_aggressive_desc:0 "The dominant species of this empire is Extremely Aggressive."
+
+ wear_trait_lateral_thinkers:0 "Lateral Thinkers"
+ wear_trait_lateral_thinkers_desc:0 "The dominant species of this empire is composed by Lateral Thinkers."
+ 
+ wear_trait_belligerent:0 "Belligerent"
+ wear_trait_belligerent_desc:0 "The dominant species of this empire is Belligerent."
+
+ wear_trait_fast_analysers:0 "Fast Analysers"
+ wear_trait_fast_analysers_desc:0 "The dominant species of this empire is composed by Fast Analysers."
+ 

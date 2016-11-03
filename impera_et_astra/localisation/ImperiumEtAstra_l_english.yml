@@ -128,9 +128,6 @@
    #########################################################################
    #################### Personalities ######################################
    #########################################################################
-   
-   personality_zealous_slavers:0 "Zealous Slavers"
-   personality_zealous_slavers_desc:0 "Spiritual or religious zealots who believe that by the divine power of their beliefs that nonbelievers and aliens alike can be enslaved in the name of their creed."
    personality_migratory_pilgrims:0 "Migratory Pilgrims"
    personality_migratory_pilgrims_desc:0 "This species believes that by exploring and travelling the galaxy and interacting with the various states and species that inhabit it that they become closer to their beliefs."
    personality_imperialist_conquerors:0 "Imperialist Conquerors"
@@ -153,3 +150,11 @@
    personality_nuetral_militarists_desc:0 "A species that wishes only to exist and to rule their empire's territory but realize that they must also maintain a defensive, standing army to ward off those who wish them harm."
    personality_indifferent_merchants:0 "Indifferent Merchants"
    personality_indifferent_merchants_desc:0 "Merchants that only wish to conduct business with those who will take their business."
+   personality_malevolent_capitalists:0 "Malevolent Capitalists"
+   personality_malevolent_capitalists_desc:0 "Capitalists who view other species and states as sources of profit and productivity to be annexed into their system."
+   personality_military_subjagators:0 "Military Subjugators"
+   personality_military_subjagators_desc:0 "Militarists who conquer, rule and/or enslave other races and states as a way of proving their military and cultural superiority."
+   personality_republican_liberators:0 "Republican Liberators"
+   personality_republican_liberators_desc:0 "A species of republicans that believe that nations and species subjugated by force are to be freed from their oppressors."
+   personality_representative_economists:0 "Representative Economists"
+   personality_representative_economists_desc:0 "A species of corporate or merchantile peoples that believe in order to create an optimal economy, all businesses and demographics are to be represented in government."

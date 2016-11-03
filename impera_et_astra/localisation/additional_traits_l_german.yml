@@ -1,0 +1,147 @@
+﻿l_german:
+####################################
+ # Traits
+ ####################################
+ #Handicaps
+ 
+ trait_ephemeral:0 "Kurzlebig"
+ trait_ephemeral_desc:0 "§LVertreter dieser Spezies sind extrem kurzlebig und können sich nur kurze Zeit den Herausforderungen des Alls stellen.§!\n"
+ 
+ trait_easily_distracted:0 "Konzentrationssschwach"
+ trait_easily_distracted_desc:0 "§LLängeres und gründliches Nachdenken ist nicht die Stärke dieser Spezies.§!\n"
+ 
+ trait_simple_minded:0 "Einfältig"
+ trait_simple_minded_desc:0 "§LWie dieses Spezies es geschafft hat, zu den Sternen zu reisen, ist ein Rätsel.§!\n"
+ 
+ trait_lazy:0 "Faulpelz"
+ trait_lazy_desc:0 "§LVertreter dieser Spezies sorgen dafür, das für andere immer genug Arbeit übrig bleibt.§!\n"
+ 
+ trait_wasteful:0 "Wasteful"
+ trait_wasteful_desc:0 "§LThis species use too much to do useless things.§!\n"
+ 
+ trait_lethargic:0 "Lethargisch"
+ trait_lethargic_desc:0 "§LDiese Spezies nimmt sich bei allem gebührend Zeit. Die Arbeit wird schon eines Tages fertig werden, warum also hetzen ?§!\n"
+ 
+ trait_unfit_engineers:0 "Schlechte Ingenieure"
+ trait_unfit_engineers_desc:0 "Vertreter dieser Spezies haben große Schwierigkeiten damit, die fundamentalen Konzepte des Maschinenbaus zu verstehen.\n"
+ 
+ trait_unfit_physicists:0 "Schlechte Physiker"
+ trait_unfit_physicists_desc:0 "Vertreter dieser Spezies haben große Schwierigkeiten damit, die fundamentalen Konzepte der theoretischen Physik zu verstehen.\n"
+ 
+ trait_unfit_sociologists:0 "Schlechte Soziologen"
+ trait_unfit_sociologists_desc:0 "Vertreter dieser Spezies haben große Schwierigkeiten damit, die fundamentalen Konzepte der Soziologie zu verstehen.\n"
+ 
+ trait_hateful:0 "Abscheulich"
+ trait_hateful_desc:0 "§LDie beleidigenden Verhaltensweisen und Traditionen schrecken andere Spezies ab.\n\nThis trait also decreases Trust Growth by 25%.§!\n"
+
+ trait_hunter_gatherers:0 "Jäger und Sammler"
+ trait_hunter_gatherers_desc:0 "§LDiese Spezies lebt im Einklang mit der Natur.§!\n"
+ 
+ trait_violent:0 "Gewalttätig"
+ trait_violent_desc:0 "§LEs gibt eine genetische oder gesellschaftliche Veranlagung zu gewalttätigem Verhalten bei dieser Spezies.§!\n"
+
+ trait_free_spirits:0 "Freigeist"
+ trait_free_spirits_desc:0 "§LVertreter dieser Spezies sind von Natur aus freigeistig und tendieren stark dazu abweichende Haltungen anzunehmen.§!\n"
+
+ trait_iconoclastic:0 "Ikonoklastisch"
+ trait_iconoclastic_desc:0 "§LAuch wenn diese Spezies nicht direkt darauf aus ist, traditionelle Institutionen und Ideen zu verwerfen, wird es dennoch darauf hinauslaufen.§!\n"
+
+ trait_delicate:0 "Empfindlich"
+ trait_delicate_desc:0 "§LVertreter dieser Spezies verletzen sich schnell. Ihre Körper halten physisch kaum etwas aus.§!\n"
+
+ trait_weak_willed:0 "Schwacher Wille"
+ trait_weak_willed_desc:0 "§LDiese Spezies beugt sich schnell unter Druck.§!\n"
+
+ trait_very_slow_breeders:0 "Sehr langsame Fortpflanzung"
+ trait_very_slow_breeders_desc:0 "§LDiese Spezies vermehrt sich mit einer sehr geringen Rate, wodurch das allgemeine Bevölkerungswachstum stark gehemmt wird.§!\n"
+ 
+ ###########################################################################################################################################################
+ #Neutral
+ 
+ #trait_focused:0 "Focused"
+ #trait_focused_desc:0 "§LThis species concentrates its specialists on one research at one time.\n\nThis trait also removed one research alternative.§!\n"
+ 
+ ###########################################################################################################################################################
+ #Avantages
+ 
+ trait_multitasking:0 "Multitasking"
+ trait_multitasking_desc:0 "§LDie Vertreter dieser Spezies haben die Fähigkeit an mehreren Problemen gleichzeitig zu arbeiten, was auf dem Gebiet der Forschung sehr nützlich ist.§!\n"
+ 
+ trait_easily_satisfied:0 "Schnell zufrieden"
+ trait_easily_satisfied_desc:0 "§LDiese Spezies ist sehr anspruchslos und mit minimalen Aufwand zufrieden zu stellen.§!\n"
+
+ trait_born_warriors:0 "Geborene Krieger"
+ trait_born_warriors_desc:0 "§LDie besten Philosophen dieser Spezies kamen alle auf die selbe universelle Wahrheit: Krieg ist die Antwort auf alles.\n\nDiese Eigenschaft erhöht den Flottenschaden um 5%.§!\n"
+
+ trait_sociable:0 "Umgänglich"
+ trait_sociable_desc:0 "§LDurch Instinkt oder Tradition hat diese Spezies viel Erfahrung mit dem Umgang mit anderen Arten gesammelt.\n\nThis trait also increases Trust Growth by 25%.§!\n"
+
+ trait_competitive:0 "Wetteifernd"
+ trait_competitive_desc:0 "§LEgal ob es Rituale oder unaufhörliche Kämpfe sind, die Spezies lebt für die Konfrontation.\n\nDiese Eigenschaft erhöht den Einflusszuwachs je Rivalität um 50%.§!\n"
+
+ trait_aggressive:0 "Aggressiv"
+ trait_aggressive_desc:0 "§LKooperation ist die nicht unbedingt die stärkste Eigenschaft dieser Spezies.\n\nDiese Eigenschaft erhöht die Anzahl erlaubter Rivalen um 1.§!\n"
+
+ trait_extremely_aggressive:0 "Extrem aggressiv"
+ trait_extremely_aggressive_desc:0 "§LDiese Spezies fühlt sich durch andere provoziert.\n\nDiese Eigenschaft erhöht die Anzahl erlaubter Rivalen um 2.§!\n"
+  
+ trait_zealous_defenders:0 "Eifrige Verteidigen"
+ trait_zealous_defenders_desc:0 "§LDiese Spezies kämpft mit unglaublichem Eifer, wenn sie angegriffen wird.§!\n"
+
+ trait_lateral_thinkers:0 "Räumliches Denken"
+ trait_lateral_thinkers_desc:0 "§LDiese Spezies weiß, wie man im dreidimensionalem Raum kämpft. Das All ist daher nicht neues für sie.\n\nDiese Eigenschaft erhöht den Flottenschaden um 10%.§!\n"
+ 
+ trait_roboticians:0 "Robotisch"
+ trait_roboticians_desc:0 "§LDiese Spezies hat Robotertechnologie noch vor der Überlichtgeschwindigkeit erfunden.\n\nDiese Eigenschaft schaltet die Technologie Roboterarbeiter zum Spielstart frei.§!\n"
+ 
+ trait_belligerent:0 "Streitlustig"
+ trait_belligerent_desc:0 "§LDiese Spezies blüht bei Konfrontationen auf.\n\nDiese Eigenschaft erhöht die Zahl der erlaubten Rivalitäten um 1 und erhöht den Einflussgewinn durch Rivalitäten um 50%.§!\n"
+
+ trait_fast_analysers:0 "Schnelle Analytiker"
+ trait_fast_analysers_desc:0 "§LDiese Spezies kann Wichtiges schnell von Unwichtigem trennen.\n\nDiese Eigenschaft erhöht die Erkundungsgeschwindikeit um 10%.§!\n"
+
+ trait_thermosynthetic:0 "Thermosyntesisch"
+ trait_thermosynthetic_desc:0 "§LDiese Spezies zieht viel Nahrung aus der Sonne oder andere Wärmequellen.§!\n"
+
+ trait_war_lovers:0 "Freunde des Krieges"
+ trait_war_lovers_desc:0 "§LKrieg ist Liebe, Friede ist Hass. Also der Spezies nach.§!\n"
+ 
+ trait_doulophage:0 "Doulophag"
+ trait_doulophage_desc:0 "§LDiese Spezies besitzt nicht nur Sklaven, sondern isst sie auch.§!\n"
+ 
+ trait_psionics:0 "Psionics"
+ # trait_psionics_desc:0 "§LThis species initially possess psionic power and is aware of its uses.§!\n"
+  
+ ###########################################################################################################################################################
+ #Traits Modifiers
+ 
+ wear_trait_sociable:0 "Umgänglich"
+ wear_trait_sociable_desc:0 "Die dominante Spezies dieses Reiches ist sehr umgänglich."
+
+ wear_trait_hateful:0 "Abscheulich"
+ wear_trait_hateful_desc:0 "Die dominante Spezies dieses Reiches ist abscheulich."
+
+ wear_trait_born_warriors:0 "Geborene Krieger"
+ wear_trait_born_warriors_desc:0 "Die dominate Spezies dieses Reiches sind geborene Krieger."
+
+ wear_trait_competitive:0 "Wetteifernd"
+ wear_trait_competitive_desc:0 "Die dominate Spezies dieses Reiches ist wetteifernd."
+
+ #wear_trait_focused:0 "Fokussiert"
+ #wear_trait_focused_desc:0 "Die dominate Spezies dieses Reiches denkt fokussiert."
+
+ wear_trait_aggressive:0 "Aggressiv"
+ wear_trait_aggressive_desc:0 "Die dominate Spezies dieses Reiches ist aggressiv."
+
+ wear_trait_extremely_aggressive:0 "Extrem aggressiv"
+ wear_trait_extremely_aggressive_desc:0 "Die dominate Spezies dieses Reiches extrem aggressiv."
+
+ wear_trait_lateral_thinkers:0 "Räumliches Denken"
+ wear_trait_lateral_thinkers_desc:0 "Die dominate Spezies dieses Reiches ist gut im räumlichen Denken."
+ 
+ wear_trait_belligerent:0 "Streitlustig"
+ wear_trait_belligerent_desc:0 "Die dominante Spezies dieses Reiches ist streitlustig."
+
+ wear_trait_fast_analysers:0 "Schnelle Analytiker"
+ wear_trait_fast_analysers_desc:0 "Die dominate Spezies dieses Reiches besteht aus schnellen Analytikern."
+ 
