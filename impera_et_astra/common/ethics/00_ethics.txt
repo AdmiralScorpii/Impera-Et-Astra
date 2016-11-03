@@ -257,7 +257,7 @@ ethic_fanatic_pacifist = {
 	}
 	
 	random_weight = {
-		value = 300 		# rare ethic
+		value = 150	# rare ethic
 	}
 }
 
@@ -282,7 +282,7 @@ ethic_pacifist = {
 	}
 	
 	random_weight = {
-		value = 350	# uncommon ethic
+		value = 250	# uncommon ethic
 	}
 }
 

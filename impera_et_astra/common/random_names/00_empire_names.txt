@@ -205,7 +205,6 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "democracy_mil"
 	parts = {
-		"Republic" = 3
 		"Commonwealth" = 3
 		"Confederation" = 3
 		"Confederacy" = 3
@@ -223,7 +222,6 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "democracy_spi"
 	parts = {
-		"Republic" = 3
 		"Commonwealth" = 3
 		"Confederation" = 3
 		"Confederacy" = 3
@@ -249,7 +247,6 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "democracy_mat"
 	parts = {
-		"Republic" = 3
 		"Commonwealth" = 3
 		"Confederation" = 3
 		"Confederacy" = 3
@@ -276,7 +273,6 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "democracy_pac"
 	parts = {
-		"Republic" = 3
 		"Commonwealth" = 3
 		"Confederation" = 3
 		"Confederacy" = 3
@@ -302,7 +298,6 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "democracy_gen"
 	parts = {
-		"Republic" = 3
 		"Commonwealth" = 3
 		"Confederation" = 3
 		"Confederacy" = 3
@@ -457,7 +452,6 @@ empire_name_parts_list = {
 		"Interstellar" = 1
 		"Galactic" = 1
 		"United" = 3
-		"Democratic" = 1
 	}
 }
 
@@ -471,7 +465,6 @@ empire_name_parts_list = {
 		"Interstellar" = 1
 		"Galactic" = 1
 		"United" = 2
-		"Democratic" = 2
 	}
 }
 
@@ -482,7 +475,6 @@ empire_name_parts_list = {
 		"Interstellar" = 1
 		"Galactic" = 1
 		"United" = 3
-		"Democratic" = 3
 	}
 }
 
@@ -494,7 +486,6 @@ empire_name_parts_list = {
 		"Interstellar" = 1
 		"Galactic" = 1
 		"United" = 3
-		"Democratic" = 3
 	}
 }
 
@@ -505,7 +496,6 @@ empire_name_parts_list = {
 		"Interstellar" = 1
 		"Galactic" = 1
 		"United" = 3
-		"Democratic" = 3
 	}
 }
 
@@ -759,7 +749,6 @@ empire_name_parts_list = {
 		"Galactic" = 1
 		"Star" = 3
 		"Stellar" = 1
-		"Democratic" = 3
 	}
 }
 
@@ -775,7 +764,6 @@ empire_name_parts_list = {
 		"Galactic" = 1
 		"Star" = 2
 		"Stellar" = 1
-		"Democratic" = 1
 	}
 }
 
@@ -788,7 +776,6 @@ empire_name_parts_list = {
 		"Galactic" = 1
 		"Star" = 3
 		"Stellar" = 1
-		"Democratic" = 1
 	}
 }
 
@@ -802,7 +789,6 @@ empire_name_parts_list = {
 		"Galactic" = 1
 		"Star" = 3
 		"Stellar" = 1
-		"Democratic" = 2
 	}
 }
 
@@ -815,7 +801,6 @@ empire_name_parts_list = {
 		"Galactic" = 2
 		"Star" = 3
 		"Stellar" = 1
-		"Democratic" = 1
 	}
 }
 
