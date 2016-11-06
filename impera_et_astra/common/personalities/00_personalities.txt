@@ -474,7 +474,7 @@ capitalist_profiteers = {
 			has_trait = "trait_doulophage"
 		}
 		modifier = {
-			factor = -3
+			factor = -2
 			has_trait = "trait_conformists"
 		}
 		modifier = {
@@ -556,7 +556,7 @@ roving_traders = {
 			has_trait = "trait_charismatic"
 		}
 		modifier = {
-			factor = 1 
+			factor = 2 
 			OR = {
 				has_ethic = "ethic_fanatic_xenophile"
 				has_ethic = "ethic_xenophile"
@@ -669,7 +669,42 @@ democratic_isolationists = {
 	}
 	
 	weight_modifier = {
-		weight = 100
+		weight = 10
+		modifier = {
+			factor = 1
+			has_ethic = "ethic_xenophobe"
+		}
+		modifier = {
+			factor = 2 
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_simple_minded"
+		}
+		modifier = {
+			factor = 2 
+			has_trait = "trait_solitary"
+		}
+		modifier = {
+			factor = 1 
+			has_trait = "trait_repugnant"
+		}
+		modifier = {
+			factor = -2
+			has_trait = "trait_free_spirit"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_communal"
+		}
+		modifier = {
+			factor = -2 
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
 	}	
 }
 
@@ -729,8 +764,43 @@ sovereign_monarchists = {
 	}
 	
 	weight_modifier = {
-		weight = 100
-	}	
+		weight = 10
+		modifier = {
+			factor = 1
+			has_ethic = "ethic_xenophobe"
+		}
+		modifier = {
+			factor = 2 
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_simple_minded"
+		}
+		modifier = {
+			factor = 2 
+			has_trait = "trait_solitary"
+		}
+		modifier = {
+			factor = 1 
+			has_trait = "trait_repugnant"
+		}
+		modifier = {
+			factor = -2
+			has_trait = "trait_free_spirit"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_communal"
+		}
+		modifier = {
+			factor = -2 
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
 }
 
 laissez_faire_economists = {
@@ -818,7 +888,7 @@ laissez_faire_economists = {
 		}
 		modifier = {
 			factor = 3 
-			has_trait = "trait_robotician"
+			has_trait = "trait_roboticians"
 		}
 		modifier = {
 			factor = 1 
@@ -989,7 +1059,35 @@ ambitious_autocrats = {
 	}
 	
 	weight_modifier = {
-		weight = 100			
+		weight = 10
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_solitary"	
+				has_trait = "trait_aggressive"
+				has_trait = "trait_competitive"
+			}			
+		}	
+		modifier = {
+			factor = 2
+			has_trait = "trait_extremely_aggressive"
+		}
+		modifier = {
+			factor = 1 
+			has_trait = "trait_roboticians"
+		}
+		modifier = {
+			factor = -2 
+			has_trait = "trait_easily_satisfied"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_weak_willed"
+		}
+		modifier = {
+			factor = -1 
+			has_trait = "trait_wasteful"
+		}
 	}
 }
 
@@ -1623,7 +1721,7 @@ evil_imperialists = {
 	}
 	
 	weight_modifier = {
-		weight = 5
+		weight = 10
 		modifier = {
 			factor = 3
 			has_trait = "trait_hateful"		
@@ -1653,7 +1751,97 @@ evil_imperialists = {
 			has_trait = "trait_friends_of_war"
 		}
 		modifier = {
-			factor = -10 
+			factor = -3
+			OR = {
+				has_trait = "trait_free_spirit"
+				has_trait = "trait_delicate"
+				has_trait = "trait_sociable"
+				has_trait = "trait_charismatic"
+			}
+		}
+	}	
+}
+
+traditional_slavers = {
+	aggressiveness = 1.2
+	trade_willingness = 0.1
+	bravery = 1.0
+	
+	military_spending = 1.1
+	colony_spending = 1.0	
+	
+	federation_acceptance = -30
+	nap_acceptance = -30
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = -100
+	
+	advanced_start_chance = 25
+	
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.5
+	shields_ratio = 0.5
+	afterburners_ratio = 0.25
+	
+	threat_modifier = 1.2
+	threat_others_modifier = 1.2
+	friction_modifier = 1.3
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_ethic = "ethic_fanatic_individualist"
+			}
+			OR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+		NOT = {
+			has_ethic = "ethic_pacifist"
+			has_ethic = "ethic_fanatic_pacifist"
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
+			has_ethic = "ethic_individualist"
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1
+			has_trait = "trait_hateful"		
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_simple_minded"
+		}
+		modifier = {
+			factor = 2 
+			OR = {
+				has_trait = "trait_weak"
+				has_trait = "trait_repugnant"
+			}
+		}
+		modifier = {
+			factor = -3
 			OR = {
 				has_trait = "trait_free_spirit"
 				has_trait = "trait_delicate"
