@@ -2,13 +2,13 @@ greetings = {
 
 	### AI Personality Greetings
 
-	# Honorbound Warriors
-	HW_HOSTILE_GREETING_01 = {
+	# Imperialist Conquerors
+	IC_HOSTILE_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -16,12 +16,12 @@ greetings = {
 			}
 		}
 	}
-	HW_HOSTILE_GREETING_02 = {
+	IC_HOSTILE_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -29,18 +29,12 @@ greetings = {
 			}
 		}
 	}
-	HW_HOSTILE_GREETING_03 = {
+	IC_HOSTILE_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
-			FROM = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -48,7 +42,7 @@ greetings = {
 			}
 		}
 	}
-	HW_DOMINEERING_GREETING_01 = {
+	IC_DOMINEERING_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
@@ -60,50 +54,34 @@ greetings = {
 			}
 		}
 	}
-	HW_NEUTRAL_GREETING_01 = {
+	IC_NEUTRAL_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	HW_NEUTRAL_GREETING_02 = {
+	IC_NEUTRAL_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	HW_NEUTRAL_GREETING_03 = {
+	IC_NEUTRAL_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
-			FROM = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			NOT = { is_at_war_with = FROM }
-			is_neutral_to = FROM
-		}
-	}
-	HW_NEUTRAL_GREETING_04 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			FROM = {
 				OR = {
 					has_ethic = ethic_militarist
@@ -114,22 +92,22 @@ greetings = {
 			is_neutral_to = FROM
 		}
 	}
-	HW_THREATENED_GREETING_01 = {
+	IC_THREATENED_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
 		}
 	}
-	HW_FRIENDLY_GREETING_01 = {
+	IC_FRIENDLY_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -138,12 +116,12 @@ greetings = {
 			}
 		}
 	}
-	HW_FRIENDLY_GREETING_02 = {
+	IC_FRIENDLY_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_at_war = no
@@ -154,12 +132,12 @@ greetings = {
 			}
 		}
 	}
-	HW_FRIENDLY_GREETING_03 = {
+	IC_FRIENDLY_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_at_war = yes
@@ -170,16 +148,16 @@ greetings = {
 			}
 		}
 	}
-	HW_FRIENDLY_GREETING_04 = {
+	IC_FRIENDLY_GREETING_04 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			FROM = {
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
 				}
 			}
 			NOT = { is_same_species = FROM }
@@ -191,12 +169,12 @@ greetings = {
 			}
 		}
 	}
-	HW_FRIENDLY_GREETING_05 = {
+	IC_FRIENDLY_GREETING_05 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			is_in_federation_with = FROM
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
@@ -207,64 +185,66 @@ greetings = {
 			}
 		}
 	}
-	HW_WAR_GREETING_01 = {
+	IC_WAR_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			is_at_war_with = FROM
 		}
 	}
-	HW_WAR_GREETING_02 = {
+	IC_WAR_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			is_at_war_with = FROM
 		}
 	}
-	HW_WAR_GREETING_03 = {
+	IC_WAR_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			is_at_war_with = FROM
 		}
 	}
-	HW_VASSAL_GREETING_01 = {
+	IC_VASSAL_GREETING_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
 		}
 	}
-	HW_VASSAL_GREETING_DISLOYAL_01 = {
+	IC_VASSAL_GREETING_DISLOYAL_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = honorbound_warriors
+			has_ai_personality = imperialist_conquerors
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
 		}
 	}
-	# Ruthless Capitalists
-	RC_HOSTILE_GREETING_01 = {
+	
+	# Enlightened Peacekeepers
+	
+	EP_HOSTILE_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -272,16 +252,16 @@ greetings = {
 			}
 		}
 	}
-	RC_HOSTILE_GREETING_02 = {
+	EP_HOSTILE_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			FROM = {
 				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
 				}
 			}
 			NOT = { is_at_war_with = FROM }
@@ -291,24 +271,24 @@ greetings = {
 			}
 		}
 	}
-	RC_DOMINEERING_GREETING_01 = {
+	EP_DOMINEERING_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_domineering_to = FROM
 			}
 		}
 	}
-	RC_NEUTRAL_GREETING_01 = {
+	EP_NEUTRAL_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
@@ -318,33 +298,33 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	RC_NEUTRAL_GREETING_03 = {
+	EP_NEUTRAL_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			FROM = {
 				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
 				}
 			}
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	RC_NEUTRAL_GREETING_04 = {
+	EP_NEUTRAL_GREETING_04 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			FROM = {
 				exists = overlord
 				overlord = { is_same_value = ROOT }
@@ -352,22 +332,22 @@ greetings = {
 			NOT = { is_at_war_with = FROM }
 		}
 	}
-	RC_THREATENED_GREETING_01 = {
+	EP_THREATENED_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
 		}
 	}
-	RC_FRIENDLY_GREETING_01 = {
+	EP_FRIENDLY_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -376,12 +356,12 @@ greetings = {
 			}
 		}
 	}
-	RC_FRIENDLY_GREETING_02 = {
+	EP_FRIENDLY_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -390,12 +370,12 @@ greetings = {
 			}
 		}
 	}
-	RC_FRIENDLY_GREETING_03 = {
+	EP_FRIENDLY_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -404,12 +384,12 @@ greetings = {
 			}
 		}
 	}
-	RC_FRIENDLY_GREETING_04 = {
+	EP_FRIENDLY_GREETING_04 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			is_in_federation_with = FROM
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -417,75 +397,79 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
 		}
 	}
-	RC_WAR_GREETING_01 = {
+	EP_WAR_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			is_at_war_with = FROM
 		}
 	}
-	RC_WAR_GREETING_02 = {
+	EP_WAR_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			is_at_war_with = FROM
 		}
 	}
-	RC_WAR_GREETING_03 = {
+	EP_WAR_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			is_at_war_with = FROM
+			OR = {
+				has_ai_personality = imperialist_conquerors
+				has_ai_personality = malevolent_captialists
+				has_ai_personality = evil_imperialists
+				has_ai_personality = traditional_slavers
+				has_ai_personality = military_subjugators
+			}
 		}
 	}
-	RC_WAR_GREETING_04 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = ruthless_capitalists
-			is_at_war_with = FROM
-		}
-	}
-	RC_VASSAL_GREETING_01 = {
+	EP_VASSAL_GREETING_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
 		}
 	}
-	RC_VASSAL_GREETING_DISLOYAL_01 = {
+	EP_VASSAL_GREETING_DISLOYAL_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = ruthless_capitalists
+			has_ai_personality = enlightened_peacekeepers
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
 		}
 	}
-	# Peaceful Traders
-	PT_HOSTILE_GREETING_01 = {
+	
+	# Roving Traders
+	
+	RT_HOSTILE_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -493,12 +477,12 @@ greetings = {
 			}
 		}
 	}
-	PT_HOSTILE_GREETING_02 = {
+	RT_HOSTILE_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -507,12 +491,12 @@ greetings = {
 			}
 		}
 	}
-	PT_HOSTILE_GREETING_03 = {
+	RT_HOSTILE_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			FROM = {
 				OR = {
@@ -526,45 +510,45 @@ greetings = {
 			}
 		}
 	}
-	PT_DOMINEERING_GREETING_01 = {
+	RT_DOMINEERING_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_domineering_to = FROM
 			}
 		}
 	}
-	PT_NEUTRAL_GREETING_01 = {
+	RT_NEUTRAL_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	PT_NEUTRAL_GREETING_02 = {
+	RT_NEUTRAL_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	PT_NEUTRAL_GREETING_03 = {
+	RT_NEUTRAL_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			FROM = {
 				OR = {
 					has_ethic = ethic_spiritualist
@@ -575,22 +559,22 @@ greetings = {
 			is_neutral_to = FROM
 		}
 	}
-	PT_THREATENED_GREETING_01 = {
+	RT_THREATENED_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
 		}
 	}
-	PT_FRIENDLY_GREETING_01 = {
+	RT_FRIENDLY_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -599,12 +583,12 @@ greetings = {
 			}
 		}
 	}
-	PT_FRIENDLY_GREETING_02 = {
+	RT_FRIENDLY_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -613,12 +597,12 @@ greetings = {
 			}
 		}
 	}
-	PT_FRIENDLY_GREETING_03 = {
+	RT_FRIENDLY_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			is_in_federation_with = FROM
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -628,51 +612,51 @@ greetings = {
 			}
 		}
 	}
-	PT_WAR_GREETING_01 = {
+	RT_WAR_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			is_at_war_with = FROM
 		}
 	}
-	PT_WAR_GREETING_02 = {
+	RT_WAR_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			is_at_war_with = FROM
 		}
 	}
-	PT_WAR_GREETING_03 = {
+	RT_WAR_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			is_at_war_with = FROM
 		}
 	}
-	PT_VASSAL_GREETING_01 = {
+	RT_VASSAL_GREETING_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
 		}
 	}
-	PT_VASSAL_GREETING_DISLOYAL_01 = {
+	RT_VASSAL_GREETING_DISLOYAL_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = peaceful_traders
+			has_ai_personality = roving_traders
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
@@ -1631,13 +1615,13 @@ greetings = {
 			is_disloyal_to = FROM
 		}
 	}
-	# Migratory Flock
+	# Migratory Pilgrims
 	MF_HOSTILE_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -1650,7 +1634,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_same_species = FROM }
 			OR = {
@@ -1664,7 +1648,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			FROM = {
 				OR = {
 					has_ethic = ethic_xenophobe
@@ -1683,7 +1667,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
@@ -1694,7 +1678,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
@@ -1704,7 +1688,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			FROM = {
 				OR = {
 					has_ethic = ethic_xenophobe
@@ -1720,7 +1704,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			FROM = {
 				OR = {
 					has_ethic = ethic_xenophile
@@ -1737,7 +1721,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
@@ -1748,7 +1732,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -1763,7 +1747,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -1778,7 +1762,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			FROM = {
 				OR = {
 					has_ethic = ethic_xenophile
@@ -1799,7 +1783,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			is_at_war_with = FROM
 		}
 	}
@@ -1808,7 +1792,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			is_at_war_with = FROM
 		}
 	}
@@ -1817,7 +1801,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
 		}
@@ -1827,7 +1811,7 @@ greetings = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			FROM = {
 				OR = {
 					has_ethic = ethic_militarist
@@ -1842,7 +1826,7 @@ greetings = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
@@ -1854,7 +1838,7 @@ greetings = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = migrating_flock
+			has_ai_personality = migrating_pilgrims
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
