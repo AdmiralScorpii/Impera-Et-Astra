@@ -397,9 +397,11 @@ greetings = {
 				is_cordial_to = FROM
 				is_protective_to = FROM
 			}
-			OR = {
-				has_ethic = ethic_pacifist
-				has_ethic = ethic_fanatic_pacifist
+			FROM = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}			
 			}
 		}
 	}
@@ -428,6 +430,7 @@ greetings = {
 		trigger = {
 			has_ai_personality = enlightened_peacekeepers
 			is_at_war_with = FROM
+			
 			OR = {
 				has_ai_personality = imperialist_conquerors
 				has_ai_personality = malevolent_captialists
@@ -551,8 +554,8 @@ greetings = {
 			has_ai_personality = roving_traders
 			FROM = {
 				OR = {
-					has_ethic = ethic_spiritualist
-					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
 			NOT = { is_at_war_with = FROM }
@@ -605,10 +608,16 @@ greetings = {
 			has_ai_personality = roving_traders
 			is_in_federation_with = FROM
 			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_friendly_to = FROM
-				is_cordial_to = FROM
-				is_protective_to = FROM
+			FROM = {
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}						
 			}
 		}
 	}
@@ -637,6 +646,27 @@ greetings = {
 		trigger = {
 			has_ai_personality = roving_traders
 			is_at_war_with = FROM
+			FROM = {
+				OR = {
+					has_ethic = ethic_xenophile 
+					has_ethic = ethic_fanatic_xenophile
+				}						
+			}
+		}
+	}
+	RT_WAR_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = roving_traders
+			is_at_war_with = FROM
+			FROM = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}						
+			}
 		}
 	}
 	RT_VASSAL_GREETING_01 = {
@@ -663,13 +693,13 @@ greetings = {
 			is_disloyal_to = FROM
 		}
 	}
-	# Hegemonic Imperialists
-	HI_HOSTILE_GREETING_01 = {
+	# Democratic Isolationists
+	DI_HOSTILE_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -678,12 +708,12 @@ greetings = {
 			}
 		}
 	}
-	HI_HOSTILE_GREETING_02 = {
+	DI_HOSTILE_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -691,12 +721,12 @@ greetings = {
 			}
 		}
 	}
-	HI_DOMINEERING_GREETING_01 = {
+	DI_DOMINEERING_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_same_species = FROM }
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -704,54 +734,54 @@ greetings = {
 			}
 		}
 	}
-	HI_DOMINEERING_GREETING_02 = {
+	DI_DOMINEERING_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_domineering_to = FROM
 			}
 		}
 	}
-	HI_NEUTRAL_GREETING_01 = {
+	DI_NEUTRAL_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	HI_NEUTRAL_GREETING_02 = {
+	DI_NEUTRAL_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			is_neutral_to = FROM
 		}
 	}
-	HI_THREATENED_GREETING_01 = {
+	DI_THREATENED_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			is_threatened_to = FROM
 		}
 	}
-	HI_FRIENDLY_GREETING_01 = {
+	DI_FRIENDLY_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -760,12 +790,12 @@ greetings = {
 			}
 		}
 	}
-	HI_FRIENDLY_GREETING_02 = {
+	DI_FRIENDLY_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -774,12 +804,12 @@ greetings = {
 			}
 		}
 	}
-	HI_FRIENDLY_GREETING_03 = {
+	DI_FRIENDLY_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			is_in_federation_with = FROM
 			NOT = { is_at_war_with = FROM }
 			OR = {
@@ -789,12 +819,12 @@ greetings = {
 			}
 		}
 	}
-	HI_FRIENDLY_GREETING_04 = {
+	DI_FRIENDLY_GREETING_04 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			FROM = {
 				OR = {
 					has_ethic = ethic_pacifist
@@ -809,52 +839,52 @@ greetings = {
 			}
 		}
 	}
-	HI_WAR_GREETING_01 = {
+	DI_WAR_GREETING_01 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			NOT = { is_same_species = FROM }
 			is_at_war_with = FROM
 		}
 	}
-	HI_WAR_GREETING_02 = {
+	DI_WAR_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			is_at_war_with = FROM
 		}
 	}
-	HI_WAR_GREETING_03 = {
+	DI_WAR_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			is_at_war_with = FROM
 		}
 	}
-	HI_VASSAL_GREETING_01 = {
+	DI_VASSAL_GREETING_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
 		}
 	}
-	HI_VASSAL_GREETING_DISLOYAL_01 = {
+	DI_VASSAL_GREETING_DISLOYAL_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = hegemonic_imperialists
+			has_ai_personality = democratic_isolationists
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
