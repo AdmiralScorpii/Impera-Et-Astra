@@ -1322,7 +1322,7 @@ federation_builders = {
 	}	
 }
 
-malevolent_capitalists = {
+slaver_capitalists = {
 	aggressiveness = 1.5
 	trade_willingness = 0.5
 	bravery = 1.25
@@ -1330,20 +1330,20 @@ malevolent_capitalists = {
 	military_spending = 1.2
 	colony_spending = 0.9	
 	
-	federation_acceptance = -20
-	nap_acceptance = -25
+	federation_acceptance = -50
+	nap_acceptance = -30
 	defensive_pact_acceptance = -25
-	migration_pact_acceptance = -20	
+	migration_pact_acceptance = -50
 	
-	advanced_start_chance = 25
+	advanced_start_chance = 35
 	
-	weapon_preferences = weapon_type_kinetic
+	weapon_preferences = weapon_type_energy
 	armor_ratio = 0.4
 	shields_ratio = 0.5
 	afterburners_ratio = 0.1	
 	
-	threat_modifier = 1.2
-	threat_others_modifier = 1.0
+	threat_modifier = 1.4
+	threat_others_modifier = 1.2
 	friction_modifier = 1.2
 	
 	behaviour = {
@@ -1358,8 +1358,8 @@ malevolent_capitalists = {
 		infiltrator = yes
 		robot_exploiter = yes
 		robot_liberator = no
-		propagator = no
-		ideologue = yes
+		propagator = yes
+		ideologue = no
 		multispecies = no
 	}
 	
