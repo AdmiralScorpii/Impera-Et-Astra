@@ -223,6 +223,25 @@
  MS_VASSAL_GREETING_01:0 "Sir! What wars do you have for us to fight?!"
  MS_VASSAL_GREETING_DISLOYAL_01:0 "Our time is coming! Our [Root.GetRulerTitle] assures us we will rise!"
  
+ #Republican Liberators
+ RL_HOSTILE_GREETING_01:0 "The freedom of our republic will stand against the tyranny of the [From.GetName]!"
+ RL_HOSTILE_GREETING_02:0 "The [Root.GetName] stands as a light to the darkness you exude!"
+ RL_HOSTILE_GREETING_03:0 "All free peoples deserve equality. A ideal you clearly have no understanding of!"
+ RL_HOSTILE_GREETING_04:0 "No people should ever be under the rule of one [Root.GetSpeciesAdj]! The individual must be free!"
+ RL_DOMINEERING_GREETING_01:0 "The light of our republic will shine all of the fellow citizens of the galaxy! Even those of lesser standing!"
+ RL_NEUTRAL_GREETING_01:0 "I shall alert the [Root.GetSpeciesAdj] Assembly of your arrival."
+ RL_NEUTRAL_GREETING_02:0 "Our republic stands as a testimony to the enrichment of the individual!"
+ RL_NEUTRAL_GREETING_03:0 "The [Root.GetName] welcomes fellow republicans amongst our halls."
+ RL_NEUTRAL_GREETING_04:0 "What can the [Root.GetName] do for you?"
+ RL_THREATENED_GREETING_01:0 "All we ask is the preservation of liberty and individualism! Do you not see any reason for mercy?"
+ RL_FRIENDLY_GREETING_01:0 "Greetings fellow [From.GetSpeciesNamePlural]! Come, speak with me!"
+ RL_FRIENDLY_GREETING_02:0 "Let your mind be heard! We always welcome any thoughts, especially those of entrusted friends such as yourself!"
+ RL_FRIENDLY_GREETING_03:0 "We are always glad to see our republican, [From.GetSpeciesAdj] allies amongst our Assembly!"
+ RL_WAR_GREETING_01:0 "The sovereignty of all will never fall to the likes of you!"
+ RL_WAR_GREETING_02:0 "Freeeeedom!"
+ RL_WAR_GREETING_03:0 "The [From.GetSpeciesName] people will learn the true value of freedom from you '[From.GetRulerTitle].'"
+ RL_VASSAL_GREETING_01:0 "Greetings! I hope our valued republic can do service to the [From.GetName]." 
+ RL_VASSAL_GREETING_DISLOYAL_01:0 "The shackles of servitude are beginning to wear loosely..."
  
  
  

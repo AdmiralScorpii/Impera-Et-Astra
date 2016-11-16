@@ -2467,13 +2467,13 @@ greetings = {
 		}
 	}
 	
-	# Harmonious Collective
-		HC_HOSTILE_GREETING_01 = {
+	# Republican Liberators
+	RL_HOSTILE_GREETING_01 = {
 			weight = {
 				weight = 3
 			}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -2481,12 +2481,12 @@ greetings = {
 			}
 		}
 	}
-	HC_HOSTILE_GREETING_02 = {
+	RL_HOSTILE_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -2494,13 +2494,12 @@ greetings = {
 			}
 		}
 	}
-	HC_HOSTILE_GREETING_03 = {
+	RL_HOSTILE_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			FROM = { NOT = { has_election_type = democratic } }
+			has_ai_personality = republican_liberators
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_hostile_to = FROM
@@ -2508,141 +2507,96 @@ greetings = {
 			}
 		}
 	}
-	HC_HOSTILE_GREETING_04 = {
+	RL_HOSTILE_GREETING_04 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			FROM = {
-				OR = {
-					has_ethic = ethic_individualist
-					has_ethic = ethic_fanatic_individualist
-				}
-			}
-			NOT = { is_same_species = FROM }
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_hostile_to = FROM
-				is_unfriendly_to = FROM
-			}
-		}
-	}
-	HC_DOMINEERING_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_domineering_to = FROM
-			}
-		}
-	}
-	HC_NEUTRAL_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_same_species = FROM }
-			NOT = { is_at_war_with = FROM }
-			is_neutral_to = FROM
-		}
-	}
-	HC_NEUTRAL_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_at_war_with = FROM }
-			is_neutral_to = FROM
-		}
-	}
-	HC_NEUTRAL_GREETING_03 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			FROM = {
-				OR = {
-					has_ethic = ethic_individualist
-					has_ethic = ethic_fanatic_individualist
-				}
-			}
-			NOT = { is_at_war_with = FROM }
-			is_neutral_to = FROM
-		}
-	}
-	HC_NEUTRAL_GREETING_04 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			FROM = {
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-			NOT = { is_at_war_with = FROM }
-			is_neutral_to = FROM
-		}
-	}
-	HC_THREATENED_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_at_war_with = FROM }
-			is_threatened_to = FROM
-		}
-	}
-	HC_FRIENDLY_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_friendly_to = FROM
-				is_cordial_to = FROM
-				is_protective_to = FROM
-			}
-		}
-	}
-	HC_FRIENDLY_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_friendly_to = FROM
-				is_cordial_to = FROM
-				is_protective_to = FROM
-			}
-		}
-	}
-	HC_FRIENDLY_GREETING_03 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			FROM = {
 				OR = {
 					has_ethic = ethic_collectivist
 					has_ethic = ethic_fanatic_collectivist
 				}
 			}
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	RL_DOMINEERING_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_domineering_to = FROM
+			}
+		}
+	}
+	RL_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	RL_NEUTRAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	RL_NEUTRAL_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			FROM = { has_ethic = ethic_individualist }
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	RL_NEUTRAL_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	RL_THREATENED_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			NOT = { is_at_war_with = FROM }
+			is_threatened_to = FROM
+		}
+	}
+	RL_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -2651,548 +2605,91 @@ greetings = {
 			}
 		}
 	}
-	HC_WAR_GREETING_01 = {
+	RL_FRIENDLY_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	RL_FRIENDLY_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
+			FROM = { has_ethic = ethic_individualist }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	RL_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = republican_liberators
 			is_at_war_with = FROM
 		}
 	}
-	HC_WAR_GREETING_02 = {
+	RL_WAR_GREETING_02 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			is_at_war_with = FROM
 		}
 	}
-	HC_WAR_GREETING_03 = {
+	RL_WAR_GREETING_03 = {
 		weight = {
 			weight = 3
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			FROM = {
 				OR = {
-					has_ethic = ethic_individualist
-					has_ethic = ethic_fanatic_individualist
+					has_ethic = ethic_collectivist
+					has_ethic = ethic_fanatic_collectivist
 				}
 			}
 			is_at_war_with = FROM
 		}
 	}
 
-	HC_VASSAL_GREETING_01 = {
+	RL_VASSAL_GREETING_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			NOT = { is_disloyal_to = FROM }
 		}
 	}
-	HC_VASSAL_GREETING_DISLOYAL_01 = {
+	RL_VASSAL_GREETING_DISLOYAL_01 = {
 		weight = {
 			weight = 10
 		}
 		trigger = {
-			has_ai_personality = harmonious_hierarchy
+			has_ai_personality = republican_liberators
 			exists = overlord
 			overlord = { is_same_value = FROM }
 			NOT = { is_at_war_with = FROM }
 			is_disloyal_to = FROM
-		}
-	}
-	### Fallen Empire AI Personality Greetings
-	# Holy Guardians
-	HG_HOSTILE_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_spiritualist
-			NOT = { is_at_war_with = FROM }
-			is_angry_to = FROM
-		}
-	}
-
-	HG_NEUTRAL_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_spiritualist
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	HG_NEUTRAL_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_spiritualist
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	HG_FRIENDLY_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_spiritualist
-			NOT = { is_at_war_with = FROM }
-			is_patronizing_to = FROM
-		}
-	}
-
-	HG_WAR_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_spiritualist
-			is_at_war_with = FROM
-		}
-	}
-	HG_VASSAL_GREETING_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_spiritualist
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			NOT = { is_disloyal_to = FROM }
-		}
-	}
-	HG_VASSAL_GREETING_DISLOYAL_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_spiritualist
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			is_disloyal_to = FROM
-		}
-	}
-	# Keepers of Knowledge
-	KK_HOSTILE_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_materialist
-			NOT = { is_at_war_with = FROM }
-			is_angry_to = FROM
-		}
-	}
-
-	KK_NEUTRAL_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_materialist
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	KK_NEUTRAL_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_materialist
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	KK_FRIENDLY_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_materialist
-			NOT = { is_at_war_with = FROM }
-			is_patronizing_to = FROM
-		}
-	}
-
-	KK_WAR_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_materialist
-			is_at_war_with = FROM
-		}
-	}
-	KK_VASSAL_GREETING_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_materialist
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			NOT = { is_disloyal_to = FROM }
-		}
-	}
-	KK_VASSAL_GREETING_DISLOYAL_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_materialist
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			is_disloyal_to = FROM
-		}
-	}
-	# Militant Isolationists
-	MI_HOSTILE_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophobe
-			NOT = { is_at_war_with = FROM }
-			is_angry_to = FROM
-		}
-	}
-
-	MI_NEUTRAL_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophobe
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	MI_NEUTRAL_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophobe
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	MI_FRIENDLY_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophobe
-			NOT = { is_at_war_with = FROM }
-			is_patronizing_to = FROM
-		}
-	}
-
-	MI_WAR_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophobe
-			is_at_war_with = FROM
-		}
-	}
-	MI_VASSAL_GREETING_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_xenophobe
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			NOT = { is_disloyal_to = FROM }
-		}
-	}
-	MI_VASSAL_GREETING_DISLOYAL_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_xenophobe
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			is_disloyal_to = FROM
-		}
-	}
-	# Enigmatic Observers
-	EO_HOSTILE_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophile
-			NOT = { is_at_war_with = FROM }
-			is_angry_to = FROM
-		}
-	}
-
-	EO_NEUTRAL_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophile
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	EO_NEUTRAL_GREETING_02 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophile
-			NOT = { is_at_war_with = FROM }
-			is_dismissive_to = FROM
-		}
-	}
-
-	EO_FRIENDLY_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophile
-			NOT = { is_at_war_with = FROM }
-			is_patronizing_to = FROM
-		}
-	}
-
-	EO_WAR_GREETING_01 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			is_country_type = fallen_empire
-			has_ai_personality = fallen_empire_xenophile
-			is_at_war_with = FROM
-		}
-	}
-	EO_VASSAL_GREETING_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_xenophile
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			NOT = { is_disloyal_to = FROM }
-		}
-	}
-	EO_VASSAL_GREETING_DISLOYAL_01 = {
-		weight = {
-			weight = 10
-		}
-		trigger = {
-			has_ai_personality = fallen_empire_xenophile
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-			is_disloyal_to = FROM
-		}
-	}
-
-	### BLORG GREETINGS
-	01_VERY_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			NOT = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}			
-		}
-	}
-	02_VERY_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			NOT = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}
-	03_VERY_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			NOT = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}
-	04_VERY_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			NOT = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}	
-	05_VERY_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			NOT = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}
-	01_SOMEWHAT_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}
-	02_SOMEWHAT_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}
-	03_SOMEWHAT_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			NOT = { is_at_war_with = FROM }
-			OR = {
-				is_hostile_to = FROM
-				is_domineering_to = FROM
-				is_unfriendly_to = FROM
-			}				
-		}
-	}	
-	01_PRE_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			is_at_war_with = FROM 		
-		}
-	}
-	02_PRE_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			is_at_war_with = FROM	
-		}
-	}
-	03_PRE_FRIENDLY_GREETING = {
-		weight = {
-			weight = 1000
-		}	
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			is_at_war_with = FROM				
-		}
-	}
-	01_BEST_FRIEND = {
-		weight = {
-			weight = 1000
-		}
-		trigger = {
-			has_ai_personality = fanatic_befrienders
-			exists = overlord
-			overlord = { is_same_value = FROM }
-			NOT = { is_at_war_with = FROM }
-
 		}
 	}
 }
@@ -3425,49 +2922,6 @@ action_declare_war = {
 				has_ai_personality = fanatic_purifiers
 			}
 		}
-		# Fallen Empires
-		01_FALLEN_EMPIRE_DISMISSIVE_DOW_SELECT = {
-			trigger = {
-				is_dismissive_to = FROM
-			}
-		}
-		01_FALLEN_EMPIRE_PATRONIZING_DOW_SELECT = {
-			trigger = {
-				is_patronizing_to = FROM
-			}
-		}
-		01_FALLEN_EMPIRE_ANGRY_DOW_SELECT = {
-			trigger = {
-				is_angry_to = FROM
-			}
-		}
-		
-		# Blorg
-		01_BLORG_WAR = {
-			trigger = {
-				has_ai_personality = fanatic_befrienders
-			}
-			weight = {
-				weight = 1000
-			}	
-		}	
-		02_BLORG_WAR = {
-			trigger = {
-				has_ai_personality = fanatic_befrienders
-			}
-			weight = {
-				weight = 1000
-			}	
-		}	
-		03_BLORG_WAR = {
-			trigger = {
-				has_ai_personality = fanatic_befrienders
-			}
-			weight = {
-				weight = 1000
-			}	
-		}			
-	}
 	propose = {
 		01_DOW_PROPOSE = {
 			trigger = {
