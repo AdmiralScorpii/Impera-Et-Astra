@@ -1,0 +1,257 @@
+##########################################################################
+# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
+##########################################################################
+
+# Opinion from AI personality
+opinion_from_personality = {
+	opinion = {
+		modifier = {
+			add = -200
+			has_ai_personality = enlightened_peacekeepers	
+			FROM = { has_policy_flag = unrestricted_wars }
+			
+		}
+		modifier = {
+			add = 50
+			has_ai_personality = enlightened_peacekeepers
+			FROM = { has_policy_flag = liberation_wars }
+		}
+		modifier = {
+			add = 100
+			has_ai_personality = enlightened_peacekeepers
+			FROM = { has_policy_flag = no_wars }
+		}		
+		modifier = {
+			add = -75
+			has_ai_personality = laissez_faire_economists
+			FROM = {
+				OR = {
+					OR = {
+						has_ethic = "ethic_collectivist"
+						has_ethic = "ethic_fanatic_collectivist"
+					}
+					OR = {
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_fanatic_xenophobe"
+					}
+				}
+
+			}			
+		}	
+		modifier = {
+			add = -1000
+			has_ai_personality = evil_imperialists
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+		modifier = {
+			add = -100
+			has_ai_personality = traditional_slavers
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+		modifier = {
+			add = 50
+			has_ai_personality = republican_liberators 
+			FROM = { 
+				OR = {
+					has_government = "regimental_republic"
+					has_government = "theocratic_republic"
+					has_government = "merchant_republic"
+					has_government = "peaceful_republic"
+					has_government = "martial_republic" 
+					has_government = "holy_republic"
+					has_government = "corporate_republic"
+					has_government = "pacifist_republic"
+				}
+			}
+		}		
+		modifier = {
+			add = -200
+			has_ai_personality = military_subjugators	
+			FROM = {
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+		modifier = {
+			add = 50
+			has_ai_personality = military_subjugators	
+			FROM = {
+				OR = {
+					has_ethic = "ethic_militarist"
+					has_ethic = "ethic_fanatic_militarist"
+				}
+			}
+		}		
+		modifier = {
+			add = -200
+			has_ai_personality = democratic_isolationists
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}	
+		modifier = {
+			add = 25 
+			has_ai_personality = roving_traders
+			FROM = { has_ethic = "ethic_xenophile" }
+		}
+		modifier = {
+			add = 75
+			has_ai_personality = roving_traders
+			FROM = { has_ethic = "ethic_fanatic_xenophile" }
+		}
+		modifier = {
+			add = -100
+			has_ai_personality = roving_traders
+			FROM = {
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
+		}
+		modifier = {
+			add = 150 
+			has_ai_personality = migratory_pilgrims
+			FROM = { 
+				AND = {
+					has_policy_flag = migration_allowed_all
+					OR = {
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_fanatic_xenophile"
+					}
+				}
+			 }
+		}
+	}
+}
+
+
+# Desecrated Fallen Empire's holy world
+opinion_desecrated_holy_world = {
+	opinion = {
+		modifier = {
+			add = -200
+			has_ai_personality = fallen_empire_spiritualist
+			FROM = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				OR = {
+					any_owned_planet = {
+						has_modifier = "holy_planet"
+					}
+					any_subject = {
+						any_owned_planet = {
+							has_modifier = "holy_planet"
+						}					
+					}
+				}
+			}
+		}	
+	}
+}
+
+# Desecrated Tomb World
+opinion_desecrated_tomb_world = {
+	opinion = {
+		modifier = {
+			add = -50
+			has_ai_personality = fallen_empire_spiritualist
+			FROM = {
+				OR = {
+					is_country_type = default
+					is_country_type = awakened_fallen_empire
+				}
+				OR = {
+					any_owned_planet = {
+						is_planet_class = pc_nuked
+					}
+					any_subject = {
+						any_owned_planet = {
+							has_modifier = "holy_planet"
+						}					
+					}					
+				}
+			}
+		}	
+	}
+}
+
+# Fallen Empire doesn't like you researching AI
+opinion_researching_ai = {
+	opinion = {
+		modifier = {
+			add = -5
+			has_ai_personality = fallen_empire_materialist
+			FROM = { is_country_type = default }
+			OR = {
+				FROM = { 
+					OR = {
+						has_policy_flag = ai_full_rights
+						has_policy_flag = ai_servitude
+					}
+					has_technology = tech_robotic_workers
+				}
+				FROM = { 
+					any_subject = {
+						OR = {
+							has_policy_flag = ai_full_rights
+							has_policy_flag = ai_servitude
+						}
+						has_technology = tech_robotic_workers
+					}
+				}					
+			}
+		}
+		modifier = {
+			add = -10
+			has_ai_personality = fallen_empire_materialist
+			FROM = { is_country_type = default }
+			OR = {
+				FROM = { 
+					OR = {
+						has_policy_flag = ai_full_rights
+						has_policy_flag = ai_servitude
+					}
+					has_technology = tech_droid_workers
+				}
+				FROM = { 
+					any_subject = {
+						OR = {
+							has_policy_flag = ai_full_rights
+							has_policy_flag = ai_servitude
+						}
+						has_technology = tech_droid_workers
+					}
+				}					
+			}			
+		}
+		modifier = {
+			add = -25
+			has_ai_personality = fallen_empire_materialist
+			FROM = { is_country_type = default }
+			OR = {
+				FROM = { 
+					OR = {
+						has_policy_flag = ai_full_rights
+						has_policy_flag = ai_servitude
+					}
+					has_technology = tech_synthetic_workers
+				}
+				FROM = { 
+					any_subject = {
+						OR = {
+							has_policy_flag = ai_full_rights
+							has_policy_flag = ai_servitude
+						}
+						has_technology = tech_synthetic_workers
+					}
+				}					
+			}				
+		}		
+	}
+}
