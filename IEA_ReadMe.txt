@@ -1,4 +1,4 @@
-Impera Et Astra
+Impera Et Astra: Stellaris Overhaul Modification 
 --------------------------------------------------------------------------------------
 Current Stellaris Version:
 1.3.* (post-Heinlein/Leviathens)
@@ -17,7 +17,7 @@ Mod Mission:
 "To increase the variety that vanilla Stellaris can provide through governments, changing how ethics relates to choosing said governments, more varied 
 and fleshed out economic and resource chains, and more to be planned for the future."
 
-Impera Et Astra is a major overhaul mod for Paradox's "Stellaris" 4X space game. The mod was first concieved as a government overhaul of Stellaris
+Impera Et Astra is a major overhaul mod for Paradox's "Stellaris" 4X space game. The mod was first conceived as a government overhaul of Stellaris
 but plans to do much more, including overhauling colonization, technologies, buildings, resources and the economy, and more. 
 --------------------------------------------------------------------------------------
 Roadmap:
@@ -26,6 +26,7 @@ Initial Release:
 -Government Overhaul
 -Additional Traits Implementation
 -Overhauled Personalities
+-Personality Opinion Modifier Overhaul 
 -Additional Gameplay Changes
 
 Inter-Release-V2 Period:
@@ -44,7 +45,7 @@ Changelog:
 Version 1 (Release)
 
 -Added 32 New Governments (Completely Overriding Vanilla)
--Added _ Personalities (Some Vanilla Ones Kept)
+-Added 19 Personalities (Some Vanilla Ones Kept)
 -Implemented Additional Traits mod by Kaochi And Company For Increased Variety Of Personality Logic
 -All New Government Icons Created By Linds95
 -Decreased The Base Maximum Systems Amount For Sectors From 5 To 3
