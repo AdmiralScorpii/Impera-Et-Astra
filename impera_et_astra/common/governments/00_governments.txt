@@ -18,11 +18,19 @@ regimental_republic = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_militarist"
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+			
 			has_ethic = "ethic_individualist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
-		NOT = { has_ethic = "ethic_fanatic_militarist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -94,8 +102,13 @@ martial_republic = {
 			has_ethic = "ethic_fanatic_militarist"
 			has_ethic = "ethic_individualist"
 		}
-		NOT = { has_ethic = "ethic_militarist" }
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 		
 	modifier = {
@@ -168,12 +181,19 @@ theocratic_republic = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_spiritualist"
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+			
 			has_ethic = "ethic_individualist"
+		}		
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
 		}
-		
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
-		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
 	}
 	
 	modifier = {
@@ -236,8 +256,13 @@ holy_republic = {
 			has_ethic = "ethic_fanatic_spiritualist"
 			has_ethic = "ethic_individualist"
 		}	
-		NOT = { has_ethic = "ethic_spiritualist" }
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -296,12 +321,20 @@ merchant_republic = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_individualist"
-			has_ethic = "ethic_materialist"
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+			
+			has_ethic = "ethic_individualist"			
 		}
 		
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
-		NOT = { has_ethic = "ethic_fanatic_materialist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -364,8 +397,13 @@ corporate_republic = {
 			has_ethic = "ethic_individualist"
 			has_ethic = "ethic_fanatic_materialist"
 		}
-		NOT = { has_ethic = "ethic_materialist" }
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -426,12 +464,20 @@ peaceful_republic = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_pacifist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			
 			has_ethic = "ethic_individualist"
 		}
 		
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
-		NOT = { has_ethic = "ethic_fanatic_pacifist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -505,8 +551,13 @@ pacifist_republic = {
 			has_ethic = "ethic_individualist"
 		}
 		
-		NOT = { has_ethic = "ethic_fanatic_individualist" }
-		NOT = { has_ethic = "ethic_pacifist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -583,11 +634,20 @@ regimental_democracy = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_militarist"
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+			
 			has_ethic = "ethic_fanatic_individualist"
 		}
-		NOT = { has_ethic = "ethic_individualist" }
-		NOT = { has_ethic = "ethic_fanatic_militarist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -631,8 +691,14 @@ martial_democracy = {
 			has_ethic = "ethic_fanatic_individualist"
 			has_ethic = "ethic_fanatic_militarist"
 		}
-		NOT = { has_ethic = "ethic_individualist" }
-		NOT = { has_ethic = "ethic_militarist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_militarist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -679,11 +745,20 @@ theocratic_democracy = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_fanatic_individualist"
-			has_ethic = "ethic_spiritualist"
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+			
+			has_ethic = "ethic_fanatic_individualist"			
 		}
-		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
-		NOT = { has_ethic = "ethic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -729,8 +804,14 @@ holy_democracy = {
 			has_ethic = "ethic_fanatic_individualist"
 			has_ethic = "ethic_fanatic_spiritualist"
 		}
-		NOT = { has_ethic = "ethic_individualist" }
-		NOT = { has_ethic = "ethic_spiritualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -773,11 +854,21 @@ merchant_democracy = {
 
 	ethics = {
 		AND = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+			
 			has_ethic = "ethic_fanatic_individualist"
-			has_ethic = "ethic_materialist"
+			
 		}
-		NOT = { has_ethic = "ethic_fanatic_materialist" }	
-		NOT = { has_ethic = "ethic_individualist"}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -821,8 +912,14 @@ corporate_democracy = {
 			has_ethic = "ethic_fanatic_individualist"
 			has_ethic = "ethic_fanatic_materialist"
 		}	
-		NOT = { has_ethic = "ethic_materialist" }
-		NOT = { has_ethic = "ethic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -864,11 +961,19 @@ peaceful_democracy = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_pacifist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}			
 			has_ethic = "ethic_fanatic_individualist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_pacifist" }
-		NOT = { has_ethic = "ethic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -920,8 +1025,14 @@ pacifist_democracy = {
 			has_ethic = "ethic_fanatic_pacifist"
 			has_ethic = "ethic_fanatic_individualist"
 		}
-		NOT = { has_ethic = "ethic_pacifist" }
-		NOT = { has_ethic = "ethic_individualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -977,11 +1088,19 @@ regimental_monarchy = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_militarist"
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+			
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_militarist" }
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1026,8 +1145,13 @@ martial_dictatorship = {
 			has_ethic = "ethic_fanatic_militarist"
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
-		NOT = { has_ethic = "ethic_militarist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1070,11 +1194,19 @@ theocratic_kingdom = {
 	}
 	ethics = {
 		AND = {
-			has_ethic = "ethic_spiritualist"
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+			
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1120,8 +1252,13 @@ holy_kingdom = {
 			has_ethic = "ethic_fanatic_spiritualist"
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
-		NOT = { has_ethic = "ethic_spiritualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1162,11 +1299,19 @@ merchant_autocracy = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_materialist"
+			OR = {
+				has_ethic = "ethic_materialist"	
+				has_ethic = "ethic_fanatic_materialist"
+			}
+			
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_materialist" }	
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1217,8 +1362,13 @@ corporate_autocracy = {
 			has_ethic = "ethic_fanatic_materialist"
 			has_ethic = "ethic_collectivist"
 		}	
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
-		NOT = { has_ethic = "ethic_materialist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1260,11 +1410,19 @@ peaceful_kingdom = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_pacifist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
-		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1316,8 +1474,13 @@ pacifist_monarchy = {
 			has_ethic = "ethic_fanatic_pacifist"
 			has_ethic = "ethic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_pacifist"}
-		NOT = { has_ethic = "ethic_fanatic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1371,11 +1534,20 @@ regimental_empire = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_militarist"
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+			
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_militarist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1418,8 +1590,14 @@ martial_empire = {
 			has_ethic = "ethic_fanatic_militarist"
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_militarist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1466,11 +1644,20 @@ theocratic_empire = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_spiritualist"
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+			
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_spiritualist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1514,8 +1701,14 @@ holy_empire = {
 			has_ethic = "ethic_fanatic_spiritualist"
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_spiritualist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1553,11 +1746,20 @@ merchant_oligarchy = {
 
 	ethics = {
 		AND = {
-			has_ethic = "ethic_materialist"
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+			
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_materialist" }	
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1620,8 +1822,14 @@ corporate_oligarchy = {
 			has_ethic = "ethic_fanatic_materialist"
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_materialist" }	
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1687,11 +1895,20 @@ peaceful_empire = {
 	
 	ethics = {
 		AND = {
-			has_ethic = "ethic_pacifist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_fanatic_pacifist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {
@@ -1746,8 +1963,14 @@ pacifist_empire = {
 			has_ethic = "ethic_fanatic_pacifist"
 			has_ethic = "ethic_fanatic_collectivist"
 		}
-		NOT = { has_ethic = "ethic_pacifist" }
-		NOT = { has_ethic = "ethic_collectivist" }
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
 	}
 	
 	modifier = {

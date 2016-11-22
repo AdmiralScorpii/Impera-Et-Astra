@@ -94,10 +94,12 @@ migratory_pilgrims = {
 			has_government = "holy_democracy"
 		}
 		NOT = {
-			has_ethic = "ethic_militarist"
-			has_ethic = "ethic_fanatic_militarist"
-			has_ethic = "ethic_xenophobe"
-			has_ethic = "ethic_fanatic_xenophobe"
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"			
+			}
 		}		
 	}
 	
@@ -217,10 +219,12 @@ imperialist_conquerors = {
 			has_government = "theocratic_empire"
 		}
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"			
+			}
 		}	
 	}
 	
@@ -327,8 +331,10 @@ enlightened_peacekeepers = {
 			has_government = "pacifist_empire"
 		}
 		NOT = {
-			has_ethic = "ethic_xenophobe"
-			has_ethic = "ethic_fanatic_xenophobe"
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"		
+			}
 		}
 	}
 	
@@ -434,8 +440,10 @@ capitalist_profiteers = {
 			has_government = "corporate_oligarchy"
 		}
 		NOT = {
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"			
+			}
 		}		
 	}
 	
@@ -544,8 +552,10 @@ roving_traders = {
 			has_government = "merchant_democracy"
 		}
 		NOT = {
-			has_ethic = "ethic_xenophobe"
-			has_ethic = "ethic_fanatic_xenophobe"
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"			
+			}
 		}	
 	}
 	
@@ -665,6 +675,12 @@ democratic_isolationists = {
 			has_government = "holy_democracy"
 			has_government = "corporate_democracy"
 			has_government = "pacifist_democracy"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
 		}
 	}
 	
@@ -857,10 +873,12 @@ laissez_faire_economists = {
 			has_government = "corporate_oligarchy"
 		}
 		NOT = {
-			has_ethic = "ethic_fanatic_xenophobe"
-			has_ethic = "ethic_xenophobe" 
-			has_ethic = "ethic_militarist"
-			has_ethic = "ethic_fanatic_militarist"
+			OR = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_xenophobe" 
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"			
+			}
 		}		
 	}
 	
@@ -1052,8 +1070,10 @@ ambitious_autocrats = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"			
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"			
+			}		
 		}	
 		has_election_type = none
 	}
@@ -1136,8 +1156,10 @@ nuetral_militarists = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"		
+			}
 		}
 		OR = {
 			has_government = "regimental_republic"
@@ -1198,8 +1220,10 @@ indifferent_merchants = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"			
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"			
+			}			
 		}
 		OR = {
 			has_government = "merchant_republic"
@@ -1259,8 +1283,10 @@ federation_builders = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }
 		NOT = {
-			has_ethic = "ethic_xenophobe"
-			has_ethic = "ethic_fanatic_xenophobe"				
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"			
+			}				
 		}
 		OR = {
 			has_government = "pacifist_democracy"
@@ -1371,10 +1397,12 @@ slaver_capitalists = {
 			has_government = "corporate_oligarchy"	
 		}
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"			
+			}
 		}
 	}
 	
@@ -1475,8 +1503,10 @@ military_subjugators = {
 			has_government = "martial_empire"
 		}
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"			
+			}
 		}
 	}
 	
@@ -1713,10 +1743,12 @@ evil_imperialists = {
 			}
 		}
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"			
+			}
 		}
 	}
 	
@@ -1815,11 +1847,13 @@ traditional_slavers = {
 			}
 		}
 		NOT = {
-			has_ethic = "ethic_pacifist"
-			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
-			has_ethic = "ethic_individualist"
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_individualist"			
+			}
 		}
 	}
 	

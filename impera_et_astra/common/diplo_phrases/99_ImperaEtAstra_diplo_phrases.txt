@@ -319,19 +319,6 @@ greetings = {
 			is_neutral_to = FROM
 		}
 	}
-	EP_NEUTRAL_GREETING_04 = {
-		weight = {
-			weight = 3
-		}
-		trigger = {
-			has_ai_personality = enlightened_peacekeepers
-			FROM = {
-				exists = overlord
-				overlord = { is_same_value = ROOT }
-			}
-			NOT = { is_at_war_with = FROM }
-		}
-	}
 	EP_THREATENED_GREETING_01 = {
 		weight = {
 			weight = 3
@@ -608,12 +595,12 @@ greetings = {
 			has_ai_personality = roving_traders
 			is_in_federation_with = FROM
 			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}			
 			FROM = {
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
 				OR = {
 					has_ethic = ethic_xenophile
 					has_ethic = ethic_fanatic_xenophile
@@ -648,7 +635,7 @@ greetings = {
 			is_at_war_with = FROM
 			FROM = {
 				OR = {
-					has_ethic = ethic_xenophile 
+					has_ethic = ethic_xenophile
 					has_ethic = ethic_fanatic_xenophile
 				}						
 			}
@@ -1504,7 +1491,7 @@ greetings = {
 			FROM = {
 				OR = {
 					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile				
+					has_ethic = ethic_fanatic_xenophile			
 				}
 			}			
 			OR = {
@@ -2625,7 +2612,7 @@ greetings = {
 		}
 		trigger = {
 			has_ai_personality = republican_liberators
-			FROM = { has_ethic = ethic_individualist }
+			FROM = { has_ethic = "ethic_individualist" }
 			NOT = { is_at_war_with = FROM }
 			OR = {
 				is_friendly_to = FROM
@@ -2692,914 +2679,332 @@ greetings = {
 			is_disloyal_to = FROM
 		}
 	}
-}
+	
+	# Evil Imperialists
+	EI_HOSTILE_GREETING_01 = {
+			weight = {
+				weight = 3
+			}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	EI_HOSTILE_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	EI_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	EI_HOSTILE_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	EI_DOMINEERING_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_domineering_to = FROM
+			}
+		}
+	}
+	EI_THREATENED_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			NOT = { is_at_war_with = FROM }
+			is_threatened_to = FROM
+		}
+	}
+	EI_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			is_at_war_with = FROM
+		}
+	}
+	EI_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			is_at_war_with = FROM
+		}
+	}
+	EI_WAR_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			is_at_war_with = FROM
+		}
+	}
 
-action_declare_war = {
-	select = {
-		# Hostile 1
-		01_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM			
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
+	EI_VASSAL_GREETING_01 = {
+		weight = {
+			weight = 10
 		}
-		# Hostile 2
-		02_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM			
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
+		trigger = {
+			has_ai_personality = evil_imperialists
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			NOT = { is_disloyal_to = FROM }
 		}
-		# Hostile 3
-		03_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM			
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
+	}
+	EI_VASSAL_GREETING_DISLOYAL_01 = {
+		weight = {
+			weight = 10
 		}
-		# Neutral 1
-		04_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM		
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Neutral 2
-		05_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM			
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Neutral 3
-		06_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM		
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Friendly 1
-		07_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM			
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Friendly 2
-		08_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM		
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Friendly 3
-		09_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { 
-					is_same_species = FROM		
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Hostile Pacifist
-		10_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
-		}
-		# Neutral Pacifist
-		11_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Friendly Pacifist
-		12_DOW_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Hive Mind
-		HM_DOW_SELECT = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		FP_DOW_SELECT = {
-			trigger = {
-				has_ai_personality = fanatic_purifiers
-			}
-		}
-	propose = {
-		01_DOW_PROPOSE = {
-			trigger = {
-				NOT = { is_same_species_class = FROM }
-				FROM = {
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		02_DOW_PROPOSE = {
-			trigger = {
-				is_same_species_class = FROM
-			}
-		}
-		# Xenophobic
-		03_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				NOT = { is_same_species_class = FROM }
-				FROM = {
-					OR = {
-						has_ethic = ethic_xenophobe
-						has_ethic = ethic_fanatic_xenophobe
-					}
-				}
-			}
-		}
-		# Honorbound personality type
-		04_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = honorbound_warriors
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Ideologue personality type
-		05_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality_behaviour = ideologue
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Hegemon personality type
-		06_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = hegemonic_imperialists
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Purifier personality type
-		07_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = fanatic_purifiers
-				}
-			}
-		}
-		# Explorer personality type
-		08_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = erudite_explorers
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Hive Mind personality type
-		09_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = hive_mind
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Migrating Flock personality type
-		10_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = migrating_flock
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Capitalist personality type
-		11_DOW_PROPOSE = {
-			weight = {
-				weight = 5
-			}
-			trigger = {
-				FROM = {
-					has_ai_personality = ruthless_capitalists
-					NOT = {
-						OR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
-				}
-			}
-		}
-		# Subject
-		01_VASSAL_DOW_PROPOSE = {
-			trigger = {
-				FROM = {
-					exists = overlord
-					overlord = { is_same_value = ROOT }
-				}
-			}
-			weight = {
-				weight = 1000
-			}	
+		trigger = {
+			has_ai_personality = evil_imperialists
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
 		}
 	}
 	
-	accept = {
-		# Hostile 1
-		01_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
-		}
-		# Hostile 2
-		02_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
-		}
-		# Hostile 3
-		03_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
-		}
-		# Neutral 1
-		04_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Neutral 2
-		05_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Neutral 3
-		06_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Friendly 1
-		07_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Friendly 2
-		08_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Friendly 3
-		09_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { 
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Hostile Pacifist
-		10_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { is_same_species = FROM }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_hostile_to = FROM
-					is_domineering_to = FROM
-					is_unfriendly_to = FROM
-				}
-			}
-		}
-		# Neutral Pacifist
-		11_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { is_same_species = FROM }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_neutral_to = FROM
-					is_threatened_to = FROM
-				}
-			}
-		}
-		# Friendly Pacifist
-		12_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { is_same_species = FROM }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-				OR = {
-					is_friendly_to = FROM
-					is_cordial_to = FROM
-					is_protective_to = FROM
-				}
-			}
-		}
-		# Pacifist Same Species
-		13_DOW_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				is_same_species = FROM
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-		}
-		HM_DOW_ACCEPT = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		# Fallen Empires
-		01_FALLEN_EMPIRE_DISMISSIVE_DOW_ACCEPT = {
-			trigger = {
-				is_dismissive_to = FROM
-			}
-		}		
-		01_FALLEN_EMPIRE_PATRONIZING_DOW_ACCEPT = {
-			trigger = {
-				is_patronizing_to = FROM
-			}
-		}		
-		01_FALLEN_EMPIRE_ANGRY_DOW_ACCEPT = {
-			trigger = {
-				is_angry_to = FROM
-			}
-		}		
-	}
-	propose_vote = {
-		01_DOW_VOTE_PROPOSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-			}
-		}
-		HM_DOW_VOTE_PROPOSE = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-	}
-}
-
-action_offer_peace = {
-	consider = {
-		01_CONSIDER = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-			}
-		}
-		HM_CONSIDER_01 = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-	}
-	select = {
-		# Generic 1
-		01_PEACE_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species = FROM }
-				NOT = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Generic 2
-		02_PEACE_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species = FROM }
-				NOT = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Generic 3
-		03_PEACE_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species = FROM }
-				NOT = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Pacifist
-		04_PEACE_SELECT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-		}
-		HM_PEACE_SELECT = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		FP_PEACE_SELECT = {
-			trigger = {
-				has_ai_personality = fanatic_purifiers
-			}
-		}
-	}
-	propose = {
-		01_PEACE_PROPOSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species_class = FROM }
-				num_war_demands > 0
-			}
-		}
-		02_PEACE_PROPOSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				is_same_species_class = FROM
-				num_war_demands > 0
-			}
-		}
-		03_PEACE_PROPOSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species_class = FROM }
-				num_war_demands < 1
-			}
-		}
-		04_PEACE_PROPOSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				is_same_species_class = FROM
-				num_war_demands < 1
-			}
-		}
-		HM_PEACE_PROPOSE = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		FP_PEACE_PROPOSE = {
-			trigger = {
-				has_ai_personality = fanatic_purifiers
-			}
-		}
-	}
-	accept = {
-		# Accepted 1
-		01_PEACE_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = {
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Accepted 2
-		02_PEACE_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = {
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Accepted 3
-		03_PEACE_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = {
-					is_same_species = FROM
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Accepted Same Species
-		04_PEACE_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				is_same_species = FROM
-				NOT = {
-					OR = {
-						has_ethic = ethic_pacifist
-						has_ethic = ethic_fanatic_pacifist
-					}
-				}
-			}
-		}
-		# Accepted Pacifist
-		05_PEACE_ACCEPT = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
-			}
-		}
-		HM_PEACE_ACCEPT = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		FP_PEACE_ACCEPT = {
-			trigger = {
-				has_ai_personality = fanatic_purifiers
-			}
-		}
-	}
-	refuse = {
-		01_PEACE_REFUSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				NOT = { is_same_species_class = FROM }
-			}
-		}
-		02_PEACE_REFUSE = {
-			trigger = {
-				NOT = { has_ai_personality = hive_mind }
-				NOT = { has_ai_personality = fanatic_purifiers }
-				is_same_species_class = FROM
-			}
-		}
-		HM_PEACE_REFUSE = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		FP_PEACE_REFUSE = {
-			trigger = {
-				has_ai_personality = hive_mind
-			}
-		}
-		01_VASSAL_PEACE_REFUSE = {
-			trigger = {
-				exists = overlord
-				overlord = { is_same_value = FROM }
-			}
+	# Traditional Slavers
+	TS_HOSTILE_GREETING_01 = {
 			weight = {
-				weight = 1000
-			}	
+				weight = 3
+			}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
 		}
-		01_OVERLORD_PEACE_REFUSE = {
-			trigger = {
-				FROM = {
-					exists = overlord
-					overlord = { is_same_value = ROOT }
+	}
+	TS_HOSTILE_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TS_HOSTILE_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TS_HOSTILE_GREETING_04 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			FROM = {
+				OR = {
+					has_trait = trait_strong
+					has_trait = trait_very_strong
 				}
 			}
-			weight = {
-				weight = 1000
-			}	
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	TS_DOMINEERING_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_domineering_to = FROM
+			}
+		}
+	}
+	TS_NEUTRAL_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	TS_NEUTRAL_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	TS_NEUTRAL_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			FROM = { has_ethic = ethic_individualist }
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+	}
+	TS_THREATENED_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			is_threatened_to = FROM
+		}
+	}
+	TS_FRIENDLY_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TS_FRIENDLY_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TS_FRIENDLY_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			FROM = { has_ethic = ethic_individualist }
+			NOT = { is_at_war_with = FROM }
+			FROM = { 
+				OR = {
+					has_policy_flag = slavery_allowed_all
+					has_policy_flag = slavery_allowed_regulated
+					has_policy_flag = slavery_allowed_xenos_only
+					has_policy_flag = slavery_allowed_regulated_xenos_only
+				} 
+			}
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	TS_WAR_GREETING_01 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			is_at_war_with = FROM
+		}
+	}
+	TS_WAR_GREETING_02 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			is_at_war_with = FROM
+		}
+	}
+	TS_WAR_GREETING_03 = {
+		weight = {
+			weight = 3
+		}
+		trigger = {
+			has_ai_personality = traditional_slavers
+			is_at_war_with = FROM
+			FROM = {
+				OR = {
+					has_trait = trait_strong
+					has_trait = trait_very_strong
+				}
+			}
 		}
 	}
 }
@@ -3610,16 +3015,39 @@ action_invite_to_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3627,16 +3055,39 @@ action_invite_to_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3644,16 +3095,39 @@ action_invite_to_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3785,16 +3259,39 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3802,16 +3299,39 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3819,16 +3339,39 @@ action_ask_to_join_federation = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3950,16 +3493,39 @@ action_demand_vassalization = {
 			trigger = {	
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3967,16 +3533,39 @@ action_demand_vassalization = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -3984,16 +3573,39 @@ action_demand_vassalization = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4228,16 +3840,39 @@ action_ask_to_become_vassalized = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4245,16 +3880,39 @@ action_ask_to_become_vassalized = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4262,16 +3920,39 @@ action_ask_to_become_vassalized = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4347,16 +4028,39 @@ action_demand_protectorate = {
 			trigger = {	
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4364,16 +4068,39 @@ action_demand_protectorate = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4381,16 +4108,39 @@ action_demand_protectorate = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4601,16 +4351,39 @@ action_ask_to_become_protectorate = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4618,16 +4391,39 @@ action_ask_to_become_protectorate = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -4635,16 +4431,39 @@ action_ask_to_become_protectorate = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6349,16 +6168,39 @@ action_form_defensive_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6366,16 +6208,39 @@ action_form_defensive_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6383,16 +6248,39 @@ action_form_defensive_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6463,16 +6351,39 @@ action_form_non_aggression_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6480,16 +6391,39 @@ action_form_non_aggression_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6497,16 +6431,39 @@ action_form_non_aggression_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6665,16 +6622,39 @@ action_form_migration_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6682,16 +6662,39 @@ action_form_migration_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6699,16 +6702,39 @@ action_form_migration_pact = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6825,16 +6851,39 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6842,16 +6891,39 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6859,16 +6931,39 @@ action_offer_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6942,16 +7037,39 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6959,16 +7077,39 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -6976,16 +7117,39 @@ action_ask_for_federation_association_status = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -7050,16 +7214,39 @@ action_demand_tributary = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_dictatorship
-					has_government = martial_empire
-					has_government = divine_mandate
-					has_government = transcendent_empire
-					has_government = despotic_hegemony
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
 					has_government = ai_overlordship
-					has_government = enlightened_monarchy
-					has_government = irenic_monarchy
-					has_government = despotic_empire
-					has_government = star_empire
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -7067,16 +7254,39 @@ action_demand_tributary = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_junta
-					has_government = ordered_stratocracy
-					has_government = theocratic_oligarchy
-					has_government = transcendent_oligarchy
-					has_government = science_directorate
-					has_government = illuminated_technocracy
-					has_government = peaceful_bureaucracy
-					has_government = irenic_protectorate
-					has_government = plutocratic_oligarchy
-					has_government = mega_corporation
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
+					has_government = theocratic_republic
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}
@@ -7084,16 +7294,39 @@ action_demand_tributary = {
 			trigger = {
 				NOT = { has_ai_personality = hive_mind }
 				OR = {
-					has_government = military_republic
-					has_government = martial_demarchy
+					has_government = regimental_republic
+					has_government = regimental_monarchy
+					has_government = regimental_democracy
+					has_government = reigmental_empire
 					has_government = theocratic_republic
-					has_government = transcendent_republic
-					has_government = direct_democracy
-					has_government = subconscious_consensus
-					has_government = moral_democracy
-					has_government = irenic_democracy
-					has_government = indirect_democracy
-					has_government = democratic_utopia
+					has_government = ai_overlordship
+					has_government = theocratic_kingdom
+					has_government = theocratic_democracy
+					has_government = theocratic_empire
+					has_government = merchant_republic
+					has_government = merchant_autocracy
+					has_government = merchant_democracy
+					has_government = merchant_oligarchy
+					has_government = peaceful_republic
+					has_government = peaceful_kingdom
+					has_government = peaceful_democracy
+					has_government = peaceful_empire
+					has_government = martial_republic
+					has_government = martial_dictatorship
+					has_government = martial_democracy
+					has_government = martial_empire
+					has_government = holy_republic
+					has_government = holy_kingdom
+					has_government = holy_democracy
+					has_government = holy_empire
+					has_government = corporate_republic
+					has_government = corporate_autocracy
+					has_government = corporate_democracy
+					has_government = corporate_oligarchy
+					has_government = pacifist_republic
+					has_government = pacifist_monarchy
+					has_government = pacifist_democracy
+					has_government = pacifist_empire
 				}
 			}
 		}

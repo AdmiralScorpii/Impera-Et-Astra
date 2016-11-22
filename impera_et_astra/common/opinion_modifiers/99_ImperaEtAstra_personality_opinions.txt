@@ -52,6 +52,13 @@ opinion_from_personality = {
 		}
 		modifier = {
 			add = 50
+			has_ai_personality = traditional_slavers
+			FROM = { has_policy_flag = }
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+		modifier = {
+			add = 50
 			has_ai_personality = republican_liberators 
 			FROM = { 
 				OR = {

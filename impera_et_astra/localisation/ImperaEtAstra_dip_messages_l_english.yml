@@ -32,7 +32,6 @@
  EP_NEUTRAL_GREETING_01:0 "What is it you wish to discuss?"
  RC_NEUTRAL_GREETING_02:0 "We wish only for peace in the galaxy. We hope this exchange will further this goal."
  EP_NEUTRAL_GREETING_03:0 "Know that we will be watching the [From.GetName]... for now we will exchange pleasantries."
- EP_NEUTRAL_GREETING_04:0 "May we help you in any way?"
  EP_THREATENED_GREETING_01:0 "If you threaten us, then you threaten the balance of peace in the galaxy... does that not worry you?"
  EP_FRIENDLY_GREETING_01:0 "Greetings [From.GetSpeciesNamePlural]! How may we aid [From.GetRulerTitle] [From.GetRulerName]?"
  EP_FRIENDLY_GREETING_02:0 "How may we help our honorable friends and allies?"
@@ -243,7 +242,34 @@
  RL_VASSAL_GREETING_01:0 "Greetings! I hope our valued republic can do service to the [From.GetName]." 
  RL_VASSAL_GREETING_DISLOYAL_01:0 "The shackles of servitude are beginning to wear loosely..."
  
+ # Evil Imperialist
+ EI_HOSTILE_GREETING_01:0 "Alien scum! You will learn to fear the [Root.GetName]!"
+ EI_HOSTILE_GREETING_02:0 "Your cities will burn and your people will be purged one day."
+ EI_HOSTILE_GREETING_03:0 "Our destiny is to purify the stars and claim them for ourselves..."
+ EI_HOSTILE_GREETING_04:0 "Leave, foul alien..."
+ EI_DOMINEERING_GREETING_01:0 "The [From.GetSpeciesName] race will be ashes floating in the vacuum of space..."
+ EI_THREATENED_GREETING_01:0 "Our destiny will not be denied by foul [From.GetSpeciesNamePlural]!"
+ EI_WAR_GREETING_01:0 "Our fleets will turn your worlds to ash!"
+ EI_WAR_GREETING_02:0 "Prepare your people for extermination!"
+ EI_WAR_GREETING_03:0 "Your fate cannot be ignored."
+ EI_VASSAL_GREETING_01:0 "Our destiny will not be denied by alien overlords..."
+ EI_VASSAL_GREETING_DISLOYAL_01: "Our destiny will not be denied by alien overlords..."
  
- 
+ # Traditional Slavers
+ TS_HOSTILE_GREETING_01:0 "Our rivalry will only end in a [From.GetSpeciesAdj] serving my food in shackles!"
+ TS_HOSTILE_GREETING_02:0 "Great nations require great workers! Perhaps our rival's will make fine workers..."
+ TS_HOSTILE_GREETING_03:0 "Ah, a slave! Oh, wait... not a slave yet..."
+ TS_HOSTILE_GREETING_04:0 "Your people look strong! They will make fine slaves for when the time comes..."
+ TS_DOMINEERING_GREETING_01:0 "Speak if you must, but we will overwhelm your weak defenses and claim your people for the [Root.GetName]."
+ TS_NEUTRAL_GREETING_01:0 "Bask upon our great civilization! Built by the hands of our slaves!"
+ TS_NEUTRAL_GREETING_02:0 "Our slaves helped us achieve all of this!"
+ TS_NEUTRAL_GREETING_03:0 "My personal slave will bring us the documents needed for our exchange."
+ TS_THREATENED_GREETING_01:0 "Our slaves will guard their [Root.GetSpeciesName] masters to the death!"
+ TS_FRIENDLY_GREETING_01:0 "It is always good to meet aliens that appreciate the majesty of our slaves!"
+ TS_FRIENDLY_GREETING_02:0 "Greetings to the [From.GetName]! Do our allies require assistance?"
+ TS_FRIENDLY_GREETING_03:0 "Fellow slavers! Greetings! What would you have to discuss with the [From.GetName]!"
+ TS_WAR_GREETING_01:0 "Your people will come to serve us!"
+ TS_WAR_GREETING_02:0 "Prepare your people for the coming shackles..."
+ TS_WAR_GREETING_03:
  
  

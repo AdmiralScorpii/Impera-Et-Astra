@@ -109,7 +109,7 @@ ethic_individualist = {
 }
 
 ethic_fanatic_xenophobe = {
-	cost = 2
+	cost = 1
 	category = "xen"
 	category_value = 0
 	
@@ -131,7 +131,7 @@ ethic_fanatic_xenophobe = {
 }
 
 ethic_xenophobe = {
-	cost = 1
+	cost = 0
 	category = "xen"
 	category_value = 1
 
@@ -153,7 +153,7 @@ ethic_xenophobe = {
 }
 
 ethic_fanatic_xenophile = {
-	cost = 2
+	cost = 1
 	category = "xen"
 	category_value = 4
 	
@@ -173,7 +173,7 @@ ethic_fanatic_xenophile = {
 }
 
 ethic_xenophile = {
-	cost = 1
+	cost = 0
 	category = "xen"
 	category_value = 3
 	
