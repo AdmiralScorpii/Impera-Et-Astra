@@ -2074,6 +2074,7 @@ guiTypes = {
 				format = center
 				#alwaysTransparent = yes
 				text_color_code = "L"
+				scrollbarType = "standardlistbox_slider"
 			}
 		}
 

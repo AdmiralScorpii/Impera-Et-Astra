@@ -270,6 +270,35 @@
  TS_FRIENDLY_GREETING_03:0 "Fellow slavers! Greetings! What would you have to discuss with the [From.GetName]!"
  TS_WAR_GREETING_01:0 "Your people will come to serve us!"
  TS_WAR_GREETING_02:0 "Prepare your people for the coming shackles..."
- TS_WAR_GREETING_03:
+ 
+ # Zealous Purgers
+ ZP_HOSTILE_GREETING_01:0 "Heretics will be purged from the face of the galaxy!"
+ ZP_HOSTILE_GREETING_02:0 "Your existence will be cleansed in holy fire!"
+ ZP_HOSTILE_GREETING_03:0 "Fear the alien... the heretic!"
+ ZP_HOSTILE_GREETING_04:0 "All xenos will be cleansed in the name of our beliefs!"
+ ZP_DOMINEERING_GREETING_01:0 "The fire of the [Root.GetName] will cleanse the weak as well as the strong!"
+ ZP_THREATENED_GREETING_01:0 "The [Root.GetSpeciesName] people do not fear the alien!"
+ ZP_WAR_GREETING_01:0 "Prepare your worlds for the coming fire!"
+ ZP_WAR_GREETING_02:0 "In the name of our faith, you shall be smitten!"
+ ZP_WAR_GREETING_03:0 "The [From.GetSpeciesAdj] worlds will be turned to ash!"
+ 
+ #Welcoming Worshippers
+ WW_HOSTILE_GREETING_01:0 "Say what you wish, [From.GetSpeciesAdj]. We will not share our faith with you."
+ WW_HOSTILE_GREETING_02:0 "Diplomacy has long since passed."
+ WW_HOSTILE_GREETING_03:0 "Your people will not be allowed in our sanctuaries."
+ WW_HOSTILE_GREETING_04:0 "The patience of the [Root.GetName] has been long since strained towards the [From.GetName]."
+ WW_DOMINEERING_GREETING_01:0 "There is no need to worry about the [Root.GetName]."
+ WW_NEUTRAL_GREETING_01:0 "Our faith welcomes all. The [From.GetSpeciesName] as well."
+ WW_NEUTRAL_GREETING_02:0 "The faith states that all aliens are welcome."
+ WW_NEUTRAL_GREETING_03:0 "The [Root.GetName] welcome the [From.GetName]."
+ WW_THREATENED_GREETING_01:0 "We mean no harm to the [From.GetName]."
+ WW_FRIENDLY_GREETING_01:0 "We welcome friends of the faith to our halls."
+ WW_FRIENDLY_GREETING_02:0 "You have proven to be a long time friend of the faith. What may we discuss?"
+ WW_FRIENDLY_GREETING_03:0 "In our view, you have proven to be a faithful ally."
+ WW_WAR_GREETING_01:0 "Our faith will not be held back!"
+ WW_WAR_GREETING_02:0 "How dare you!"
+ WW_WAR_GREETING_03:0 "The [Root.GetName] will not hold back."
+ 
+
  
  

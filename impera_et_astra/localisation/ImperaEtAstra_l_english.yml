@@ -162,6 +162,9 @@
    personality_evil_imperialists_desc:0 "Imperialist who have one goal: The extermination of all other life in the galaxy."
    personality_traditional_slavers:0 "Traditional Slavers"
    personality_traditional_slavers_desc:0 "A species that survives and thrives on the enslavement of species and their labor."
-   
+   personality_zealous_purgers:0 "Zealous Purgers"
+   personality_zealous_purgers_desc:0 "A species that believes that all alien life goes against their beliefs and must be cleansed from the galaxy."
+   personality_welcoming_worshippers:0 "Welcoming Worshippers"
+   personality_welcoming_worshippers_desc:0 "Spiritualists who wish to share their relgion with those who visit or migrate to their empire."
    # Any Menu Strings 
    MUST_PICK_EITHER:0 "Must Choose One:"

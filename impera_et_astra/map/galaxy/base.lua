@@ -11,8 +11,8 @@ countries = {
 
 fallen_empires = {
 	num = 4,						-- Number of fallen empires
-	ideal_sq_dist_between = 100*100,-- Ideal square distance between countries
-	min_sq_dist_between = 85*85,	-- Min square distance between countries
+	ideal_sq_dist_between = 120*120,-- Ideal square distance between countries
+	min_sq_dist_between = 95*95,	-- Min square distance between countries
 	max_military_fleet_count = 5,	-- Number of military fleets the empire will start with
 	ships_per_fleet = 3,			
 	--starting_tech

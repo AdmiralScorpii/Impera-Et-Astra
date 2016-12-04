@@ -87,18 +87,21 @@ migratory_pilgrims = {
 	allow = {
 		NOT = { is_country_type = fallen_empire }
 		NOT = { is_country_type = awakened_fallen_empire }	
-		OR = {
-			has_government = "theocratic_republic"
-			has_government = "holy_republic"
-			has_government = "theocratic_democracy"
-			has_government = "holy_democracy"
+		AND = {
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"			
+			}
+			has_trait = "trait_nomadic"
 		}
 		NOT = {
 			OR = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"			
+				has_ethic = "ethic_fanatic_xenophobe"	
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
 			}
 		}		
 	}
@@ -1885,4 +1888,216 @@ traditional_slavers = {
 			}
 		}
 	}	
+}
+
+zealous_purgers = {
+	aggressiveness = 2.0
+	trade_willingness = 0.1
+	bravery = 1.5
+	
+	military_spending = 1.3
+	colony_spending = 0.8
+	
+	federation_acceptance = -1000
+	nap_acceptance = -1000
+	defensive_pact_acceptance = -1000
+	migration_pact_acceptance = -1000
+	
+	advanced_start_chance = 15
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.5
+	shields_ratio = 0.5
+	afterburners_ratio = 0.3
+	
+	threat_modifier = 1.0
+	threat_others_modifier = 1.0
+	friction_modifier = 1.5
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = yes
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+			}
+			AND = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			has_trait = "trait_hateful"		
+		}
+		modifier = {
+			factor = 1
+			has_trait = "trait_simple_minded"
+		}
+		modifier = {
+			factor = 1 
+			OR = {
+				has_trait = "trait_aggressive"
+				has_trait = "trait_extremely_aggressive"
+			}		
+		}
+		modifier = {
+			factor = 2 
+			OR = {
+				has_trait = "trait_strong"
+				has_trait = "trait_very_strong"
+			}
+		}
+		modifier = {
+			factor = -3
+			OR = {
+				has_trait = "trait_free_spirit"
+				has_trait = "trait_delicate"
+				has_trait = "trait_sociable"
+				has_trait = "trait_charismatic"
+				has_trait = "trait_easily_satisfied"
+			}
+		}
+	}
+}
+
+welcoming_worshippers = {
+	aggressiveness = 0.7
+	trade_willingness = 0.75
+	bravery = 0.8
+	
+	military_spending = 1.0
+	colony_spending = 1.3
+	
+	federation_acceptance = 0
+	nap_acceptance = 20
+	defensive_pact_acceptance = 15
+	migration_pact_acceptance = 40
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.4
+	shields_ratio = 0.3
+	afterburners_ratio = 0.35
+	
+	threat_modifier = 0.6
+	threat_others_modifier = 0.6
+	friction_modifier = 0.7
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = no
+		infiltrator = yes
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = yes
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+			}
+			AND = {
+				OR = {
+					has_ethic = "ethic_fanatic_xenophile"
+					has_ethic = "ethic_xenophile"
+				}
+				OR = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					has_ethic = "ethic_spiritualist"
+				}				
+			}
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_charismatic"
+				has_trait = "trait_sociable"
+				has_trait = "trait_very_adaptive"
+			}
+		}
+		modifier = {
+			factor = 3 
+			OR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}			
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_adaptive"
+				has_trait = "trait_agrarian"
+				has_trait = "trait_free_spirit"
+			}
+		}
+		modifier = {
+			factor = -5 
+			OR = {
+				has_trait = "trait_aggressive"
+				has_trait = "trait_extremely_aggressive"
+				has_trait = "trait_born_warriors"
+				has_trait = "trait_decadent"
+				has_trait = "trait_friends_of_war"
+				has_trait = "trait_hateful"
+			}
+		}
+	}
 }

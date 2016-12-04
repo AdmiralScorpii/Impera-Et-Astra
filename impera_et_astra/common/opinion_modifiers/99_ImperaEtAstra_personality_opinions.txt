@@ -130,7 +130,33 @@ opinion_from_personality = {
 						has_ethic = "ethic_fanatic_xenophile"
 					}
 				}
-			 }
+			}
+		}
+		modifier = {
+			add = -1000 
+			has_ai_personality = zealous_purgers
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+		modifier = {
+			add = 50 
+			has_ai_personality = welcoming_worshippers
+			FROM ={
+				OR = {
+					has_ethic = "ethic_xenophile"
+					has_ethic = "ethic_fanatic_xenophile"
+				}		
+			}
+		}
+		modifier = {
+			add = -100 
+			has_ai_personality = welcoming_worshippers
+			FROM = {
+				OR = {
+					has_ethic = "ethic_xenophobe"
+					has_ethic = "ethic_fanatic_xenophobe"
+				}
+			}
 		}
 	}
 }
