@@ -49,10 +49,10 @@ migratory_pilgrims = {
 	military_spending = 0.9
 	colony_spending = 1.3
 	
-	federation_acceptance = 0
-	nap_acceptance = 25
-	defensive_pact_acceptance = 20
-	migration_pact_acceptance = 40
+	federation_acceptance = -20
+	nap_acceptance = 20
+	defensive_pact_acceptance = -50
+	migration_pact_acceptance = 100
 	
 	advanced_start_chance = 30
 	
@@ -178,10 +178,10 @@ imperialist_conquerors = {
 	military_spending = 1.3
 	colony_spending = 0.8
 	
-	federation_acceptance = -30
-	nap_acceptance = -35
-	defensive_pact_acceptance = -10
-	migration_pact_acceptance = -30
+	federation_acceptance = -70
+	nap_acceptance = -100
+	defensive_pact_acceptance = -70
+	migration_pact_acceptance = -100
 	
 	advanced_start_chance = 45
 	
@@ -399,10 +399,10 @@ capitalist_profiteers = {
 	military_spending = 1.1
 	colony_spending = 1.1
 	
-	federation_acceptance = -30
-	nap_acceptance = -20
-	defensive_pact_acceptance = -15
-	migration_pact_acceptance = -40
+	federation_acceptance = -100
+	nap_acceptance = -50
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = -100
 	
 	advanced_start_chance = 35
 	
@@ -512,10 +512,10 @@ roving_traders = {
 	military_spending = 1.0
 	colony_spending = 1.2
 	
-	federation_acceptance = 0
-	nap_acceptance = 15
-	defensive_pact_acceptance = 0
-	migration_pact_acceptance = 40
+	federation_acceptance = -10
+	nap_acceptance = 0
+	defensive_pact_acceptance = -35
+	migration_pact_acceptance = 50
 	
 	advanced_start_chance = 20
 	
@@ -631,9 +631,9 @@ democratic_isolationists = {
 	military_spending = 1.1
 	colony_spending = 1.2
 	
-	federation_acceptance = -40
-	nap_acceptance = -20
-	defensive_pact_acceptance = -30
+	federation_acceptance = -100
+	nap_acceptance = -30
+	defensive_pact_acceptance = -50
 	migration_pact_acceptance = -100
 	
 	advanced_start_chance = 35
@@ -735,10 +735,10 @@ sovereign_monarchists = {
 	military_spending = 1.0
 	colony_spending = 1.1
 	
-	federation_acceptance = -15
-	nap_acceptance = 0
-	defensive_pact_acceptance = 0
-	migration_pact_acceptance = -20
+	federation_acceptance = -20
+	nap_acceptance = -10
+	defensive_pact_acceptance = -40
+	migration_pact_acceptance = -40
 	
 	advanced_start_chance = 35
 	
@@ -831,9 +831,9 @@ laissez_faire_economists = {
 	military_spending = 1.0
 	colony_spending = 1.3
 	
-	federation_acceptance = 20
-	nap_acceptance = 15
-	defensive_pact_acceptance = 10
+	federation_acceptance = -30
+	nap_acceptance = 35
+	defensive_pact_acceptance = -20
 	migration_pact_acceptance = 30
 	
 	advanced_start_chance = 25
@@ -1122,11 +1122,10 @@ nuetral_militarists = {
 	military_spending = 1.0
 	colony_spending = 1.0
 	
-	federation_acceptance = 10
-	nap_acceptance = 15
-	defensive_pact_acceptance = 0
+	federation_acceptance = 0
+	nap_acceptance = 0
+	defensive_pact_acceptance = -50
 	migration_pact_acceptance = 0	
-	
 	advanced_start_chance = 35
 	
 	weapon_preferences = weapon_type_energy
@@ -1187,9 +1186,9 @@ indifferent_merchants = {
 	colony_spending = 1.0
 	
 	federation_acceptance = 0
-	nap_acceptance = 15
+	nap_acceptance = 0
 	defensive_pact_acceptance = 0
-	migration_pact_acceptance = 10
+	migration_pact_acceptance = 0
 	
 	advanced_start_chance = 35
 	
@@ -1359,10 +1358,10 @@ slaver_capitalists = {
 	military_spending = 1.2
 	colony_spending = 0.9	
 	
-	federation_acceptance = -50
-	nap_acceptance = -30
+	federation_acceptance = -100
+	nap_acceptance = -100
 	defensive_pact_acceptance = -25
-	migration_pact_acceptance = -50
+	migration_pact_acceptance = -100
 	
 	advanced_start_chance = 35
 	
@@ -1558,10 +1557,10 @@ republican_liberators = {
 	military_spending = 1.0
 	colony_spending = 1.1	
 	
-	federation_acceptance = 0
-	nap_acceptance = 10
-	defensive_pact_acceptance = 10
-	migration_pact_acceptance = 0
+	federation_acceptance = -30
+	nap_acceptance = 15
+	defensive_pact_acceptance = 15
+	migration_pact_acceptance = -10
 	
 	advanced_start_chance = 35
 	
@@ -1698,10 +1697,10 @@ evil_imperialists = {
 	military_spending = 1.4
 	colony_spending = 0.8	
 	
-	federation_acceptance = -40
-	nap_acceptance = -40
-	defensive_pact_acceptance = -40
-	migration_pact_acceptance = -100
+	federation_acceptance = -1000
+	nap_acceptance = -1000
+	defensive_pact_acceptance = -1000
+	migration_pact_acceptance = -1000
 	
 	advanced_start_chance = 35
 	
@@ -1805,9 +1804,9 @@ traditional_slavers = {
 	military_spending = 1.1
 	colony_spending = 1.0	
 	
-	federation_acceptance = -30
+	federation_acceptance = -100
 	nap_acceptance = -30
-	defensive_pact_acceptance = -20
+	defensive_pact_acceptance = -30
 	migration_pact_acceptance = -100
 	
 	advanced_start_chance = 25
@@ -2001,10 +2000,10 @@ welcoming_worshippers = {
 	military_spending = 1.0
 	colony_spending = 1.3
 	
-	federation_acceptance = 0
-	nap_acceptance = 20
-	defensive_pact_acceptance = 15
-	migration_pact_acceptance = 40
+	federation_acceptance = 15
+	nap_acceptance = 0
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = 50
 	
 	advanced_start_chance = 30
 	
