@@ -41,7 +41,7 @@
 # NOTE: Weight is additive!
 
 migratory_pilgrims = {
-	type = propogator 
+	type = propagator 
 	aggressiveness = 0.8
 	trade_willingness = 0.8
 	bravery = 0.7
@@ -77,7 +77,6 @@ migratory_pilgrims = {
 		infiltrator = yes
 		robot_exploiter = no
 		robot_liberator = no
-		propagator = no
 		ideologue = no
 		multispecies = yes
 		migrator = yes

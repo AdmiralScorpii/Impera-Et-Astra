@@ -1,0 +1,13 @@
+on_game_start = {
+	events = {
+		habitability_traits.1
+		habitability_traits.2
+		habitability_traits.3
+		habitability_traits.4
+		habitability_traits.5
+		habitability_traits.6
+		habitability_traits.7
+		habitability_traits.8
+		habitability_traits.9	
+	}
+}
