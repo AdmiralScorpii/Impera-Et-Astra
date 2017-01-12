@@ -204,3 +204,18 @@
    trait_pc_toxic_preference_desc:1 "$trait_pc_arctic_preference_desc$"
    trait_pc_frozen_preference:0 "Frozen Preference"
    trait_pc_frozen_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   
+   
+   ##############################################################
+   ################### RESOURCES ################################
+   ##############################################################
+   water:0 "Water"
+   water_desc:1 "Water is an essential resource for farming and life as a whole."
+   
+   power:0 "Power"
+   power_desc:1 "Power is required for modern society and industry to function and can be converted to §Y$energy$§! for economic and transportation uses."
+   
+   requires_water_deposit:0 "§RRequires §Y$water$§! on tile.§!"
+   
+   building_water_extraction_plant_1:0 "Water Extraction Plant I"
+   building_water_extraction_plant_1_desc:0 "An extraction facility used to harvest liquid or solid water."

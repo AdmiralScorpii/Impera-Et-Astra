@@ -1,0 +1,97 @@
+d_water_deposit = {
+	resources = { water = 1	}
+	is_orbital_slot = no 
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 12
+			planet = {
+				OR = {
+					is_planet_class = pc_continental
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_tropical
+					is_planet_class = pc_ocean
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_asteroid
+				}
+			}
+		}
+		modifier = {
+			weight = 15
+			planet = {
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
+
+d_rich_water_deposit = {
+	resources = { water = 2	}
+	is_orbital_slot = no 
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 20
+			planet = {
+				OR = {
+					is_planet_class = pc_continental
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_tropical
+					is_planet_class = pc_ocean
+					is_planet_class = pc_barren 
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_asteroid
+				}
+			}
+		}
+		modifier = {
+			weight = 28
+			planet = {
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
+
+d_water_mineral_deposit = {
+	resources = { 
+		water = 1
+		minerals = 1
+	}
+	is_orbital_slot = no 
+		drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 12
+			planet = {
+				OR = {
+					is_planet_class = pc_continental
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_tropical
+					is_planet_class = pc_ocean
+					is_planet_class = pc_arid
+					is_planet_class = pc_desert
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+				}
+			}
+		}
+		modifier = {
+			weight = 15
+			planet = {
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
