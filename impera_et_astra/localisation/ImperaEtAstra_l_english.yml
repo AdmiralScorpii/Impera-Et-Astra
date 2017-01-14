@@ -210,7 +210,7 @@
    ################### RESOURCES ################################
    ##############################################################
    water:0 "Water"
-   water_desc:1 "Water is an essential resource for farming and life as a whole."
+   water_desc:1 "§Y$water$§! is an essential resource for farming and life as a whole."
    
    power:0 "Power"
    power_desc:1 "Power is required for modern society and industry to function and can be converted to §Y$energy$§! for economic and transportation uses."
@@ -218,4 +218,13 @@
    requires_water_deposit:0 "§RRequires §Y$water$§! on tile.§!"
    
    building_water_extraction_plant_1:0 "Water Extraction Plant I"
-   building_water_extraction_plant_1_desc:0 "An extraction facility used to harvest liquid or solid water."
+   building_water_extraction_plant_1_desc:0 "An extraction facility used to harvest liquid or solid §Y$water$§!."
+   
+   building_water_extraction_plant_2:0 "Water Extraction Plant II"
+   building_water_extraction_plant_2_desc:0 "$building_water_extraction_plant_1_desc$"
+   
+   building_energy_conversion_plant_1:0 "Energy Conversion Plant I"
+   building_energy_conversion_plant_1_desc:0 "Facility where §Y$power$§! is converted into §Y$energy$§! for economic and transportation uses."
+   
+   building_energy_conversion_plant_2:0 "Energy Conversion Plant II"
+   building_energy_conversion_plant_2_desc:0 "$building_energy_conversion_plant_1_desc$"

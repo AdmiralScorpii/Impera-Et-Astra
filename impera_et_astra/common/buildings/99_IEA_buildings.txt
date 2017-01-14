@@ -45,6 +45,207 @@ building_water_extraction_plant_1 = {
 		water = 2
 	}
 	
+	upgrades = {
+		building_water_extraction_plant_2
+	}
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+			custom_tooltip_fail = {
+				text = "requires_water_deposit"
+				tile = {
+					has_resource = {
+						type = water
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+}
+
+building_water_extraction_plant_2 = {
+	base_buildtime = @b2time
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	produced_resources = {
+		water = 3
+	}
+	
+	prerequisites = {
+		"tech_mining_network_2"
+	}
+	
+	upgrades = {
+		building_water_extraction_plant_3
+	}
+	
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+			custom_tooltip_fail = {
+				text = "requires_water_deposit"
+				tile = {
+					has_resource = {
+						type = water
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+}
+
+building_water_extraction_plant_3 = {
+	base_buildtime = @b3time
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	produced_resources = {
+		water = 4
+	}
+	
+	prerequisites = {
+		"tech_mining_network_2"
+	}
+	
+	
+	allow = {
+		AND = {
+			custom_tooltip_fail = {
+				text = "requires_building_capital_1"
+				planet = {
+					OR = {
+						has_building = "building_capital_1"
+						has_building = "building_capital_2"
+						has_building = "building_capital_3"
+					}
+				}
+			}
+			custom_tooltip_fail = {
+				text = "requires_betharian_stone"
+				tile = {
+					has_resource = {
+						type = sr_betharian
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+}
+
+building_energy_conversion_plant_1 = {
+	base_buildtime = @b1time	
+	cost = {
+		minerals = @b1cost
+	}
+	
+	produced_resources = {
+		energy = 3
+	}
+	
+	required_resources = {
+		power = 3
+	}
+	
+	upgrades = {
+		building_energy_conversion_plant_2
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+}
+
+building_energy_conversion_plant_2 = {
+	base_buildtime = @b2time	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	produced_resources = {
+		energy = 5
+	}
+	
+	required_resources = {
+		power = 5
+	}
+	
+	upgrades = {
+		building_energy_conversion_plant_3
+	}
+	
+	prerequisites = {
+		"tech_power_hub_1"
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+}
+
+building_energy_conversion_plant_3 = {
+	base_buildtime = @b3time	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	produced_resources = {
+		energy = 8
+	}
+	
+	required_resources = {
+		power = 8
+	}
+	
+	prerequisites = {
+		"tech_power_hub_2"
+	}
+	
 	allow = {
 		custom_tooltip = {
 			text = "requires_building_capital_1"
