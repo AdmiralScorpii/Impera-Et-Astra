@@ -1,0 +1,18 @@
+﻿l_english:
+   building_water_extraction_plant_1:0 "Water Extraction Plant I"
+   building_water_extraction_plant_1_desc:0 "An extraction facility used to harvest liquid or solid §Y$water$§!."
+   
+   building_water_extraction_plant_2:0 "Water Extraction Plant II"
+   building_water_extraction_plant_2_desc:0 "$building_water_extraction_plant_1_desc$"
+   
+   building_water_extraction_plant_3:0 "Water Extraction Planet III"
+   building_water_extraction_plant_3_desc:0 "$building_energy_conversion_plant_1_desc$"
+   
+   building_energy_conversion_plant_1:0 "Energy Conversion Plant I"
+   building_energy_conversion_plant_1_desc:0 "Facility where §Y$power$§! is converted into §Y$energy$§! for economic and transportation uses."
+   
+   building_energy_conversion_plant_2:0 "Energy Conversion Plant II"
+   building_energy_conversion_plant_2_desc:0 "$building_energy_conversion_plant_1_desc$"
+   
+   building_energy_conversion_plant_3:0 "Energy Conversion Plant III"
+   building_energy_conversion_plant_3_desc:0 "$building_energy_conversion_plant_1_desc$"

@@ -1,0 +1,16 @@
+﻿l_english:
+   # Trait Strings 
+   trait_pc_asteroid_preference:0 "Asteroid Preference"
+   trait_pc_asteroid_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   trait_pc_molten_preference:0 "Molten Preference"
+   trait_pc_molten_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   trait_pc_barren_preference:0 "Barren Preference"
+   trait_pc_barren_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   trait_pc_barren_cold_preference:0 "Cold Barren Preference"
+   trait_pc_barren_cold_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   trait_pc_toxic_preference:0 "Toxic Preference"
+   trait_pc_toxic_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   trait_pc_frozen_preference:0 "Frozen Preference"
+   trait_pc_frozen_preference_desc:1 "$trait_pc_arctic_preference_desc$"
+   
+   

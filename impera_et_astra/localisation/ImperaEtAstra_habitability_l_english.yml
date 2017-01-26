@@ -1,0 +1,22 @@
+﻿l_english:
+   # Planet Preference Strings 
+   pc_asteroid_habitability:0 "Asteroid Habitability"
+   pc_molten_habitability:0 "Molten Habitability"
+   pc_barren_habitability:0 "Barren Habitability"
+   pc_barren_cold_habitability:0 "Cold Barren Habitability"
+   pc_toxic_habitability:0 "Toxic Habitability"
+   pc_frozen_habitability:0 "Frozen Habitability"
+   
+   pc_asteroid_tile:0 "Asteroid Terrain"
+   pc_asteroid_tile_desc:0 "Rocky, almost inhospitable terrain that is unfit for most organic life."
+   pc_molten_tile:0 "Molten Terrain"
+   pc_molten_tile_desc:0 "Molten terrain inhospitable to organic life unless equipped with special equipment."
+   pc_barren_tile:0 "Barren Terrain"
+   pc_barren_tile_desc:0 "Terrain of a planetary body devoid of an atmosphere."
+   pc_barren_cold_tile:0 "Cold Barren Terrain"
+   pc_barren_cold_tile_desc:0 "$pc_barren_tile_desc$"
+   pc_toxic_tile:0 "Toxic Terrain"
+   pc_toxic_tile_desc:0 "Toxic terrain that makes colonization extremely hazardous to organic species."
+   pc_frozen_tile:0 "Frozen Terrain"
+   pc_frozen_tile_desc:0 "Terrain that is void of any plantlife and covered in a glacier."
+   

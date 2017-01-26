@@ -1,0 +1,13 @@
+﻿l_english:
+
+   ##############################################################
+   ################### RESOURCES ################################
+   ##############################################################
+   water:0 "Water"
+   water_desc:1 "§Y$water$§! is an essential resource for farming and life as a whole."
+   
+   power:0 "Power"
+   power_desc:1 "Power is required for modern society and industry to function and can be converted to §Y$energy$§! for economic and transportation uses."
+   
+   requires_water_deposit:0 "§RRequires §Y$water$§! on tile.§!"
+   
