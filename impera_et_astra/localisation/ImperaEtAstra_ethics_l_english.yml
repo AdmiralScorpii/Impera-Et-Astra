@@ -1,0 +1,15 @@
+﻿l_english:
+   # Ethics Strings 
+   ethic_rationalist:0 "Rationalist"
+   ethic_fanatic_rationalist:0 "Fanatic Rationalist"
+   
+   ethic_rationalist_desc:1 "§LScience and reason are the means to our place and explanation of the universe. The stars, alien life, and the mysteries of the universe can be explained by the scientific method.§!\n"
+   ethic_fanatic_rationalist_desc:1 "§LOur species has abandoned the misguided artistic interpretation of the universe for a more logical and rational view on the universe. We will discover all that this universe has to offer!§!\n"
+   
+   ethic_expressionist:0 "Expressionist"
+   ethic_fanatic_expressionist:0 "Fanatic Expressionist"
+   
+   ethic_expressionist_desc:1 "§LAll experiences and events in the universe deserve to be remembered and expressed through the arts as they are fulfilling to the soul.§!\n"
+   ethic_fanatic_expressionist_desc:1 "§LOur society is completely devoted to the artistic and expressionistic viewpoint, wholly devoted to the belief that the soul can only be fulfilled through individual interpretation.§!\n"
+   
+   

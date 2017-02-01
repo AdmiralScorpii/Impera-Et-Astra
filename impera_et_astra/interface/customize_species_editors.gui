@@ -1891,14 +1891,14 @@ guiTypes = {
 			buttonType = {
 				name = "ethic_militarist"
 				spriteType = "GFX_ethics_militarist"
-				position = { x = 125 y = 125 }
+				position = { x = 125 y = 100 }
 				clicksound = interface
 			}
 			
 			buttonType = {
 				name = "ethic_xenophobe"
 				spriteType = "GFX_ethics_xenophobe"
-				position = { x = 155 y = 140 }
+				position = { x = 155 y = 110 }
 				clicksound = interface
 			}
 			
@@ -1940,6 +1940,20 @@ guiTypes = {
 			buttonType = {
 				name = "ethic_spiritualist"
 				spriteType = "GFX_ethics_spiritualist"
+				position = { x = 95 y = 110 }
+				clicksound = interface
+			}
+			
+			buttonType = {
+				name = "ethic_expressionist"
+				spriteType = "GFX_ethics_expressionist"
+				position = { x = 155 y = 140 }
+				clicksound = interface
+			}
+			
+			buttonType = {
+				name = "ethic_rationalist"
+				spriteType = "GFX_ethics_rationalist"
 				position = { x = 95 y = 140 }
 				clicksound = interface
 			}
@@ -1949,14 +1963,14 @@ guiTypes = {
 			buttonType = {
 				name = "ethic_fanatic_militarist"
 				spriteType = "GFX_ethics_fanatic_militarist"
-				position = { x = 125 y = 90 }
+				position = { x = 125 y = 65 }
 				clicksound = interface
 			}
 			
 			buttonType = {
 				name = "ethic_fanatic_xenophobe"
 				spriteType = "GFX_ethics_fanatic_xenophobe"
-				position = { x = 180 y = 115 }
+				position = { x = 180 y = 85 }
 				clicksound = interface
 			}
 			
@@ -1990,7 +2004,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "ethic_fanatic_collectivist"
-				spriteType = "GFX_ethics_fanatic_collectivist"
+				spriteType = "GFX_ethics_fanatic_collectivist" 
 				position = { x = 70 y = 295 }
 				clicksound = interface
 			}
@@ -1998,7 +2012,21 @@ guiTypes = {
 			buttonType = {
 				name = "ethic_fanatic_spiritualist"
 				spriteType = "GFX_ethics_fanatic_spiritualist"
-				position = { x = 70 y = 115 }
+				position = { x = 70 y = 85 }
+				clicksound = interface
+			}
+			
+			buttonType = {
+				name = "ethic_fanatic_rationalist"
+				spriteType = "GFX_ethics_fanatic_rationalist"
+				position = { x = 60 y = 140 }
+				clicksound = interface
+			}
+			
+			buttonType = {
+				name = "ethic_fanatic_expressionist"
+				spriteType = "GFX_ethics_fanatic_expressionist"
+				position = { x = 190 y = 140}
 				clicksound = interface
 			}
 			

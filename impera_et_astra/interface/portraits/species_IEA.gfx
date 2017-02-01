@@ -1,0 +1,22 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_ethics_expressionist"
+		textureFile = "gfx/interface/icons/ethics/ethic_expressionist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ethics_fanatic_expressionist"
+		textureFile = "gfx/interface/icons/ethics/ethic_fanatic_expressionist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ethics_rationalist"
+		textureFile = "gfx/interface/icons/ethics/ethic_rationalist.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ethics_fanatic_rationalist"
+		textureFile = "gfx/interface/icons/ethics/ethic_fanatic_rationalist.dds"
+	}	
+}

@@ -343,9 +343,7 @@ ethic_materialist = {
 	}	
 	
 	pop_modifier = {
-		tile_resource_physics_research_mult = 0.05
-		tile_resource_society_research_mult = 0.05
-		tile_resource_engineering_research_mult = 0.05
+		tile_resource_energy_mult = 0.05
 	}
 	
 	random_weight = {
@@ -368,12 +366,12 @@ ethic_fanatic_materialist = {
 	}
 	
 	pop_modifier = {
-		tile_resource_physics_research_mult = 0.15
-		tile_resource_society_research_mult = 0.15
-		tile_resource_engineering_research_mult = 0.15
+		tile_resource_energy_mult = 0.15
 	}
 	
 	random_weight = {
 		value = 600
 	}
 }
+
+

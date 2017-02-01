@@ -1,0 +1,87 @@
+ethic_categories = {
+	art = {
+		opinions = { 1 1 1 1 1 }
+	}
+}
+
+ethic_expressionist = {
+	cost = 1
+	category = "art"
+	category_value = 0
+	
+	country_modifier = {
+		influence_gain_mult = 0.1 
+	}
+	pop_modifier = {
+		policy_happiness_impace = -0.1
+		pop_happiness = 0.05		
+	}
+	random_weight = {
+		value = 500
+	}
+}
+
+
+ethic_fanatic_expressionist = {
+	cost = 2
+	category = "art"
+	category_value = 1
+	
+	country_modifier = {
+		influence_gain_mult = 0.2
+	}
+	pop_modifier = {
+		policy_happiness_impace = -0.2
+		pop_happiness = 0.1		
+	}
+	random_weight = {
+		value = 600
+	}
+}
+
+ethic_rationalist = {
+	cost = 1 
+	category = "art"
+	category_value = 3
+	
+	category_opposite = yes
+	
+	opposite_dislike = -0.1
+	
+	country_modifier = {
+		all_technology_research_speed = 0.1
+	}
+	pop_modifier = {
+		tile_resource_physics_research_mult = 0.1
+		tile_resource_society_research_mult = 0.1
+		tile_resource_engineering_research_mult = 0.1
+	}
+	random_weight = {
+		value = 500
+	}
+	 
+}
+
+ethic_fanatic_rationalist = {
+	cost = 1 
+	category = "art"
+	category_value = 4
+	
+	category_opposite = yes
+	
+	opposite_dislike = -0.2
+	
+	country_modifier = {
+		all_technology_research_speed = 0.2
+	}
+	pop_modifier = {
+		tile_resource_physics_research_mult = 0.2
+		tile_resource_society_research_mult = 0.2
+		tile_resource_engineering_research_mult = 0.2
+	}
+	random_weight = {
+		value = 600
+	}
+	 
+
+}
