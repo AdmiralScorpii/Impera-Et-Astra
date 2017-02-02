@@ -26,6 +26,8 @@ regimental_republic = {
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -104,6 +106,8 @@ martial_republic = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -185,6 +189,8 @@ theocratic_republic = {
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -253,6 +259,8 @@ holy_republic = {
 				has_ethic = "ethic_spiritualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -321,6 +329,8 @@ merchant_republic = {
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -390,6 +400,8 @@ corporate_republic = {
 				has_ethic = "ethic_materialist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -461,6 +473,8 @@ peaceful_republic = {
 				has_ethic = "ethic_fanatic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -541,6 +555,8 @@ pacifist_republic = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -599,6 +615,283 @@ pacifist_republic = {
 	ruler_title = RT_SUPREME_MINISTER
 }
 
+#####################################
+######## NORMAL RATIONALIST #########
+#####################################
+
+rational_republic = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_rationalist"
+			has_ethic = "ethic_individualist"
+		}
+		
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 3
+		country_sector_cap_add = -2
+		country_leader_cap = 3
+	}
+	
+	election_term_years = 5
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 250
+	has_agendas = yes
+	
+	max_election_candidates = 10
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 1000
+			leader_class = scientist
+		}
+	}
+	
+	ruler_title = RT_HEAD_RESEARCHER
+}
+
+######################################
+######## FANATIC RATIONALIST #########
+######################################
+
+scientific_republic = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_rationalist"
+			has_ethic = "ethic_individualist"
+		}
+		
+		NOT = {
+			OR = {
+				has_ethic = "ethic_rationalist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_expressionist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 3
+		country_sector_cap_add = -2
+		country_leader_cap = 3
+	}
+	
+	election_term_years = 8
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 350
+	has_agendas = yes
+	
+	max_election_candidates = 10
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 1000
+			leader_class = scientist
+		}
+	}
+	
+	ruler_title = RT_HEAD_RESEARCHER
+}
+
+#######################################
+######## NORMAL EXPRESSIONIST #########
+#######################################
+
+aesthetic_republic = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_expressionist"
+			has_ethic = "ethic_individualist"
+		}
+		
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_expressionist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 3
+		country_sector_cap_add = -2
+		country_leader_cap = 3
+	}
+	
+	election_term_years = 10
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 250
+	has_agendas = yes
+	
+	max_election_candidates = 10
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			leader_class = governor
+		}
+		modifier = {
+			add = -1000 
+			leader_class = scientist
+		}
+	}
+	
+	ruler_title = RT_SPEAKER_OF_THE_GUILDS
+}
+
+########################################
+######## FANATIC EXPRESSIONIST #########
+########################################
+
+artistic_republic = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_expressionist"
+			has_ethic = "ethic_individualist"
+		}
+		
+		NOT = {
+			OR = {
+				has_ethic = "ethic_expressionist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 3
+		country_sector_cap_add = -2
+		country_leader_cap = 3
+	}
+	
+	election_term_years = 8
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 350
+	has_agendas = yes
+	
+	max_election_candidates = 10
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			leader_class = governor
+		}
+		modifier = {
+			add = -1000 
+			leader_class = scientist
+		}
+	}
+	
+	ruler_title = RT_LEAD_ARTIST
+}
+
 ##################################
 ####### FANATIC INDIVIDUAL #######
 ##################################
@@ -629,6 +922,8 @@ regimental_democracy = {
 				has_ethic = "ethic_individualist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -680,6 +975,8 @@ martial_democracy = {
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -736,6 +1033,8 @@ theocratic_democracy = {
 				has_ethic = "ethic_individualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -788,6 +1087,8 @@ holy_democracy = {
 				has_ethic = "ethic_spiritualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -840,6 +1141,8 @@ merchant_democracy = {
 				has_ethic = "ethic_individualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -891,6 +1194,8 @@ corporate_democracy = {
 				has_ethic = "ethic_materialist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -943,6 +1248,8 @@ peaceful_democracy = {
 				has_ethic = "ethic_individualist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1003,6 +1310,8 @@ pacifist_democracy = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1038,6 +1347,190 @@ pacifist_democracy = {
 }
 
 ###################################
+####### NORMAL RATIONALIST ########
+###################################
+
+rational_democracy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {	
+			has_ethic = "ethic_rationalist"
+			has_ethic = "ethic_fanatic_individualist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = -5
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 2
+	}
+	
+	uses_mandates = yes
+	election_term_years = 5
+	re_election_allowed = yes
+	election_type = democratic
+	
+	ruler_title = RT_PHILOSOPHER
+}
+
+####################################
+####### NORMAL EXPRESSIONIST #######
+####################################
+
+artistic_democracy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {	
+			has_ethic = "ethic_expressionist"
+			has_ethic = "ethic_fanatic_individualist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_expressionist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = -5
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 2
+	}
+	
+	uses_mandates = yes
+	election_term_years = 5
+	re_election_allowed = yes
+	election_type = democratic
+	
+	ruler_title = RT_GREAT_ARTIST
+}
+
+###################################
+####### FANATIC RATIONALIST #######
+###################################
+
+scientific_democracy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_rationalist"
+			has_ethic = "ethic_fanatic_individualist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_rationalist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = -5
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 2	
+	}
+	
+	uses_mandates = yes
+	election_term_years = 8
+	re_election_allowed = yes
+	election_type = democratic
+	
+	ruler_title = RT_GREAT_RESEARCHER
+}
+
+#####################################
+####### FANATIC EXPRESSIONIST #######
+#####################################
+
+aesthetic_democracy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_expressionist"
+			has_ethic = "ethic_fanatic_individualist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_expressionist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = -5
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 2	
+	}
+	
+	uses_mandates = yes
+	election_term_years = 8
+	re_election_allowed = yes
+	election_type = democratic
+	
+	ruler_title = RT_GRAND_ARTIST
+}
+
+###################################
 ####### NORMAL COLLECTIVIST #######
 ###################################
 
@@ -1069,6 +1562,8 @@ regimental_monarchy = {
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1119,6 +1614,8 @@ martial_dictatorship = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1171,6 +1668,8 @@ theocratic_kingdom = {
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_fanatic_pacifist"
 				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1222,6 +1721,8 @@ holy_kingdom = {
 				has_ethic = "ethic_spiritualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1271,6 +1772,8 @@ merchant_autocracy = {
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1327,6 +1830,8 @@ corporate_autocracy = {
 				has_ethic = "ethic_materialist"
 				has_ethic = "ethic_fanatic_pacifist"
 				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1377,6 +1882,8 @@ peaceful_kingdom = {
 				has_ethic = "ethic_fanatic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1435,6 +1942,8 @@ pacifist_monarchy = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1499,6 +2008,8 @@ regimental_empire = {
 				has_ethic = "ethic_collectivist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1549,6 +2060,8 @@ martial_empire = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_spiritualist"
 				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1606,6 +2119,8 @@ theocratic_empire = {
 				has_ethic = "ethic_collectivist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1656,6 +2171,8 @@ holy_empire = {
 				has_ethic = "ethic_spiritualist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1703,6 +2220,8 @@ merchant_oligarchy = {
 				has_ethic = "ethic_collectivist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1772,6 +2291,8 @@ corporate_oligarchy = {
 				has_ethic = "ethic_materialist"
 				has_ethic = "ethic_fanatic_militarist"
 				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1847,6 +2368,8 @@ peaceful_empire = {
 				has_ethic = "ethic_collectivist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
@@ -1909,6 +2432,8 @@ pacifist_empire = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_materialist"
 				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_expressionist"
 			}
 		}
 	}
