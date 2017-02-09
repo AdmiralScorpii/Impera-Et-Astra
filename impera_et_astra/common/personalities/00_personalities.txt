@@ -2099,3 +2099,825 @@ welcoming_worshippers = {
 		}
 	}
 }
+
+indifferent_archivists = {
+	aggressiveness =0.7
+	trade_willingness = 0.8
+	bravery = 0.7
+	
+	military_spending = 1.0
+	colony_spending = 1.2
+	
+	federation_acceptance = 0
+	nap_acceptance = 0
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+	
+	advanced_start_chance = 15
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.2
+	shields_ratio = 0.5
+	afterburners_ratio = 0.35
+	
+	threat_modifier = 0.6
+	threat_others_modifier = 0.6
+	friction_modifier = 0.7
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = no
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		OR = {	
+			has_government = "rational_republic"
+			has_government = "rational_democracy"
+			has_government = "scientific_republic"
+			has_government = "scientific_democracy"
+			has_government = "rational_oligarchy"
+			has_government = "scientific_oligarchy"
+			has_government = "rational_empire"
+			has_government = "scientific_empire"
+		}
+	}
+	
+	weight_modifier = {
+		weight = 100		
+	}
+}
+
+scientific_crusaders = {
+	aggressiveness = 1.5
+	trade_willingness = 0.35
+	bravery = 1.2
+	
+	military_spending = 1.2
+	colony_spending = 0.9
+	
+	federation_acceptance = -50
+	nap_acceptance = -50
+	defensive_pact_acceptance = -50
+	migration_pact_acceptance = -1000
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.3
+	shields_ratio = 0.5
+	afterburners_ratio = 0.4
+	
+	threat_modifier = 1.3
+	threat_others_modifier = 1.0
+	friction_modifier = 1.1
+	
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		
+		OR = {	
+			has_government = "rational_republic"
+			has_government = "rational_democracy"
+			has_government = "scientific_republic"
+			has_government = "scientific_democracy"
+			has_government = "rational_oligarchy"
+			has_government = "scientific_oligarchy"
+			has_government = "rational_empire"
+			has_government = "scientific_empire"
+		}			
+
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_xenophobe"
+			}
+		}
+		modifier = {
+			factor = 4 
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+		modifier = {
+			factor = 2 
+			OR = {
+				has_trait = "trait_born_warriors"
+				has_trait = "trait_strong"
+				has_trait = "trait_iconoclastic"
+				has_trait = "trait_aggressive"
+				has_trait = "trait_doulophage"
+			}			
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = "trait_belligerent"
+				has_trait = "trait_very_strong"
+				has_trait = "trait_extremely_aggressive"
+				has_trait = "trait_friends_of_war"
+				has_trait = "trait_simple_minded"
+				has_trait = "trait_violent"
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_free_spirits"
+					has_trait = "trait_delicate"
+					has_trait = "trait_sociable"
+					has_trait = "trait_communal"
+					has_trait = "trait_charismatic"
+					has_trait = "trait_easily_satisfied"
+					has_trait = "trait_weak_willed"
+				}			
+			}
+		}
+	}
+}
+
+fanatic_uplifters = {
+	aggressiveness = 0.8
+	trade_willingness = 0.60
+	bravery = 0.85
+	
+	military_spending = 1.2
+	colony_spending = 1.0
+	
+	federation_acceptance = 10
+	nap_acceptance = 0
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = -15
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.3
+	shields_ratio = 0.5
+	afterburners_ratio = 0.4
+	
+	threat_modifier = 0.7
+	threat_others_modifier = 0.8
+	friction_modifier = 0.8
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = yes
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = yes
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+
+		OR = {	
+			has_government = "rational_republic"
+			has_government = "rational_democracy"
+			has_government = "scientific_republic"
+			has_government = "scientific_democracy"
+			has_government = "rational_oligarchy"
+			has_government = "scientific_oligarchy"
+			has_government = "rational_empire"
+			has_government = "scientific_empire"
+		}			
+
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_agressive"
+				has_trait = "trait_extremely_aggressive"
+			}
+		}
+		modifier = {
+			factor = 2 
+			OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+			}			
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_belligerent"
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_free_spirits"
+					has_trait = "trait_delicate"
+					has_trait = "trait_sociable"
+					has_trait = "trait_war_lovers"
+					has_trait = "trait_friends_of_war"
+					has_trait = "trait_doulophage"
+				}			
+			}
+		}
+	}
+}
+
+secretive_scientists = {
+	aggressiveness = 0.5
+	trade_willingness = 0.35
+	bravery = 0.5
+	
+	military_spending = 1.0
+	colony_spending = 1.0
+	
+	federation_acceptance = -35
+	nap_acceptance = 0
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = -1000
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.3
+	shields_ratio = 0.5
+	afterburners_ratio = 0.4
+	
+	threat_modifier = 0.6
+	threat_others_modifier = 0.6
+	friction_modifier = 0.6
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_government = "rational_republic"
+				has_government = "rational_democracy"
+				has_government = "scientific_republic"
+				has_government = "scientific_democracy"
+				has_government = "rational_oligarchy"
+				has_government = "scientific_oligarchy"
+				has_government = "rational_empire"
+				has_government = "scientific_empire"
+			}		
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_simple_minded"
+				has_trait = "trait_wasteful"
+				has_trait = "trait_hateful"
+				has_trait = "trait_doulophage"
+				has_trait = "trait_sedentary"
+			}
+		}
+		modifier = {
+			factor = 4 
+			OR = {
+				has_trait = "trait_solitary"
+				has_trait = "trait_repugnant"
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_free_spirits"
+					has_trait = "trait_delicate"
+					has_trait = "trait_sociable"
+					has_trait = "trait_communal"
+
+				}			
+			}
+		}
+	}
+}
+
+preacher_philsophers = {
+	aggressiveness = 0.5
+	trade_willingness = 0.75
+	bravery = 0.7
+	
+	military_spending = 1.0
+	colony_spending = 1.4
+	
+	federation_acceptance = 15
+	nap_acceptance = 5
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 30
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.3
+	shields_ratio = 0.5
+	afterburners_ratio = 0.4
+	
+	threat_modifier = 0.7
+	threat_others_modifier = 0.8
+	friction_modifier = 0.8
+	
+	behaviour = {
+		conqueror = no
+		subjugator = yes
+		liberator = yes
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = no
+		infiltrator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = yes
+		ideologue = no
+		multispecies = yes
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_government = "rational_republic"
+				has_government = "rational_democracy"
+				has_government = "scientific_republic"
+				has_government = "scientific_democracy"
+				has_government = "rational_oligarchy"
+				has_government = "scientific_oligarchy"
+				has_government = "rational_empire"
+				has_government = "scientific_empire"
+			}			
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_free_spirits"
+				has_trait = "trait_hunter_gatherers"
+				has_trait = "trait_charismatic"
+				has_trait = "trait_communal"
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = "trait_nomadic"
+				has_trait = "trait_sociable"
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_aggressive"
+					has_trait = "trait_extremely_aggressive"
+					has_trait = "trait_violent"
+					has_trait = "trait_hateful"
+					has_trait = "trait_iconoclastic"
+					has_trait = "trait_born_warriors"
+					has_trait = "trait_belligerent"
+					has_trait = "trait_war_lovers"
+				}			
+			}
+		}
+	}
+}
+
+protective_artisans = {
+	aggressiveness = 0.5
+	trade_willingness = 0.6
+	bravery = 0.8
+	
+	military_spending = 1.4
+	colony_spending = 1.0
+	
+	federation_acceptance = 10
+	nap_acceptance = 0
+	defensive_pact_acceptance = 20
+	migration_pact_acceptance = -15
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.5
+	shields_ratio = 0.1
+	afterburners_ratio = 0.3
+	
+	threat_modifier = 1.0
+	threat_others_modifier = 1.0
+	friction_modifier = 0.9
+	
+	behaviour = {
+		conqueror = no
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_government = "artistic_republic"
+				has_government = "artistic_democracy"
+				has_government = "aesthetic_republic"
+				has_government = "aesthetic_democracy"
+				has_government = "aesthetic_monarchy"
+				has_government = "aesthetic_empire"
+				has_government = "artistic_monarchy"
+				has_government = "artistic_empire"
+			}			
+		}
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_deviants"
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = "trait_solitary"
+				has_trait = "trait_repugnant"
+				has_trait = "trait_deviants"
+			}
+		}
+		modifier = {
+			factor = 4 
+			has_trait = "trait_zealous_defenders"
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_aggressive"
+					has_trait = "trait_extremely_aggressive"
+					has_trait = "trait_communal"
+					has_trait = "trait_nomadic"
+				}			
+			}
+		}
+	}
+}
+
+artistic_purifier = {
+	aggressiveness = 1.2
+	trade_willingness = 0.35
+	bravery = 1.2
+	
+	military_spending = 1.1
+	colony_spending = 1.0
+	
+	federation_acceptance = -30
+	nap_acceptance = -30
+	defensive_pact_acceptance = -15
+	migration_pact_acceptance = -1000
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.3
+	shields_ratio = 0.1
+	afterburners_ratio = 0.4
+	
+	threat_modifier = 1.2
+	threat_others_modifier = 1.1
+	friction_modifier = 1.2
+	
+	behaviour = {
+		conqueror = yes
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = yes
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = yes
+		multispecies = no
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_government = "artistic_republic"
+				has_government = "artistic_democracy"
+				has_government = "aesthetic_republic"
+				has_government = "aesthetic_democracy"
+				has_government = "aesthetic_monarchy"
+				has_government = "aesthetic_empire"
+				has_government = "artistic_monarchy"
+				has_government = "artistic_empire"
+			}
+			
+			has_ethic = "ethic_fanatic_xenophobe"
+		}
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_deviants"
+				has_trait = "trait_aggressive"
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_solitary"
+				has_trait = "trait_repugnant"
+				has_trait = "trait_deviants"
+				has_trait = "trait_strong"
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = "trait_violent"			
+				has_trait = "trait_very_strong"
+				has_trait = "trait_belligerent"
+				has_trait = "trait_extremely_aggressive"		
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_charismatic"
+					has_trait = "trait_communal"
+					has_trait = "trait_weak"
+					has_trait = "trait_nomadic"
+				}			
+			}
+		}
+	}
+}
+
+artistic_melting_pot = {
+	aggressiveness = 0.8
+	trade_willingness = 0.75
+	bravery = 1.0
+	
+	military_spending = 1.0
+	colony_spending = 1.4
+	
+	federation_acceptance = 0
+	nap_acceptance = 10
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 20
+	
+	advanced_start_chance = 30
+	
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.3
+	shields_ratio = 0.2
+	afterburners_ratio = 0.3
+	
+	threat_modifier = 0.9
+	threat_others_modifier = 0.9
+	friction_modifier = 1.0
+	
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = no
+		infiltrator = yes
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		ideologue = no
+		multispecies = yes
+	}
+	
+	allow = {
+		NOT = { is_country_type = fallen_empire }
+		NOT = { is_country_type = awakened_fallen_empire }
+		AND = {
+			OR = {	
+				has_government = "artistic_republic"
+				has_government = "artistic_democracy"
+				has_government = "aesthetic_republic"
+				has_government = "aesthetic_democracy"
+				has_government = "aesthetic_monarchy"
+				has_government = "aesthetic_empire"
+				has_government = "artistic_monarchy"
+				has_government = "artistic_empire"
+			}
+		}
+
+		NOT = {
+			OR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+	}
+	
+	weight_modifier = {
+		weight = 10
+		modifier = {
+			factor = 1
+			OR = {
+				has_trait = "trait_adaptive"
+				has_trait = "trait_communal"
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = "trait_charismatic"
+				has_trait = "trait_conformists"
+				has_trait = "trait_easily_satisfied"
+				has_trait = "trait_free_spirits"
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_trait = "trait_free_spirits"
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_xenophile"
+				}
+			}
+				
+		}
+		modifier = {
+			factor = 4 
+			OR = {
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				OR = {
+					has_trait = "trait_hateful"
+					has_trait = "trait_violent"
+					has_trait = "trait_aggressive"
+					has_trait = "trait_extremely_aggressive"
+					has_trait = "trait_friends_of_war"
+					has_trait = "trait_belligerent"
+					has_trait = "trait_born_warriors"
+					has_trait = "trait_decadent"
+					has_trait = "trait_deviants"
+				}			
+			}
+		}
+	}
+}

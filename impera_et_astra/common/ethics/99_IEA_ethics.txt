@@ -63,7 +63,7 @@ ethic_rationalist = {
 }
 
 ethic_fanatic_rationalist = {
-	cost = 1 
+	cost = 2  
 	category = "art"
 	category_value = 4
 	

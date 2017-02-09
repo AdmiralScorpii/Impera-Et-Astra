@@ -17,7 +17,7 @@ ethic_categories = {
 }
 
 ethic_fanatic_collectivist = {
-	cost = 2
+	cost = 0
 	category = "col"
 	category_value = 0
 	
@@ -38,7 +38,7 @@ ethic_fanatic_collectivist = {
 }
 
 ethic_collectivist = {
-	cost = 1
+	cost = 0
 	category = "col"
 	category_value = 1
 	
@@ -59,7 +59,7 @@ ethic_collectivist = {
 }
 
 ethic_fanatic_individualist = {
-	cost = 2
+	cost = 0
 	category = "col"
 	category_value = 4
 	
@@ -84,7 +84,7 @@ ethic_fanatic_individualist = {
 }
 
 ethic_individualist = {
-	cost = 1
+	cost = 0
 	category = "col"
 	category_value = 3
 	
@@ -126,7 +126,7 @@ ethic_fanatic_xenophobe = {
 	}
 	
 	random_weight = {
-		value = 350
+		value = 200
 	}
 }
 
@@ -148,7 +148,7 @@ ethic_xenophobe = {
 	}
 	
 	random_weight = {
-		value = 450
+		value = 250
 	}
 }
 
@@ -168,7 +168,7 @@ ethic_fanatic_xenophile = {
 	}
 	
 	random_weight = {
-		value = 300
+		value = 200
 	}
 }
 
@@ -188,7 +188,7 @@ ethic_xenophile = {
 	}
 	
 	random_weight = {
-		value = 450
+		value = 250
 	}
 }
 

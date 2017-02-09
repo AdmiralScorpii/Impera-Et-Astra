@@ -2067,8 +2067,9 @@ guiTypes = {
 			slotSize = { width = 50 height = 50 }
 			max_slots_horizontal = 6
 			format = UPPER_LEFT
-			position = { x = 450 y = 35 }
+			position = { x = 450 y = 0 }
 			add_horizontal = yes
+			verticalScrollBar = "right_vertical_slider"
 		}
 		
 		containerWindowType = {

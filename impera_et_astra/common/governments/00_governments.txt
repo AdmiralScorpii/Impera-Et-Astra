@@ -1976,6 +1976,213 @@ pacifist_monarchy = {
 }
 
 ###################################
+####### NORMAL RATIONALIST #######
+###################################
+
+rational_oligarchy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	ethics = {
+		AND = {
+			has_ethic = "ethic_rationalist"
+			has_ethic = "ethic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_rationalist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+	
+	modifier = {
+	}
+	
+	election_term_years = 5
+	election_term_variance = 5 # +/- 10 years
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 250
+	has_agendas = yes
+	
+	max_election_candidates = 4
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+	}
+	
+	ruler_title = RT_LEAD_SCIENTIST
+}
+
+###################################
+####### FANATIC RATIONALIST #######
+###################################
+
+scientific_oligarchy = {
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_rationalist"
+			has_ethic = "ethic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_rationalist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+	}
+	
+	modifier = {
+	}
+	
+	election_term_years = 10
+	election_term_variance = 5 # +/- 10 years
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	emergency_election_cost = 350
+	has_agendas = yes
+	
+	max_election_candidates = 4
+	election_candidates = {
+		modifier = {
+			add = 1000
+			OR = {
+				leader_class = ruler
+				AND = {
+					exists = pop_faction
+					pop_faction = {
+						is_scope_valid = yes
+						is_pop_faction_type = loyalist
+					}
+				}
+			}
+		}
+	}
+	
+	ruler_title = RT_DIRECTOR_OF_SCIENCES
+}
+
+###################################
+####### NORMAL EXPRESSIONIST #######
+###################################
+
+aesthetic_monarchy = {
+	has_heir = yes
+	dynastic_last_names = yes
+	use_regnal_names = yes
+
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_expressionist"
+			has_ethic = "ethic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_fanatic_pacifist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 5
+		country_core_sector_planet_cap = -5
+	}
+	
+	ruler_title = RT_PATRON_KING
+	ruler_title_female = RT_PATRON_QUEEN
+	heir_title = RT_PUPIL
+}
+
+###################################
+####### FANATIC EXPRESSIONIST #######
+###################################
+
+artistic_monarchy = {
+	has_heir = yes
+	dynastic_last_names = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_expressionist"
+			has_ethic = "ethic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_expressionist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 5
+		country_core_sector_planet_cap = -5
+	}
+	
+	ruler_title = RT_PATRON_KING
+	ruler_title_female = RT_PATRON_QUEEN
+	heir_title = RT_PUPIL
+}
+
+###################################
 ####### FANATIC COLLECTIVIST #######
 ###################################
 
@@ -2463,6 +2670,194 @@ pacifist_empire = {
 	ruler_title_female = RT_TRANQUIL_EMPRESS
 	heir_title = PEACEFUL_PRINCE
 	heir_title_female = PEACEFUL_PRINCESS
+}
+
+##################################
+######## NORMAL RATIONALIST #########
+##################################
+
+rational_empire = {
+
+	has_heir = yes
+	dynastic_last_names = no
+	use_regnal_names = no
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_rationalist"
+			has_ethic = "ethic_fanatic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 2
+		slave_production_output = 0.1
+	}
+	
+	ruler_title = RT_PHILOSOPHER_EMPEROR
+	ruler_title_female = RT_PHILOSOPHER_EMPRESS
+	heir_title = RT_PRINCE
+	heir_title_female = RT_PRINCESS
+}
+
+##################################
+######## FANATIC RATIONALIST #########
+##################################
+
+scientific_empire = {
+
+	has_heir = yes
+	dynastic_last_names = no
+	use_regnal_names = no
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_rationalist"
+			has_ethic = "ethic_fanatic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_rationalist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 2
+		slave_production_output = 0.1
+	}
+	
+	ruler_title = RT_PHILOSOPHER_EMPEROR
+	ruler_title_female = RT_PHILOSOPHER_EMPRESS
+	heir_title = RT_PRINCE
+	heir_title_female = RT_PRINCESS
+}
+
+##################################
+######## NORMAL EXPRESSIONIST #########
+##################################
+
+aesthetic_empire = {
+
+	has_heir = yes
+	dynastic_last_names = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_expressionist"
+			has_ethic = "ethic_fanatic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 2
+		slave_production_output = 0.1
+	}
+	
+	ruler_title = RT_PATRON_EMPEROR
+	ruler_title_female = RT_PATRON_EMPRESS
+	heir_title = RT_PUPIL
+}
+
+##################################
+######## FANATIC EXPRESSIONIST #########
+##################################
+
+artistic_empire = {
+
+	has_heir = yes
+	dynastic_last_names = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { 
+			NOR = { 
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire 
+			} 		
+		}
+	}
+
+	
+	ethics = {
+		AND = {
+			has_ethic = "ethic_fanatic_expressionist"
+			has_ethic = "ethic_fanatic_collectivist"
+		}
+		NOT = {
+			OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_expressionist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+	}
+	
+	modifier = {
+		country_sector_cap_add = 2
+		slave_production_output = 0.1
+	}
+	
+	ruler_title = RT_PATRON_EMPEROR
+	ruler_title_female = RT_PATRON_EMPRESS
+	heir_title = RT_PUPIL
 }
 
 ######################
