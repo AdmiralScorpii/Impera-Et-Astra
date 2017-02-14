@@ -202,6 +202,7 @@ ethic_fanatic_militarist = {
 	
 	pop_modifier = {
 		pop_war_happiness = 0.10
+		pop_ethic_shift = -0.1
 	}
 	
 	country_modifier = {
@@ -224,6 +225,7 @@ ethic_militarist = {
 	
 	pop_modifier = {
 		pop_war_happiness = 0.10
+		pop_ethic_shift = -0.05
 	}
 	
 	country_modifier = {
@@ -254,6 +256,7 @@ ethic_fanatic_pacifist = {
 	pop_modifier = {
 		pop_peace_happiness = 0.15
 		pop_war_happiness = -0.15
+		pop_ethic_shift = 0.1
 	}
 	
 	random_weight = {
@@ -279,6 +282,7 @@ ethic_pacifist = {
 	pop_modifier = {
 		pop_peace_happiness = 0.05
 		pop_war_happiness = -0.05
+		pop_ethic_shift = 0.05
 	}
 	
 	random_weight = {
@@ -295,7 +299,7 @@ ethic_fanatic_spiritualist = {
 	opposite_dislike = -0.1
 	
 	country_modifier = {
-		pop_ethic_shift = -0.3
+		pop_ethic_shift = -0.1
 	}
 	
 	pop_modifier = {
@@ -316,7 +320,7 @@ ethic_spiritualist = {
 	opposite_dislike = -0.05
 	
 	country_modifier = {
-		pop_ethic_shift = -0.1
+		pop_ethic_shift = -0.05
 	}
 	
 	pop_modifier = {
@@ -344,6 +348,7 @@ ethic_materialist = {
 	
 	pop_modifier = {
 		tile_resource_energy_mult = 0.05
+		pop_ethic_shift = 0.05
 	}
 	
 	random_weight = {
@@ -367,6 +372,7 @@ ethic_fanatic_materialist = {
 	
 	pop_modifier = {
 		tile_resource_energy_mult = 0.15
+		pop_ethic_shift = 0.1
 	}
 	
 	random_weight = {

@@ -13,8 +13,9 @@ ethic_expressionist = {
 		influence_gain_mult = 0.1 
 	}
 	pop_modifier = {
-		policy_happiness_impace = -0.1
-		pop_happiness = 0.05		
+		policy_happiness_impact = -0.1
+		pop_happiness = 0.05
+		pop_ethic_shift = 0.05
 	}
 	random_weight = {
 		value = 500
@@ -31,8 +32,9 @@ ethic_fanatic_expressionist = {
 		influence_gain_mult = 0.2
 	}
 	pop_modifier = {
-		policy_happiness_impace = -0.2
-		pop_happiness = 0.1		
+		policy_happiness_impact = -0.2
+		pop_happiness = 0.1	
+		pop_ethic_shift = 0.15
 	}
 	random_weight = {
 		value = 600
@@ -55,6 +57,7 @@ ethic_rationalist = {
 		tile_resource_physics_research_mult = 0.1
 		tile_resource_society_research_mult = 0.1
 		tile_resource_engineering_research_mult = 0.1
+		pop_ethic_shift = -0.05
 	}
 	random_weight = {
 		value = 500
@@ -78,6 +81,7 @@ ethic_fanatic_rationalist = {
 		tile_resource_physics_research_mult = 0.2
 		tile_resource_society_research_mult = 0.2
 		tile_resource_engineering_research_mult = 0.2
+		pop_ethic_shift = -0.15
 	}
 	random_weight = {
 		value = 600

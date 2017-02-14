@@ -201,9 +201,6 @@ theocratic_republic = {
 		country_leader_cap = 3
 		pop_xenophobia = 0.1
 		army_morale = 0.25
-		tile_resource_physics_research_mult = -0.15
-		tile_resource_society_research_mult = -0.15
-		tile_resource_engineering_research_mult = -0.15
 		shipsize_colonizer_build_cost_mult = -0.25
 		planet_colony_development_speed_mult = -0.1
 		pop_other_species_happiness = -0.05
@@ -271,9 +268,6 @@ holy_republic = {
 		country_leader_cap = 3
 		pop_xenophobia = 0.15
 		army_morale = 0.3
-		tile_resource_physics_research_mult = -0.25
-		tile_resource_society_research_mult = -0.25
-		tile_resource_engineering_research_mult = -0.25
 		shipsize_colonizer_build_cost_mult = -0.35
 		planet_colony_development_speed_mult = -0.2
 		pop_other_species_happiness = -0.1
@@ -343,7 +337,6 @@ merchant_republic = {
 		slave_production_output = 0.1
 		tile_resource_minerals_mult = 0.05
 		tile_resource_energy_mult = 0.05
-		tile_resource_food_mult = -0.1
 		spaceport_ship_build_cost_mult = -0.15
 		spaceport_ship_build_time_mult = -0.05
 		shipsize_constructor_build_cost_mult = -0.25
@@ -414,7 +407,6 @@ corporate_republic = {
 		slave_production_output = 0.15
 		tile_resource_minerals_mult = 0.1
 		tile_resource_energy_mult = 0.1
-		tile_resource_food_mult = -0.2
 		spaceport_ship_build_cost_mult = -0.25
 		spaceport_ship_build_time_mult = -0.1
 		shipsize_constructor_build_cost_mult = -0.35
@@ -484,9 +476,6 @@ peaceful_republic = {
 		country_sector_cap_add = -2
 		country_leader_cap = 3
 		navy_size_mult = -0.25
-		tile_resource_physics_research_mult = 0.15
-		tile_resource_society_research_mult = 0.15
-		tile_resource_engineering_research_mult = 0.15
 		category_military_theory_research_speed_mult = -0.15
 		category_voidcraft_research_speed_mult = -0.15
 		science_ship_survey_speed = 0.25
@@ -566,9 +555,6 @@ pacifist_republic = {
 		country_sector_cap_add = -2
 		country_leader_cap = 3
 		navy_size_mult = -0.4
-		tile_resource_physics_research_mult = 0.25
-		tile_resource_society_research_mult = 0.25
-		tile_resource_engineering_research_mult = 0.25
 		category_military_theory_research_speed_mult = -0.25
 		category_voidcraft_research_speed_mult = -0.2
 		science_ship_survey_speed = 0.35
@@ -651,6 +637,10 @@ rational_republic = {
 		country_sector_cap_add = 3
 		country_sector_cap_add = -2
 		country_leader_cap = 3
+		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
+		num_tech_alternatives_add = 1
 	}
 	
 	election_term_years = 5
@@ -718,6 +708,10 @@ scientific_republic = {
 		country_sector_cap_add = 3
 		country_sector_cap_add = -2
 		country_leader_cap = 3
+		science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 0.40
+		ship_anomaly_generation_chance_mult = 0.20
+		num_tech_alternatives_add = 2
 	}
 	
 	election_term_years = 8
@@ -786,6 +780,12 @@ aesthetic_republic = {
 		country_sector_cap_add = 3
 		country_sector_cap_add = -2
 		country_leader_cap = 3
+		country_resettlement_cost_mult = -0.25 
+		leader_influence_cost = -0.15 
+		edict_influence_cost = -0.1 
+		pop_migration_time = -0.25
+		country_trust_growth = 0.1
+		faction_suppression_cost = -0.2
 	}
 	
 	election_term_years = 10
@@ -856,6 +856,12 @@ artistic_republic = {
 		country_sector_cap_add = 3
 		country_sector_cap_add = -2
 		country_leader_cap = 3
+		country_resettlement_cost_mult = -0.5
+		leader_influence_cost = -0.3
+		edict_influence_cost = -0.2
+		pop_migration_time = -0.5
+		country_trust_growth = 0.2
+		faction_suppression_cost = -0.4
 	}
 	
 	election_term_years = 8
@@ -1382,6 +1388,10 @@ rational_democracy = {
 		country_sector_cap_add = -5
 		species_leader_exp_gain = 0.15
 		leader_skill_levels = 2
+		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
+		num_tech_alternatives_add = 1
 	}
 	
 	uses_mandates = yes
@@ -1428,6 +1438,12 @@ artistic_democracy = {
 		country_sector_cap_add = -5
 		species_leader_exp_gain = 0.15
 		leader_skill_levels = 2
+		country_resettlement_cost_mult = -0.25 
+		leader_influence_cost = -0.15 
+		edict_influence_cost = -0.1 
+		pop_migration_time = -0.25
+		country_trust_growth = 0.1
+		faction_suppression_cost = -0.2
 	}
 	
 	uses_mandates = yes
@@ -1474,6 +1490,10 @@ scientific_democracy = {
 		country_sector_cap_add = -5
 		species_leader_exp_gain = 0.15
 		leader_skill_levels = 2	
+		science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 0.4
+		ship_anomaly_generation_chance_mult = 0.2
+		num_tech_alternatives_add = 2
 	}
 	
 	uses_mandates = yes
@@ -1520,6 +1540,12 @@ aesthetic_democracy = {
 		country_sector_cap_add = -5
 		species_leader_exp_gain = 0.15
 		leader_skill_levels = 2	
+		country_resettlement_cost_mult = -0.5
+		leader_influence_cost = -0.3
+		edict_influence_cost = -0.2
+		pop_migration_time = -0.5
+		country_trust_growth = 0.2
+		faction_suppression_cost = -0.4
 	}
 	
 	uses_mandates = yes
@@ -2006,6 +2032,13 @@ rational_oligarchy = {
 	}
 	
 	modifier = {
+		country_sector_cap_add = 2
+		slave_production_output = 0.1
+		pop_robot_production_output = 0.2
+		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
+		num_tech_alternatives_add = 1
 	}
 	
 	election_term_years = 5
@@ -2066,6 +2099,13 @@ scientific_oligarchy = {
 	}
 	
 	modifier = {
+		country_sector_cap_add = 4
+		slave_production_output = 0.2
+		pop_robot_production_output = 0.35
+		science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 0.4
+		ship_anomaly_generation_chance_mult = 0.2
+		num_tech_alternatives_add = 2
 	}
 	
 	election_term_years = 10
@@ -2132,6 +2172,12 @@ aesthetic_monarchy = {
 	modifier = {
 		country_sector_cap_add = 5
 		country_core_sector_planet_cap = -5
+		country_resettlement_cost_mult = -0.25 
+		leader_influence_cost = -0.15 
+		edict_influence_cost = -0.1 
+		pop_migration_time = -0.25
+		country_trust_growth = 0.1
+		faction_suppression_cost = -0.2
 	}
 	
 	ruler_title = RT_PATRON_KING
@@ -2175,6 +2221,12 @@ artistic_monarchy = {
 	modifier = {
 		country_sector_cap_add = 5
 		country_core_sector_planet_cap = -5
+		country_resettlement_cost_mult = -0.5
+		leader_influence_cost = -0.3
+		edict_influence_cost = -0.2
+		pop_migration_time = -0.5
+		country_trust_growth = 0.2
+		faction_suppression_cost = -0.4
 	}
 	
 	ruler_title = RT_PATRON_KING
@@ -2584,12 +2636,8 @@ peaceful_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
-		tile_resource_physics_research_mult = 0.15
-		tile_resource_society_research_mult = 0.15
-		tile_resource_engineering_research_mult = 0.15
 		category_military_theory_research_speed_mult = -0.15
 		category_voidcraft_research_speed_mult = -0.15
-		science_ship_survey_speed = 0.25
 		tile_resource_food_mult = 0.25
 		planet_army_build_cost_mult = 0.20
 		navy_size_mult = -0.25
@@ -2648,12 +2696,8 @@ pacifist_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
-		tile_resource_physics_research_mult = 0.30
-		tile_resource_society_research_mult = 0.30
-		tile_resource_engineering_research_mult = 0.30
 		category_military_theory_research_speed_mult = -0.30
 		category_voidcraft_research_speed_mult = -0.30
-		science_ship_survey_speed = 0.45
 		tile_resource_food_mult = 0.35
 		planet_army_build_cost_mult = 0.35
 		navy_size_mult = -0.4
@@ -2711,6 +2755,10 @@ rational_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
+		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.10
+		num_tech_alternatives_add = 1
 	}
 	
 	ruler_title = RT_PHILOSOPHER_EMPEROR
@@ -2759,6 +2807,10 @@ scientific_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
+		science_ship_survey_speed = 0.5
+		ship_anomaly_research_speed_mult = 0.4
+		ship_anomaly_generation_chance_mult = 0.2
+		num_tech_alternatives_add = 2
 	}
 	
 	ruler_title = RT_PHILOSOPHER_EMPEROR
@@ -2806,6 +2858,12 @@ aesthetic_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
+		country_resettlement_cost_mult = -0.25 
+		leader_influence_cost = -0.15 
+		edict_influence_cost = -0.1 
+		pop_migration_time = -0.25
+		country_trust_growth = 0.1
+		faction_suppression_cost = -0.2
 	}
 	
 	ruler_title = RT_PATRON_EMPEROR
@@ -2853,6 +2911,12 @@ artistic_empire = {
 	modifier = {
 		country_sector_cap_add = 2
 		slave_production_output = 0.1
+		country_resettlement_cost_mult = -0.5
+		leader_influence_cost = -0.3
+		edict_influence_cost = -0.2
+		pop_migration_time = -0.5
+		country_trust_growth = 0.2
+		faction_suppression_cost = -0.4
 	}
 	
 	ruler_title = RT_PATRON_EMPEROR

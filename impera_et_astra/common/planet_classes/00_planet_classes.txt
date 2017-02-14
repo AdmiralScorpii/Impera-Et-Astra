@@ -344,7 +344,8 @@ pc_gas_giant = {
 	moon_size = { min = 8 max = 15 }
 	
 	production_spawn_chance = 0.5
-
+	
+	starting_planet = no
 	colonizable = no
 }
 
@@ -365,6 +366,7 @@ pc_asteroid = {
 	
 	planet_size = 5
 	
+	starting_planet = no
 	colonizable = yes
 	survey_time_factor = 0.5
 	
@@ -395,6 +397,7 @@ pc_molten = {
 	planet_size = { min = 14 max = 30 }
 	moon_size = { min = 6 max = 12 }
 	
+	starting_planet = no
 	colonizable = yes
 }
 
@@ -422,6 +425,7 @@ pc_barren = {
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
 	
+	starting_planet = no
 	colonizable = yes
 	colonization_tech = { tech_barren_colonization }
 }
@@ -450,6 +454,7 @@ pc_barren_cold = {
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
 	
+	starting_planet = no
 	colonizable = yes
 	colonization_tech = { tech_barren_colonization }
 }
@@ -481,6 +486,7 @@ pc_toxic = {
 	
 	colonizable = yes
 	colonization_tech = { tech_toxic_colonization }
+	starting_planet = no
 }
 
 pc_frozen = {
@@ -508,6 +514,7 @@ pc_frozen = {
 	moon_size = { min = 6 max = 10 }
 	
 	colonizable = yes
+	starting_planet = no
 	colonization_tech = { tech_frozen_colonization }
 }
 
